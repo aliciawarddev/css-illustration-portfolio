@@ -1,0 +1,242 @@
+/* ================================
+   DESIGN SYSTEM & BASE STYLES
+   Based on MCM aesthetic from main portfolio
+   ================================ */
+
+/* COLOR PALETTE */
+:root {
+    --light: #FAF3E0;  
+    --lightest: #FDF9F0;
+    --dark: #3A3A3A; 
+    --orange: #E07A5F;
+    --orange-dark: #c7654c;
+    --teal: #3B9C9C;
+    --teal-dark: #2f7e7e;
+    --mustard: #F2CC8F;
+    --mustard-light: #f5d8a9;
+    
+    /* Spacing units */
+    --space-xs: 0.25rem;   /* 4px */
+    --space-sm: 0.5rem;    /* 8px */
+    --space-md: 1rem;      /* 16px */
+    --space-lg: 1.5rem;    /* 24px */
+    --space-xl: 2rem;      /* 32px */
+    --space-2xl: 3rem;     /* 48px */
+}
+
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 1.25rem;
+    min-height: 100vh;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--teal);
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-top: 0;
+    margin-bottom: var(--space-xl);
+    color: var(--dark);
+    border-bottom: 0.4rem solid var(--teal);
+    padding-bottom: var(--space-xs);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--dark);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark);
+    margin-bottom: var(--space-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* LAYOUT */
+main {
+    display: block;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section {
+    display: block;
+    width: 100%;
+    padding: 80px 20px;
+    max-width: 1200px; /* Wider for gallery */
+    margin: 0 auto;
+}
+
+main section:first-child {
+    padding-top: 40px;
+}
+
+main section:last-child {
+    padding-bottom: 40px;
+}
+
+/* NAVIGATION */
+header {
+    margin-bottom: var(--space-xl);
+}
+
+nav {
+    padding: var(--space-md) 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    text-shadow: -4px 4px 0 var(--dark);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: var(--space-md);
+}
+
+/* BUTTONS */
+.btn {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--lightest);
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 25px;
+    background-color: var(--orange);
+    border: 2px solid var(--dark);
+    box-shadow: -4px 4px 0 0 var(--dark);
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--orange-dark);
+    color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: -8px 8px 0 0 var(--dark);
+}
+
+/* CARDS */
+.card {
+    background: var(--lightest);
+    border: 2px solid var(--dark);
+    border-radius: 25px;
+    padding: var(--space-lg);
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: -6px 6px 0 0 var(--mustard);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: -8px 8px 0 0 var(--mustard);
+}
+
+.card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.25rem;
+    color: var(--dark);
+    margin: 0 0 var(--space-sm) 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.card p {
+    margin: 0;
+    color: var(--dark);
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    padding: var(--space-xl) var(--space-xl) var(--space-lg);
+    margin-top: var(--space-2xl);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: var(--dark);
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.footer-star {
+    color: var(--mustard);
+    font-size: 1.2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    main section {
+        padding: 60px 20px;
+    }
+}
