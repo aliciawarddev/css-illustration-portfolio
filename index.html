@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pure CSS illustrations gallery showcasing MCM aesthetic designs and creative CSS art">
+  <meta name="author" content="Alicia Ward">
+  
+  <!-- Page Title -->
+  <title>CSS Illustrations | Alicia Ward</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FAF3E0' rx='10'/><text x='50' y='70' font-family='Bebas Neue, sans-serif' font-size='50' fill='%233B9C9C' text-anchor='middle' font-weight='400'>AW</text></svg>">
+  
+  <!-- Font Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/gallery.css">
+</head>
+<body>
+  
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <h1 class="site-title">CSS Illustrations</h1>
+        <ul class="nav-links">
+          <li><a href="https://aliciawarddev.github.io" class="btn">Main Portfolio</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-content">
+        <h2 class="hero-title">Pure CSS Art Gallery</h2>
+        <p>A collection of illustrations created entirely with CSS - no images, no JavaScript for the art itself. Each piece showcases different CSS techniques and properties, from gradients and transforms to animations and clip-paths.</p>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section id="filters">
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="objects">Objects</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="scenes">Scenes</button>
+        <button class="filter-btn" data-filter="abstract">Abstract</button>
+        <button class="filter-btn" data-filter="animated">Animated</button>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section id="gallery">
+      <div class="gallery-grid">
+        
+        <!-- Example Gallery Items - Replace with your actual illustrations -->
+        <article class="gallery-item card" data-category="objects">
+          <div class="illustration-preview">
+            <!-- Thumbnail or CSS preview here -->
+            <div class="placeholder">Coming Soon</div>
+          </div>
+          <div class="illustration-info">
+            <h3>Starburst Clock</h3>
+            <p class="techniques">Gradients • Transforms</p>
+            <a href="illustrations/starburst-clock/index.html" class="view-btn">View →</a>
+          </div>
+        </article>
+
+        <article class="gallery-item card" data-category="objects">
+          <div class="illustration-preview">
+            <div class="placeholder">Coming Soon</div>
+          </div>
+          <div class="illustration-info">
+            <h3>Martini Glass</h3>
+            <p class="techniques">Borders • Shadows</p>
+            <a href="illustrations/martini-glass/index.html" class="view-btn">View →</a>
+          </div>
+        </article>
+
+        <article class="gallery-item card" data-category="nature">
+          <div class="illustration-preview">
+            <div class="placeholder">Coming Soon</div>
+          </div>
+          <div class="illustration-info">
+            <h3>Desert Sunset</h3>
+            <p class="techniques">Gradients • Clip-path</p>
+            <a href="illustrations/desert-sunset/index.html" class="view-btn">View →</a>
+          </div>
+        </article>
+
+        <!-- Add more gallery items as you create illustrations -->
+        
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About This Project</h2>
+      <p>Each illustration in this gallery is created using only HTML and CSS - no images, SVGs, or canvas elements. This project explores the artistic possibilities of CSS, pushing the boundaries of what can be achieved with code alone.</p>
+      <p>Techniques used include gradients, transforms, pseudo-elements, clip-paths, animations, and creative use of borders and shadows. Click on any piece to see the full illustration and examine the code behind it.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-star">✦</span>
+    <p>&copy; 2025 Alicia Ward</p>
+    <span class="footer-star">✦</span>
+  </footer>
+
+  <!-- JavaScript for filtering -->
+  <script src="js/filter.js"></script>
+</body>
+</html>
