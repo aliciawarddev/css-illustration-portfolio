@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TODO-DESCRIPTION - Pure CSS illustration">
+  <meta name="author" content="Alicia Ward">
+  
+  <!-- Page Title -->
+  <title>TODO-TITLE | CSS Illustrations</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FAF3E0' rx='10'/><text x='50' y='70' font-family='Bebas Neue, sans-serif' font-size='50' fill='%233B9C9C' text-anchor='middle' font-weight='400'>AW</text></svg>">
+  
+  <!-- Font Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Illustration Page Specific Styles */
+    .illustration-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--space-xl);
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--orange);
+      text-decoration: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-xl);
+      transition: color 0.3s ease;
+    }
+    
+    .back-link:hover {
+      color: var(--orange-dark);
+    }
+    
+    .illustration-header {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+    
+    .illustration-title {
+      font-size: 2.5rem;
+      color: var(--teal);
+      text-shadow: -4px 4px 0 var(--dark);
+      margin-bottom: var(--space-md);
+      border: none;
+    }
+    
+    .illustration-meta {
+      font-size: 0.9rem;
+      color: var(--dark);
+      opacity: 0.8;
+      font-style: italic;
+    }
+    
+    .illustration-container {
+      background: var(--lightest);
+      border: 2px solid var(--dark);
+      border-radius: 25px;
+      padding: var(--space-2xl);
+      box-shadow: -6px 6px 0 0 var(--mustard);
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-2xl);
+    }
+    
+    .code-section {
+      background: var(--lightest);
+      border: 2px solid var(--dark);
+      border-radius: 25px;
+      padding: var(--space-lg);
+      box-shadow: -6px 6px 0 0 var(--teal);
+    }
+    
+    .code-section summary {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--dark);
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+    }
+    
+    .code-section summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    .code-section summary::before {
+      content: '▶';
+      display: inline-block;
+      margin-right: var(--space-sm);
+      transition: transform 0.3s ease;
+    }
+    
+    .code-section[open] summary::before {
+      transform: rotate(90deg);
+    }
+    
+    .code-content {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-lg);
+      border-top: 2px solid var(--dark);
+    }
+    
+    .code-block {
+      background: var(--light);
+      border-radius: 10px;
+      padding: var(--space-md);
+      overflow-x: auto;
+      margin-top: var(--space-md);
+    }
+    
+    .code-block pre {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    
+    .code-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .code-label:first-child {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <h1 class="site-title">CSS Illustrations</h1>
+        <ul class="nav-links">
+          <li><a href="../../" class="btn">Gallery</a></li>
+          <li><a href="https://aliciawarddev.github.io" class="btn">Main Portfolio</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="illustration-page">
+      <!-- Back to Gallery -->
+      <a href="../../" class="back-link">← Back to Gallery</a>
+      
+      <!-- Illustration Header -->
+      <div class="illustration-header">
+        <h2 class="illustration-title">TODO-TITLE</h2>
+        <p class="illustration-meta">Techniques: TODO-TECHNIQUES</p>
+      </div>
+      
+      <!-- Illustration Display -->
+      <div class="illustration-container">
+        <!-- TODO: Your illustration HTML goes here -->
+        <!-- Example: -->
+        <!-- <div class="your-illustration-class">
+          <div class="element1"></div>
+          <div class="element2"></div>
+        </div> -->
+      </div>
+      
+      <!-- Code Display -->
+      <details class="code-section">
+        <summary>View Code</summary>
+        <div class="code-content">
+          <div class="code-label">CSS</div>
+          <div class="code-block">
+            <pre><code>/* TODO: Add your CSS code here */
+/* You can copy your actual CSS and paste it here */
+/* Users can then copy this code to learn from it */</code></pre>
+          </div>
+          
+          <div class="code-label">HTML Structure</div>
+          <div class="code-block">
+            <pre><code>&lt;!-- TODO: Add the HTML structure here --&gt;
+&
