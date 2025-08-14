@@ -70,7 +70,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--teal);
     margin: 0;
 }
@@ -140,15 +140,11 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-.site-title {
-    font-size: 2.5rem;
+    padding: var(--space-md) 20px;
 }
 
 .nav-links {

@@ -21,14 +21,16 @@
 }
 
 .hero-title {
-    font-size: 3rem;
     color: var(--teal);
     text-shadow: -5px 5px 0 var(--dark);
     border: none;
     margin-bottom: var(--space-lg);
+    text-shadow: -3px 3px 0 var(--dark);
+    letter-spacing: 0.05em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    font-size: clamp(2.5rem, 7vw, 4rem);
 }
 
 #hero h3 {
@@ -44,15 +46,6 @@
     margin: 0 1rem;
     color: var(--mustard);
     font-size: 1.5rem;
-    vertical-align: middle;
-}
-
-.hero-title::before,
-.hero-title::after {
-    content: '✦';
-    margin: 0 1rem;
-    color: var(--mustard);
-    font-size: 2rem;
     vertical-align: middle;
 }
 
@@ -221,7 +214,7 @@
         padding: var(--space-xs) var(--space-md);
     }
 
-        .hero-title {
+    .hero-title {
         font-size: clamp(2rem, 8vw, 3rem);
         text-shadow: -3px 3px 0 var(--dark);
     }
