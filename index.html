@@ -49,23 +49,25 @@
 </head>
 <body>
   
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Header -->
   <header>
-    <nav>
+    <nav aria-label="Main navigation">
       <div class="nav-container">
-        <h1 class="site-title">CSS Illustrations</h1>
-        <ul class="nav-links">
-          <li><a href="https://aliciawarddev.github.io" class="btn">Main Portfolio</a></li>
+        <div class="site-title" aria-label="CSS Illustrations">CSS Illustrations</div>
+        <ul class="nav-links" role="list">
+          <li><a href="https://aliciawarddev.github.io" class="btn" aria-label="Return to main portfolio">Main Portfolio</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main id="main-content" role="main">
     <!-- Hero Section -->
-    <section id="hero">
+    <section id="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h1 class="hero-title">Pure CSS Art Gallery</h1>
+        <h1 id="hero-title" class="hero-title">Pure CSS Art Gallery</h1>
         <h3>by Alicia Ward</h3>
         <p>A collection of illustrations created entirely with CSS - no images, no JavaScript for the art itself. Each piece showcases different CSS techniques and properties, from gradients and transforms to animations and clip-paths.</p>
       </div>
@@ -82,12 +84,12 @@
     <!-- Filter Section -->
     <section id="filters">
       <div class="filter-container">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="objects">Objects</button>
-        <button class="filter-btn" data-filter="nature">Nature</button>
-        <button class="filter-btn" data-filter="scenes">Scenes</button>
-        <button class="filter-btn" data-filter="abstract">Abstract</button>
-        <button class="filter-btn" data-filter="animated">Animated</button>
+        <button class="filter-btn active" data-filter="all" aria-pressed="true" aria-label="Show all illustrations">All</button>
+        <button class="filter-btn" data-filter="objects" aria-pressed="false" aria-label="Show object illustrations">Objects</button>
+        <button class="filter-btn" data-filter="nature" aria-pressed="false" aria-label="Show nature illustrations">Nature</button>
+        <button class="filter-btn" data-filter="scenes" aria-pressed="false" aria-label="Show scenes illustrations">Scenes</button>
+        <button class="filter-btn" data-filter="abstract" aria-pressed="false" aria-label="Show abstract illustrations">Abstract</button>
+        <button class="filter-btn" data-filter="animated" aria-pressed="false" aria-label="Show animated illustrations">Animated</button>
       </div>
     </section>
 
@@ -96,37 +98,36 @@
       <div class="gallery-grid">
         
         <!-- Example Gallery Items - Replace with your actual illustrations -->
-        <article class="gallery-item card" data-category="objects">
+        <article class="gallery-item card" data-category="objects" aria-label="Starburst Clock illustration">
           <div class="illustration-preview">
-            <!-- Thumbnail or CSS preview here -->
-            <div class="placeholder">Coming Soon</div>
+            <div class="placeholder" aria-label="Preview coming soon">Coming Soon</div>
           </div>
           <div class="illustration-info">
             <h3>Starburst Clock</h3>
-            <p class="techniques">Gradients • Transforms</p>
-            <a href="illustrations/starburst-clock/index.html" class="view-btn">View →</a>
+            <p class="techniques">Techniques: Gradients, Transforms</p>
+            <a href="illustrations/starburst-clock/index.html" class="view-btn" aria-label="View Starburst Clock illustration">View <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
-        <article class="gallery-item card" data-category="objects">
+        <article class="gallery-item card" data-category="objects" aria-label="Martini Glass illustration">
           <div class="illustration-preview">
-            <div class="placeholder">Coming Soon</div>
+            <div class="placeholder" aria-label="Preview coming soon">Coming Soon</div>
           </div>
           <div class="illustration-info">
             <h3>Martini Glass</h3>
-            <p class="techniques">Borders • Shadows</p>
-            <a href="illustrations/martini-glass/index.html" class="view-btn">View →</a>
+            <p class="techniques">Techniques: Borders, Shadows</p>
+            <a href="illustrations/martini-glass/index.html" class="view-btn" aria-label="View Martini Glass illustration">View <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
-        <article class="gallery-item card" data-category="nature">
+        <article class="gallery-item card" data-category="nature" aria-label="Desert Sunset illustration">
           <div class="illustration-preview">
-            <div class="placeholder">Coming Soon</div>
+            <div class="placeholder" aria-label="Preview coming soon">Coming Soon</div>
           </div>
           <div class="illustration-info">
             <h3>Desert Sunset</h3>
-            <p class="techniques">Gradients • Clip-path</p>
-            <a href="illustrations/desert-sunset/index.html" class="view-btn">View →</a>
+            <p class="techniques">Techniques: Gradients, Clip-path</p>
+            <a href="illustrations/desert-sunset/index.html" class="view-btn" aria-label="View Desert Sunset illustration">View <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -135,13 +136,11 @@
       </div>
     </section>
 
-
-
   <!-- Footer -->
   <footer>
-    <span class="footer-star">✦</span>
-    <p>&copy; 2025 Alicia Ward</p>
-    <span class="footer-star">✦</span>
+    <span class="footer-star" aria-hidden="true">✦</span>
+    <p>&copy; <time datetime="2025">2025</time> Alicia Ward</p>
+    <span class="footer-star" aria-hidden="true">✦</span>
   </footer>
 
   <!-- JavaScript for filtering -->
