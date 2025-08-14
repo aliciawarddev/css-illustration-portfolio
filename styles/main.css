@@ -1,10 +1,24 @@
-/* ================================
-   DESIGN SYSTEM & BASE STYLES
-   Based on MCM aesthetic from web dev site
-   ================================ */
+/* =======================================
+   TABLE OF CONTENTS - NOT FINALIZED
+   =======================================
+   1. Design System & Variables
+   2. Reset & Base Styles
+   3. Typography
+   4. Layout
+   5. Navigation
+   6. Components (Buttons & Cards)
+   7. Footer
+   8. Accessibility
+   9. Responsive Design
+   ======================================= */
 
-/* COLOR PALETTE */
+/* =======================================
+   DESIGN SYSTEM & VARIABLES
+   Color palette and spacing system
+   ======================================= */
+
 :root {
+    /* Color Palette */
     --light: #FAF3E0;  
     --lightest: #FDF9F0;
     --dark: #3A3A3A; 
@@ -24,7 +38,11 @@
     --space-2xl: 3rem;     /* 48px */
 }
 
-/* RESET & BASE */
+/* =======================================
+   RESET & BASE STYLES
+   Global resets and foundational styles
+   ======================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -220,7 +238,10 @@ footer p {
     font-size: 1.2rem;
 }
 
-/* RESPONSIVE */
+/* =======================================
+   MOBILE RESPONSIVENESS
+   ======================================= */
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -237,5 +258,104 @@ footer p {
     
     main section {
         padding: 60px 20px;
+    }
+
+    .btn, .filter-btn {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Flexible typography */
+    h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    .site-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+}
+
+/* Hover state fix for mobile */
+@media (hover: hover) and (pointer: fine) {
+    .btn:hover {
+        background-color: var(--orange-dark);
+        color: var(--light);
+        transform: translateY(-3px);
+        box-shadow: -8px 8px 0 0 var(--dark);
+    }
+    
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: -8px 8px 0 0 var(--mustard);
+    }
+}
+
+/* Small phone breakpoint */
+@media (max-width: 480px) {
+    body {
+        padding: 0.75rem;
+    }
+    
+    main section {
+        padding: 40px 15px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ADD after the BUTTONS section (around line 160) */
+
+/* =======================================
+   ACCESSIBILITY
+   Skip links, focus states, and a11y features
+   ======================================= */
+
+/* Skip Navigation */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--orange);
+    color: var(--lightest);
+    padding: var(--space-sm) var(--space-md);
+    text-decoration: none;
+    border-radius: 0 0 5px 0;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus Styles */
+*:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 2px;
+}
+
+.btn:focus,
+.filter-btn:focus {
+    outline: 3px solid var(--teal);
+    outline-offset: 4px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .btn, .card, .filter-btn {
+        border-width: 3px;
     }
 }
