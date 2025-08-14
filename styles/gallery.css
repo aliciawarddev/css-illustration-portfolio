@@ -1,6 +1,12 @@
-/* ================================
+/* =======================================
    GALLERY SPECIFIC STYLES
-   ================================ */
+   =======================================
+   1. Hero Section
+   2. Filter Controls
+   3. Gallery Grid & Items
+   4. About Section
+   5. Responsive Gallery
+   ======================================= */
 
 /* HERO SECTION */
 #hero {
@@ -20,6 +26,25 @@
     text-shadow: -5px 5px 0 var(--dark);
     border: none;
     margin-bottom: var(--space-lg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+#hero h3 {
+    font-size: 1.75rem;
+    border-bottom: none;
+    color: var(--dark);
+    margin-bottom: var(--space-lg);
+}
+
+#hero h3::before,
+#hero h3::after {
+    content: '✦';
+    margin: 0 1rem;
+    color: var(--mustard);
+    font-size: 1.5rem;
+    vertical-align: middle;
 }
 
 .hero-title::before,
@@ -168,7 +193,10 @@
     max-width: 800px;
 }
 
-/* RESPONSIVE */
+/* =======================================
+   MOBILE RESPONSIVENESS
+   ======================================= */
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
@@ -192,10 +220,56 @@
         font-size: 0.9rem;
         padding: var(--space-xs) var(--space-md);
     }
+
+        .hero-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+        text-shadow: -3px 3px 0 var(--dark);
+    }
+    
+    #hero h3 {
+        font-size: clamp(1.2rem, 4vw, 1.75rem);
+    }
+    
+    #hero h3::before,
+    #hero h3::after {
+        display: none; /* Hide stars on mobile */
+    }
+    
+    /* Gallery items full width with padding */
+    .gallery-grid {
+        padding: 0 var(--space-sm);
+    }
+    
+    /* Ensure filter buttons are touch-friendly */
+    .filter-btn {
+        min-height: 44px;
+        padding: var(--space-sm) var(--space-md);
+    }
 }
 
 @media (max-width: 480px) {
     .illustration-preview {
         height: 200px;
+    }
+}
+
+/* Hover state fix for mobile */
+@media (hover: hover) and (pointer: fine) {
+    .filter-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: -5px 5px 0 0 var(--dark);
+    }
+    
+    .view-btn:hover {
+        color: var(--orange-dark);
+        border-bottom-color: var(--orange-dark);
+    }
+}
+
+/* Remove sticky hover on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .filter-btn:active {
+        transform: translateY(0);
+        box-shadow: -2px 2px 0 0 var(--dark);
     }
 }
