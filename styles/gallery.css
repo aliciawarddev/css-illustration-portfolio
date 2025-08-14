@@ -11,8 +11,8 @@
 /* HERO SECTION */
 #hero {
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding: 20px;
+    position: relative;
 }
 
 .hero-content {
@@ -24,13 +24,14 @@
     color: var(--teal);
     text-shadow: -5px 5px 0 var(--dark);
     border: none;
+    margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
     text-shadow: -3px 3px 0 var(--dark);
     letter-spacing: 0.05em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
 }
 
 #hero h3 {
@@ -47,6 +48,60 @@
     color: var(--mustard);
     font-size: 1.5rem;
     vertical-align: middle;
+}
+
+.hero-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--mustard);
+    margin: var(--space-lg) auto;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--dark);
+    opacity: 0.8;
+    letter-spacing: 0.02em;
+}
+
+/* ABOUT - Card strip */
+#about {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-title {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.about-points {
+    text-align: center;
+}
+
+.about-point {
+    text-align: left; /* Text stays left-aligned within */
+    margin-bottom: var(--space-lg);
+    padding-left: 2rem; /* Room for starburst */
+    position: relative;
+}
+
+.about-point::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--mustard);
+    font-size: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Optional: Make the first part bold */
+.about-point strong {
+    color: var(--teal);
+    font-weight: 600;
 }
 
 /* FILTER SECTION */
