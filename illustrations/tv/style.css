@@ -1,9 +1,23 @@
+/* COLOR PALETTE */
+:root {
+    --brown-light: #9d5a24;
+    --brown-dark: #402c1f;
+    --teal: #579b85;
+    --bg: #fef2dd;
+    --bg-shadow: #e5ceaa;
+    --off-white: #fddcaa;
+    --brown-stripe: #8e4f1e;
+}
+
 /* GENERAL */
 .tv-illustration-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--bg);
+    height: 350px;
+    width: 400px;
 }
 
 /* TV TOP */
@@ -12,22 +26,157 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .top-semicircle {
-    width: 100px;
-    height: 50px;
+    width: 50px;
+    height: 25px;
     border-radius: 50px 50px 0 0;
-    background-color: black;
+    background-color: var(--brown-dark);
     position: relative;
+    margin-bottom: -10px;
+}
+
+.top-antennas-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: -5px;
+}
+
+.antenna {
+    width: 3px;
+    height: 50px;
+    background-color: var(--dark);
+    position: relative;
+    transform-origin: bottom center;
+}
+
+.antenna.left {
+    transform: rotate(-35deg);
+}
+
+.antenna.right {
+    transform: rotate(35deg);
+}
+
+/* Add circles at the end of antennas */
+.antenna::before {
+    content: '';
+    position: absolute;
+    top: -8px; /* Adjust based on circle size */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--brown-dark);
 }
 
 /* TV BOX */
 .tv-box-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background: repeating-linear-gradient(
+        180deg,
+        var(--brown-light) 0px,
+        var(--brown-light) 10px,
+        var(--brown-stripe) 10px,
+        var(--brown-stripe) 12px  /* Thin stripes */
+    );
+    border-radius: 25px;
+    border-radius: 25px;
+    z-index: 2;
+}
+
+.tv-display-container {
+    width: 220px;
+    height: 170px;
+    background-color: var(--off-white);
+    margin-left: 10px;
+    border-radius: 15px;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.display-border {
+    width: 210px;
+    height: 160px;
+    box-sizing: border-box;
+    background-color: var(--brown-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.display {
+    width: 190px;
+    height: 140px;
+    background-color: var(--teal);
+    border-radius: 30px;
+    
+}
+
+.tv-controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tv-controls {
+    width: 50px;
+    height: 90px;
+    background-color: var(--off-white);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tv-knob {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: var(--off-white);
+    box-sizing: border-box;
+    border: 4px solid var(--brown-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.knob-line {
+    width: 4px;
+    height: 33px;
+    background-color: var(--brown-dark);
+}
+
+.tv-speaker {
+    width: 50px;
+    height: 60px;
+    border-radius: 5px;
+        background-image: 
+        radial-gradient(
+            circle at center,
+            var(--brown-dark) 2.5px,
+            transparent 2.5px
+        );
+    background-size: 10px 10px; /* Adjust for spacing */
+    background-position: 0px 0px; /* Centers the pattern */
 }
 
 /* TV BOTTOM */
@@ -36,4 +185,94 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.bottom-base-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    width: 125px;
+    height: 15px;
+    background-color: var(--brown-dark);
+    transform: skew(20deg);
+    z-index: 2;
+}
+
+.bottom.left {
+    transform: skew(-20deg);
+    margin-right: -5px;
+}
+
+.bottom.right {
+    transform: skew(20deg);
+    margin-left: -5px;
+}
+
+.bottom-legs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -1px;
+    z-index: 1;
+    width: 253px;
+}   
+
+.leg-pair {
+    display: flex;
+    gap: 8px; /* Space between front and back leg */
+    align-items: flex-end; /* Align bottoms */
+}
+
+.front-leg {
+    position: relative;
+    height: 25px;
+    width: 15px;
+    background: repeating-linear-gradient(
+        180deg,
+        var(--brown-light) 0px,
+        var(--brown-light) 5px,
+        var(--brown-stripe) 5px,
+        var(--brown-stripe) 7px  /* Thin stripes */
+    );
+    border-radius: 0 0 25% 25%;
+}
+
+.back-leg {
+    position: relative;
+    height: 20px;
+    width: 13px;
+    background-color: var(--brown-dark);
+    border-radius: 0 0 25% 25%;
+    margin-bottom: 5px;
+}
+
+.back-leg.left {
+    margin-left: 10px;
+}
+
+.back-leg.right {
+    margin-right: 10px;
+}
+
+.front-leg.left, 
+.back-leg.left {
+    transform: skewX(-20deg);
+}
+
+.front-leg.right, 
+.back-leg.right {
+    transform: skewX(20deg);
+}
+
+.tv-shadow {
+    background-color: var(--bg-shadow);
+    width: 320px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -10px;
 }
