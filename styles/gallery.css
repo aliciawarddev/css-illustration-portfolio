@@ -148,12 +148,35 @@
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: var(--space-xl);
     padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* GALLERY ITEMS */
+
+.gallery-item {
+    /* 16:9 aspect ratio container */
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    
+    /* Card styling */
+    background: var(--lightest);
+    border: 2px solid var(--dark);
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: -6px 6px 0 0 var(--mustard);
+    
+    /* Make cards equal height in grid */
+    justify-self: center;
+}
+
+/* 
 .gallery-item {
     display: flex;
     flex-direction: column;
@@ -161,11 +184,28 @@
     transition: all 0.3s ease;
     overflow: hidden;
 }
+*/ 
 
 .gallery-item.hidden {
     display: none;
 }
 
+.gallery-item:hover .illustration-info {
+    opacity: 1;
+}
+
+.illustration-preview {
+    width: 100%;
+    height: 100%;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 
 .illustration-preview {
     height: 250px;
     background: var(--light);
@@ -176,6 +216,7 @@
     overflow: hidden;
     position: relative;
 }
+    */ 
 
 /* Placeholder for coming soon items */
 .placeholder {
@@ -189,22 +230,38 @@
 
 /* For actual CSS illustrations preview */
 .illustration-preview .css-preview {
-    transform: scale(0.5);
+    transform: scale(0.6);
     transform-origin: center;
 }
 
+.illustration-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(58, 58, 58, 0.95));
+    color: var(--lightest);
+    padding: 20px 16px 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 
 .illustration-info {
     padding: var(--space-lg);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
+*/ 
 
 .illustration-info h3 {
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
     color: var(--teal);
+    font-size: 1.3rem;
 }
 
+/* 
 .techniques {
     font-size: 0.9rem;
     color: var(--dark);
@@ -212,7 +269,17 @@
     margin-bottom: var(--space-md);
     font-style: italic;
 }
+*/ 
 
+.techniques {
+    font-size: 0.85rem;
+    color: var(--lightest);
+    opacity: 0.9;
+    margin-bottom: var(--space-sm);
+    font-style: italic;
+}
+
+/* 
 .view-btn {
     margin-top: auto;
     align-self: flex-start;
@@ -226,10 +293,33 @@
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
 }
+*/ 
 
+.view-btn {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--mustard);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--mustard);
+    border-radius: 15px;
+    background: rgba(242, 204, 143, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* 
 .view-btn:hover {
     color: var(--orange-dark);
     border-bottom-color: var(--orange-dark);
+}
+*/ 
+
+.view-btn:hover {
+    background: var(--mustard);
+    color: var(--dark);
 }
 
 /* ABOUT SECTION */
@@ -292,6 +382,20 @@
     .filter-btn {
         min-height: 44px;
         padding: var(--space-sm) var(--space-md);
+    }
+
+    .gallery-item {
+    max-width: 100%;
+    /* Slightly taller ratio on mobile for better viewing */
+    aspect-ratio: 4 / 3;
+    }
+
+    /* Show info by default on mobile since hover doesn't work well */
+    .illustration-info {
+        opacity: 1;
+        position: static;
+        background: var(--dark);
+        padding: var(--space-md);
     }
 }
 

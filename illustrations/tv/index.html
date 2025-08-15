@@ -25,11 +25,12 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
+
     /* Illustration Page Specific Styles */
     .illustration-page {
       max-width: 1000px;
       margin: 0 auto;
-      padding: var(--space-xl);
+      padding: var(--space-md);
     }
     
     .back-link {
@@ -51,13 +52,12 @@
     
     .illustration-header {
       text-align: center;
-      margin-bottom: var(--space-2xl);
+      margin-bottom: var(--space-xl);
     }
     
     .illustration-title {
       font-size: 2.5rem;
       color: var(--teal);
-      text-shadow: -4px 4px 0 var(--dark);
       margin-bottom: var(--space-md);
       border: none;
     }
@@ -80,41 +80,89 @@
       align-items: center;
       justify-content: center;
       margin-bottom: var(--space-2xl);
+      position: relative;
+      cursor: zoom-in;
+    }
+
+    .illustration-container:hover {
+        cursor: zoom-in;
+    }
+
+    .site-title {
+        font-size: 1.2em;
+    }
+
+    .image-container {
+        position: relative;
+        cursor: zoom-in;
+    }
+
+    .zoom-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        cursor: zoom-out;
+        padding: 20px;
+    }
+
+    .zoom-modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .zoom-modal img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+    }
+
+    .zoom-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        background: none;
+        border: none;
     }
 
   </style>
 </head>
+
 <body>
 
   <!-- Skip Link -->
    <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  <!-- Header -->
+
+    <!-- Header -->
   <header>
-    <nav aria-label=" Main navigation">
+    <nav aria-label="Main navigation">
       <div class="nav-container">
-        <h1 class="site-title">CSS Illustrations</h1>
-        <ul class="nav-links">
-          <li><a href="../../" class="btn">Gallery</a></li>
-          <li><a href="https://aliciawarddev.github.io/alicia-ward-dev" class="btn">Main Portfolio</a></li>
-        </ul>
+        <a href="../../" class="btn" aria-label="Return to main gallery">
+          ← Back to Gallery
+        </a>
       </div>
     </nav>
   </header>
 
   <main id="main-content">
     <div class="illustration-page">
-      <!-- Back to Gallery -->
-      <a href="../../" class="back-link">← Back to Gallery</a>
       
       <!-- Illustration Header -->
       <div class="illustration-header">
-        <h2 class="illustration-title">TODO-TITLE</h2>
+        <h2 class="illustration-title">Retro TV</h2>
         <p class="illustration-meta">Techniques: TODO-TECHNIQUES</p>
       </div>
       
       <!-- Illustration Display -->
-      <div class="illustration-container">
+      <div class="illustration-container" onclick="openZoom()">
         <!-- TV ILLUSTRATION -->
         <div class="tv-illustration-container">
           <!-- TV Top-->
@@ -171,3 +219,41 @@
           </div>
         </div>
       </div>
+    </div>
+</main>
+
+<!-- Zoom Modal-->
+ <div class="zoom-modal" id="zoomModal" onclick="closeZoom()">
+      <button class="zoom-close" onclick="closeZoom()">&times;</button>
+      <img src="" alt="Zoomed illustration" id="zoomedImage">
+  </div>
+
+<!-- Zoom Script -->
+  <script>
+      function openZoom() {
+          const modal = document.getElementById('zoomModal');
+          const zoomedImg = document.getElementById('zoomedImage');
+          
+          // Since this is a CSS illustration, not an image, we'll capture it
+          const illustration = document.querySelector('.tv-illustration-container');
+          
+          // Clone the illustration into the modal
+          modal.innerHTML = '<button class="zoom-close" onclick="closeZoom()">&times;</button>';
+          const clone = illustration.cloneNode(true);
+          clone.style.transform = 'scale(2)';
+          modal.appendChild(clone);
+          
+          modal.classList.add('active');
+      }
+
+      function closeZoom() {
+          document.getElementById('zoomModal').classList.remove('active');
+      }
+
+      // ESC key to close
+      document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') closeZoom();
+      });
+  </script>
+
+</body>
