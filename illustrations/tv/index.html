@@ -73,8 +73,20 @@
       background: var(--lightest);
       border: 2px solid var(--dark);
       border-radius: 25px;
-      padding: var(--space-2xl);
       box-shadow: -6px 6px 0 0 var(--mustard);
+      padding: var(--space-xl);
+          /* Standardized size for all illustrations */
+      width: 900px;
+      height: 600px;
+      max-width: 100%; /* Responsive */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-2xl) auto;
+      position: relative;
+      cursor: zoom-in;
+      overflow: hidden; /* Ensures content stays within borders */
+/* 
       min-height: 400px;
       display: flex;
       align-items: center;
@@ -82,7 +94,13 @@
       margin-bottom: var(--space-2xl);
       position: relative;
       cursor: zoom-in;
+      */ 
     }
+
+    .illustration-container > * {
+    width: 100%;
+    height: 100%;
+}
 
     .illustration-container:hover {
         cursor: zoom-in;
