@@ -64,9 +64,11 @@
     letter-spacing: 0.02em;
 }
 
-/* ABOUT - Card strip */
+/* ABOUT SECTION */
+
 #about {
     padding: 40px;
+    padding-top: 80px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -78,14 +80,22 @@
 }
 
 .about-points {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-left: 2rem;   /* Match the star indent */
+    padding-right: 2rem;  /* Balance it on the right */
 }
 
 .about-point {
-    text-align: left; /* Text stays left-aligned within */
+    text-align: left;
     margin-bottom: var(--space-lg);
-    padding-left: 2rem; /* Room for starburst */
+    padding-left: 1.3rem;   /* Room for starburst */
     position: relative;
+    width: 100%;
+    max-width: 700px;
 }
 
 .about-point::before {
@@ -93,12 +103,11 @@
     position: absolute;
     left: 0;
     color: var(--mustard);
-    font-size: 1.2rem;
-    top: 50%;
-    transform: translateY(-50%);
+    font-size: 1.1rem;
+    bottom: -0.1em;
+    transform: none;
 }
 
-/* Optional: Make the first part bold */
 .about-point strong {
     color: var(--teal);
     font-weight: 600;
@@ -320,15 +329,6 @@
 .view-btn:hover {
     background: var(--mustard);
     color: var(--dark);
-}
-
-/* ABOUT SECTION */
-#about {
-    padding-top: 80px;
-}
-
-#about p {
-    max-width: 800px;
 }
 
 /* =======================================
