@@ -81,75 +81,7 @@
       justify-content: center;
       margin-bottom: var(--space-2xl);
     }
-    
-    .code-section {
-      background: var(--lightest);
-      border: 2px solid var(--dark);
-      border-radius: 25px;
-      padding: var(--space-lg);
-      box-shadow: -6px 6px 0 0 var(--teal);
-    }
-    
-    .code-section summary {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.3rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--dark);
-      cursor: pointer;
-      user-select: none;
-      list-style: none;
-    }
-    
-    .code-section summary::-webkit-details-marker {
-      display: none;
-    }
-    
-    .code-section summary::before {
-      content: '▶';
-      display: inline-block;
-      margin-right: var(--space-sm);
-      transition: transform 0.3s ease;
-    }
-    
-    .code-section[open] summary::before {
-      transform: rotate(90deg);
-    }
-    
-    .code-content {
-      margin-top: var(--space-lg);
-      padding-top: var(--space-lg);
-      border-top: 2px solid var(--dark);
-    }
-    
-    .code-block {
-      background: var(--light);
-      border-radius: 10px;
-      padding: var(--space-md);
-      overflow-x: auto;
-      margin-top: var(--space-md);
-    }
-    
-    .code-block pre {
-      margin: 0;
-      font-family: 'Courier New', monospace;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-    
-    .code-label {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-top: var(--space-lg);
-      margin-bottom: var(--space-sm);
-    }
-    
-    .code-label:first-child {
-      margin-top: 0;
-    }
+
   </style>
 </head>
 <body>
@@ -239,19 +171,3 @@
           </div>
         </div>
       </div>
-      
-      <!-- Code Display -->
-      <details class="code-section">
-        <summary>View Code</summary>
-        <div class="code-content">
-          <div class="code-label">CSS</div>
-          <div class="code-block">
-            <pre><code>/* TODO: Add your CSS code here */
-/* You can copy your actual CSS and paste it here */
-/* Users can then copy this code to learn from it */</code></pre>
-          </div>
-          
-          <div class="code-label">HTML Structure</div>
-          <div class="code-block">
-            <pre><code>&lt;!-- TODO: Add the HTML structure here --&gt;
-&
