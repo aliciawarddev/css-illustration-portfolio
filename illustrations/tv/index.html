@@ -84,7 +84,6 @@
       justify-content: center;
       margin: 0 auto var(--space-2xl) auto;
       position: relative;
-      cursor: zoom-in;
       overflow: hidden; /* Ensures content stays within borders */
 /* 
       min-height: 400px;
@@ -102,53 +101,12 @@
     height: 100%;
 }
 
-    .illustration-container:hover {
-        cursor: zoom-in;
-    }
-
     .site-title {
         font-size: 1.2em;
     }
 
     .image-container {
         position: relative;
-        cursor: zoom-in;
-    }
-
-    .zoom-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        z-index: 1000;
-        cursor: zoom-out;
-        padding: 20px;
-    }
-
-    .zoom-modal.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .zoom-modal img {
-        max-width: 90%;
-        max-height: 90%;
-        object-fit: contain;
-    }
-
-    .zoom-close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        color: white;
-        font-size: 40px;
-        cursor: pointer;
-        background: none;
-        border: none;
     }
 
   </style>
@@ -180,7 +138,7 @@
       </div>
       
       <!-- Illustration Display -->
-      <div class="illustration-container" onclick="openZoom()">
+      <div class="illustration-container">
         <!-- TV ILLUSTRATION -->
         <div class="tv-illustration-container">
           <!-- TV Top-->
@@ -239,39 +197,5 @@
       </div>
     </div>
 </main>
-
-<!-- Zoom Modal-->
- <div class="zoom-modal" id="zoomModal" onclick="closeZoom()">
-      <button class="zoom-close" onclick="closeZoom()">&times;</button>
-      <img src="" alt="Zoomed illustration" id="zoomedImage">
-  </div>
-
-<!-- Zoom Script -->
-  <script>
-      function openZoom() {
-          const modal = document.getElementById('zoomModal');
-          const zoomedImg = document.getElementById('zoomedImage');
-          
-          // Since this is a CSS illustration, not an image, we'll capture it
-          const illustration = document.querySelector('.tv-illustration-container');
-          
-          // Clone the illustration into the modal
-          modal.innerHTML = '<button class="zoom-close" onclick="closeZoom()">&times;</button>';
-          const clone = illustration.cloneNode(true);
-          clone.style.transform = 'scale(2)';
-          modal.appendChild(clone);
-          
-          modal.classList.add('active');
-      }
-
-      function closeZoom() {
-          document.getElementById('zoomModal').classList.remove('active');
-      }
-
-      // ESC key to close
-      document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape') closeZoom();
-      });
-  </script>
 
 </body>

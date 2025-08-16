@@ -1,0 +1,21 @@
+/* COLOR PALETTE */
+:root {
+    --orange-dark: #cf6824;
+    --orange-medium: #dd7a23;
+    --orange-light: #eaa331;
+    --teal-dark: #477a67;
+    --teal-light: #a0bb9c;
+    --cream: #f4d59e;
+}
+
+/* GENERAL */
+
+.diamond-pattern-illustration-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}

@@ -8,7 +8,7 @@
   <meta name="author" content="Alicia Ward">
   
   <!-- Page Title -->
-  <title>TODO-TITLE | CSS Illustrations</title>
+  <title>DIAMOND PATTERN | CSS Illustrations</title>
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FAF3E0' rx='10'/><text x='50' y='70' font-family='Bebas Neue, sans-serif' font-size='50' fill='%233B9C9C' text-anchor='middle' font-weight='400'>AW</text></svg>">
@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
+
     /* Illustration Page Specific Styles */
     .illustration-page {
       max-width: 1000px;
@@ -72,23 +73,42 @@
       background: var(--lightest);
       border: 2px solid var(--dark);
       border-radius: 25px;
-      padding: var(--space-2xl);
       box-shadow: -6px 6px 0 0 var(--mustard);
+      padding: var(--space-xl);
+          /* Standardized size for all illustrations */
+      width: 900px;
+      height: 600px;
+      max-width: 100%; /* Responsive */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-2xl) auto;
+      position: relative;
+      overflow: hidden; /* Ensures content stays within borders */
+/* 
       min-height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: var(--space-2xl);
       position: relative;
+      cursor: zoom-in;
+      */ 
     }
 
+    .illustration-container > * {
+    width: 100%;
+    height: 100%;
+}
+
     .site-title {
-      font-size: 1.2em;
+        font-size: 1.2em;
     }
 
     .image-container {
-      position: relative;
+        position: relative;
     }
+
   </style>
 </head>
 
@@ -112,19 +132,30 @@
       
       <!-- Illustration Header -->
       <div class="illustration-header">
-        <h2 class="illustration-title">TODO-TITLE</h2>
+        <h2 class="illustration-title">DIAMOND PATTERN</h2>
         <p class="illustration-meta">Techniques: TODO-TECHNIQUES</p>
       </div>
       
       <!-- Illustration Display -->
-      <div class="illustration-container" >
-        <!-- TODO: YOUR ILLUSTRATION HTML GOES HERE -->
-        <div class="your-illustration-container">
-          <!-- Your illustration elements -->
+      <div class="illustration-container">
+        <!-- DIAMOND PATTERN -->
+        <div class="diamond-pattern-illustration-container">
+          <div class="diamond-pattern"></div>
         </div>
+
+
+
+
+
       </div>
     </div>
   </main>
+
+  <!-- Zoom Modal -->
+  <div class="zoom-modal" id="zoomModal" onclick="closeZoom()">
+    <button class="zoom-close" onclick="closeZoom()">&times;</button>
+    <img src="" alt="Zoomed illustration" id="zoomedImage">
+  </div>
 
 </body>
 </html>
