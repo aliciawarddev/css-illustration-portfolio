@@ -297,7 +297,7 @@
     font-weight: 400;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--dark);
+    color: var(--lightest);
     text-decoration: none;
     padding: var(--space-xs) var(--space-sm);
     border: 2px solid var(--dark);

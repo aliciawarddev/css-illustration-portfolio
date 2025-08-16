@@ -196,7 +196,7 @@
 
 .bottom {
     width: 125px;
-    height: 15px;
+    height: 10px;
     background-color: var(--brown-dark);
     transform: skew(20deg);
     z-index: 2;
@@ -219,7 +219,7 @@
     align-items: flex-start;
     margin-top: -1px;
     z-index: 1;
-    width: 253px;
+    width: 252px;
 }   
 
 .leg-pair {
