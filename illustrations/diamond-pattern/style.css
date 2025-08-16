@@ -4,6 +4,7 @@
     --orange-medium: #dd7a23;
     --orange-light: #eaa331;
     --teal-dark: #477a67;
+    --teal-medium: #749b81;
     --teal-light: #a0bb9c;
     --cream: #f4d59e;
 }
@@ -15,7 +16,42 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--cream);
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    position: relative;
+    gap: 40px;
+}
+
+.diamond-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+.diamond {
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+}
+
+
+/* DIAMONDS */
+
+.diamond.orange {
+    background-color: var(--orange-light);
+    box-sizing: border-box;
+    border: 15px solid var(--orange-dark);
+    box-shadow: inset 0 0 0 15px var(--orange-medium);
+}
+
+.diamond.teal {
+    background-color: var(--teal-light);
+    box-sizing: border-box;
+    border: 15px solid var(--teal-dark);
+    box-shadow: inset 0 0 0 15px var(--teal-medium);
 }
