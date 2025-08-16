@@ -89,7 +89,8 @@
 
 #about {
     padding: 40px;
-    padding-top: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -306,16 +307,8 @@
     display: inline-block;
 }
 
-/* 
 .view-btn:hover {
-    color: var(--orange-dark);
-    border-bottom-color: var(--orange-dark);
-}
-*/ 
-
-.view-btn:hover {
-    background: var(--mustard);
-    color: var(--dark);
+    background-color: var(--orange-dark);
 }
 
 /* =======================================
@@ -437,11 +430,6 @@
     .filter-btn:hover {
         transform: translateY(-2px);
         box-shadow: -5px 5px 0 0 var(--dark);
-    }
-    
-    .view-btn:hover {
-        color: var(--orange-dark);
-        border-bottom-color: var(--orange-dark);
     }
 
     .gallery-item {
