@@ -8,6 +8,27 @@
    5. Responsive Gallery
    ======================================= */
 
+:root {
+    /* Color Palette */
+    --light: #FAF3E0;  
+    --lightest: #FDF9F0;
+    --dark: #3A3A3A; 
+    --orange: #E07A5F;
+    --orange-dark: #c7654c;
+    --teal: #3B9C9C;
+    --teal-dark: #2f7e7e;
+    --mustard: #F2CC8F;
+    --mustard-light: #f5d8a9;
+    
+    /* Spacing units */
+    --space-xs: 0.25rem;   /* 4px */
+    --space-sm: 0.5rem;    /* 8px */
+    --space-md: 1rem;      /* 16px */
+    --space-lg: 1.5rem;    /* 24px */
+    --space-xl: 2rem;      /* 32px */
+    --space-2xl: 3rem;     /* 48px */
+}
+
 /* HERO SECTION */
 #hero {
     text-align: center;
@@ -114,6 +135,7 @@
 }
 
 /* FILTER SECTION */
+
 #filters {
     padding: 40px 20px;
 }
@@ -157,20 +179,21 @@
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: var(--space-xl);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    row-gap: var(--space-lg);
+    column-gap: var(--space-lg);
     padding: 0 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 /* GALLERY ITEMS */
 
 .gallery-item {
-    /* 16:9 aspect ratio container */
-    width: 100%;
-    max-width: 560px;
-    aspect-ratio: 16 / 9;
+    /* Fixed square size */
+    width: 300px;
+    height: 300px;
     
     /* Card styling */
     background: var(--lightest);
@@ -214,18 +237,11 @@
     position: relative;
 }
 
-/* 
-.illustration-preview {
-    height: 250px;
-    background: var(--light);
-    border-bottom: 2px solid var(--dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
+.illustration-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Or 'contain' if you want to show full image */
 }
-    */ 
 
 /* Placeholder for coming soon items */
 .placeholder {
@@ -248,73 +264,39 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(58, 58, 58, 0.95));
-    color: var(--lightest);
+    background: linear-gradient(to top, var(--lightest) 0%, var(--lightest) 30%, transparent 100%);
+    color: var(--dark);
     padding: 20px 16px 16px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-/* 
-.illustration-info {
-    padding: var(--space-lg);
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-*/ 
-
 .illustration-info h3 {
     margin-bottom: var(--space-xs);
-    color: var(--teal);
-    font-size: 1.3rem;
-}
-
-/* 
-.techniques {
-    font-size: 0.9rem;
     color: var(--dark);
-    opacity: 0.8;
-    margin-bottom: var(--space-md);
-    font-style: italic;
+    font-size: 1.2rem;
 }
-*/ 
 
 .techniques {
     font-size: 0.85rem;
-    color: var(--lightest);
+    color: var(--dark);
     opacity: 0.9;
     margin-bottom: var(--space-sm);
     font-style: italic;
 }
 
-/* 
-.view-btn {
-    margin-top: auto;
-    align-self: flex-start;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--orange);
-    text-decoration: none;
-    padding: var(--space-xs) 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-*/ 
-
 .view-btn {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.9rem;
+    font-weight: 400;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--mustard);
+    color: var(--dark);
     text-decoration: none;
     padding: var(--space-xs) var(--space-sm);
-    border: 1px solid var(--mustard);
+    border: 2px solid var(--dark);
     border-radius: 15px;
-    background: rgba(242, 204, 143, 0.1);
+    background: var(--orange);
     transition: all 0.3s ease;
     display: inline-block;
 }
@@ -334,6 +316,48 @@
 /* =======================================
    MOBILE RESPONSIVENESS
    ======================================= */
+/* For wide monitors - 4 columns */
+@media (min-width: 1400px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: var(--space-2xl);
+        column-gap: var(--space-lg);
+    }
+}
+
+/* For medium/vertical screens - 3 columns */
+@media (min-width: 1000px) and (max-width: 1399px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: var(--space-2xl);
+        column-gap: var(--space-lg);
+    }
+}
+
+/* For tablets - 2 columns */
+@media (min-width: 640px) and (max-width: 999px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: var(--space-xl);
+        column-gap: var(--space-lg);
+    }
+}
+
+/* For mobile - 1 column */
+@media (max-width: 639px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        padding: 0 var(--space-sm);
+    }
+}
+
+/* Adjust gallery item size slightly for better fit */
+.gallery-item {
+    width: 280px; /* Slightly smaller to fit better */
+    height: 280px;
+    /* rest of your styles */
+}
 
 @media (max-width: 768px) {
     .hero-title {
@@ -376,6 +400,8 @@
     /* Gallery items full width with padding */
     .gallery-grid {
         padding: 0 var(--space-sm);
+        justify-items: center;
+        grid-template-columns: 1fr;
     }
     
     /* Ensure filter buttons are touch-friendly */
@@ -385,17 +411,13 @@
     }
 
     .gallery-item {
-    max-width: 100%;
-    /* Slightly taller ratio on mobile for better viewing */
-    aspect-ratio: 4 / 3;
+        width: 280px;
+        height: 280px;
     }
 
     /* Show info by default on mobile since hover doesn't work well */
     .illustration-info {
         opacity: 1;
-        position: static;
-        background: var(--dark);
-        padding: var(--space-md);
     }
 }
 
@@ -415,6 +437,11 @@
     .view-btn:hover {
         color: var(--orange-dark);
         border-bottom-color: var(--orange-dark);
+    }
+
+    .gallery-item {
+        width: 250px; /* Even smaller on very small screens */
+        height: 250px;
     }
 }
 
