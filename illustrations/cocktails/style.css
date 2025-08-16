@@ -1,0 +1,13 @@
+/* COLOR PALETTE */
+:root {
+    /* Shaker */
+    --shaker-lightest: #fbd492;
+    --shaker-light: #7d6a45;
+    --shaker-medium: #af8347;
+    --shaker-dark: #222a28;
+    /* Glass */
+    --glass-lightest: #f6deb0;
+    --glass-light: #d5c087;
+    --glass-medium: #5f7f67;
+    --glass-dark: #326256;
+}
