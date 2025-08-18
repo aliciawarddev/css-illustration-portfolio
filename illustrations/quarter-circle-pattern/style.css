@@ -2,11 +2,11 @@
 
 /* COLOR PALETTE */
 :root {
-    --cream: #FFF5F0;        /* Peachy cream */
-    --blush: #F2B8C6;        /* Soft vibrant pink */
-    --sage: #9CAA88;         /* Muted sage green */
-    --mauve: #D47A96;        /* Deeper pink-mauve */
-    --cocoa: #8B6355;        /* Warm brown */
+    --cream: #FAF3E0;        /* Borders */
+    --pearl: #FBF7F0;        /* Lightest fill */
+    --linen: #F7F0E5;        /* Light fill */
+    --sand: #F4EAD5;         /* Medium fill */
+    --wheat: #F0E5CC;        /* Darker fill */
 }
 
 .quarter-circle-pattern-illustration-container {
@@ -15,11 +15,11 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: var(--cocoa);
+    background-color: var(--background);
     overflow: hidden;
     width: 100%;
     height: 100%;
-    gap: 0;
+    gap: 0px;
 }
 
 .row {
@@ -28,14 +28,13 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    gap: 0;
+    gap: 0px;
 }
 
 .circle {
     width: 100px;
     height: 100px;
     position: relative;
-    transition: transform 0.3s ease;
 }
 
 /* TOP HALF */
@@ -51,21 +50,19 @@
 .quarter-top-left {
     width: 50px;
     height: 50px;
-    background-color: var(--cocoa);
     border-radius: 50px 0 0 0;
-    border: 4px solid var(--cream);
-    border-right: 2px solid var(--cream);
-    border-bottom: 2px solid var(--cream);
+    border: 2px solid var(--cream);
+    border-right: 1px solid var(--cream);
+    border-bottom: 1px solid var(--cream);
 }
 
 .quarter-top-right {
     width: 50px;
     height: 50px;
-    background-color: var(--blush);
     border-radius: 0 50px 0 0;
-    border: 4px solid var(--cream);
-    border-left: 2px solid var(--cream);
-    border-bottom: 2px solid var(--cream);
+    border: 2px solid var(--cream);
+    border-left: 1px solid var(--cream);
+    border-bottom: 1px solid var(--cream);
 }
 
 /* BOTTOM HALF */
@@ -81,24 +78,46 @@
 .quarter-bottom-left {
     width: 50px;
     height: 50px;
-    background-color: var(--mauve);
     border-radius: 0 0 0 50px;
-    border: 4px solid var(--cream);
-    border-top: 2px solid var(--cream);
-    border-right: 2px solid var(--cream);
+    border: 2px solid var(--cream);
+    border-top: 1px solid var(--cream);
+    border-right: 1px solid var(--cream);
 }
 
 .quarter-bottom-right {
     width: 50px;
     height: 50px;
-    background-color: var(--sage);
     border-radius: 0 0 50px 0;
-    border: 4px solid var(--cream);
-    border-left: 2px solid var(--cream);
-    border-top: 2px solid var(--cream);
+    border: 2px solid var(--cream);
+    border-left: 1px solid var(--cream);
+    border-top: 1px solid var(--cream);
 }
 
-/* BORDERS */
+/* QUARTER CIRCLES - COLORS */
 
+/* All circles the same, creating a uniform pattern */
+.circle .quarter-top-left { background-color: var(--pearl); }
+.circle .quarter-top-right { background-color: var(--linen); }
+.circle .quarter-bottom-left { background-color: var(--linen); }
+.circle .quarter-bottom-right { background-color: var(--pearl); }
 
-/* ANIMATION */
+/* OR: Checkerboard with just 2 tones */
+.circle:nth-child(odd) .quarter-top-left,
+.circle:nth-child(odd) .quarter-bottom-right { 
+    background-color: var(--pearl); 
+}
+
+.circle:nth-child(odd) .quarter-top-right,
+.circle:nth-child(odd) .quarter-bottom-left { 
+    background-color: var(--sand); 
+}
+
+.circle:nth-child(even) .quarter-top-left,
+.circle:nth-child(even) .quarter-bottom-right { 
+    background-color: var(--sand); 
+}
+
+.circle:nth-child(even) .quarter-top-right,
+.circle:nth-child(even) .quarter-bottom-left { 
+    background-color: var(--pearl); 
+}
