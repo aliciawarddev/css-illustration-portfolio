@@ -1,5 +1,6 @@
 /* COLOR PALETTE */
 :root {
+    /* Old color palette 
     --orange-dark: #cf6824;
     --orange-medium: #dd7a23;
     --orange-light: #eaa331;
@@ -7,6 +8,17 @@
     --teal-medium: #749b81;
     --teal-light: #a0bb9c;
     --cream: #f4d59e;
+    */
+    /* NEW COLOR PALETTE */
+    /* Light off-white background */
+    /* Light off-white background */
+    --cream: #FFFEFB;
+    --pink-dark: #C08081;
+    --pink-medium: #DDA0A2;
+    --pink-light: #F0C0C1;
+    --olive-dark: #6B6B47;
+    --olive-medium: #8A8A5F;
+    --olive-light: #A8A881;
 }
 
 /* GENERAL */
@@ -37,10 +49,75 @@
     width: 100px;
     height: 100px;
     transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SPACE */
+.space {
+    background-color: var(--cream);
+}
+
+.space.outer {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.space.inner {
+    width: 40px;
+    height: 40px;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TEAL DIAMOND */
+.diamond.teal {
+    background-color: var(--olive-dark);
+}
+
+.teal.middle {
+    background-color: var(--olive-medium);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.teal-inner {
+    background-color: var(--olive-light);
+    width: 20px;
+    height: 20px;
+}
+
+/* ORANGE DIAMOND */
+.diamond.orange {
+    background-color: var(--pink-dark);
+}
+
+.orange.middle {
+    background-color: var(--pink-medium);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orange.inner {
+    background-color: var(--pink-light);
+    width: 20px;
+    height: 20px;
 }
 
 
 /* DIAMONDS */
+/* 
 
 .diamond.orange {
     background-color: var(--orange-light);
@@ -55,3 +132,4 @@
     border: 15px solid var(--teal-dark);
     box-shadow: inset 0 0 0 15px var(--teal-medium);
 }
+*/ 
