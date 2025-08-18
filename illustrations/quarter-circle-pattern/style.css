@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: var(--cream);
+    background-color: var(--cocoa);
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -28,18 +28,20 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    gap: 0;
 }
 
 .circle {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     position: relative;
+    transition: transform 0.3s ease;
 }
 
 /* TOP HALF */
 .top-half {
-    width: 120px;
-    height: 60px;
+    width: 100px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,23 +49,29 @@
 }
 
 .quarter-top-left {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: var(--cocoa);
-    border-radius: 60px 0 0 0;
+    border-radius: 50px 0 0 0;
+    border: 4px solid var(--cream);
+    border-right: 2px solid var(--cream);
+    border-bottom: 2px solid var(--cream);
 }
 
 .quarter-top-right {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: var(--blush);
-    border-radius: 0 60px 0 0;
+    border-radius: 0 50px 0 0;
+    border: 4px solid var(--cream);
+    border-left: 2px solid var(--cream);
+    border-bottom: 2px solid var(--cream);
 }
 
 /* BOTTOM HALF */
 .bottom-half {
-    width: 120px;
-    height: 60px;
+    width: 100px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,15 +79,26 @@
 }
 
 .quarter-bottom-left {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: var(--mauve);
-    border-radius: 0 0 0 60px;
+    border-radius: 0 0 0 50px;
+    border: 4px solid var(--cream);
+    border-top: 2px solid var(--cream);
+    border-right: 2px solid var(--cream);
 }
 
 .quarter-bottom-right {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: var(--sage);
-    border-radius: 0 0 60px 0;
+    border-radius: 0 0 50px 0;
+    border: 4px solid var(--cream);
+    border-left: 2px solid var(--cream);
+    border-top: 2px solid var(--cream);
 }
+
+/* BORDERS */
+
+
+/* ANIMATION */
