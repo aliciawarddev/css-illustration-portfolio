@@ -1,0 +1,79 @@
+/* COLOR PALETTE */
+:root {
+    --cream: #FFF5F0;        /* Peachy cream */
+    --blush: #F2B8C6;        /* Soft vibrant pink */
+    --sage: #9CAA88;         /* Muted sage green */
+    --mauve: #D47A96;        /* Deeper pink-mauve */
+    --cocoa: #8B6355;        /* Warm brown */
+}
+
+.quarter-circle-pattern-illustration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--cream);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+/* TOP HALF */
+.top-half {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.quarter-top-left {
+    width: 50px;
+    height: 50px;
+    background-color: var(--cocoa);
+    border-radius: 50px 0 0 0;
+}
+
+.quarter-top-right {
+    width: 50px;
+    height: 50px;
+    background-color: var(--blush);
+    border-radius: 0 50px 0 0;
+}
+
+/* BOTTOM HALF */
+.bottom-half {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.quarter-bottom-left {
+    width: 50px;
+    height: 50px;
+    background-color: var(--mauve);
+    border-radius: 0 0 0 50px;
+}
+
+.quarter-bottom-right {
+    width: 50px;
+    height: 50px;
+    background-color: var(--sage);
+    border-radius: 0 0 50px 0;
+}
