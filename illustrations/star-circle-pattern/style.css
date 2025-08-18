@@ -1,11 +1,25 @@
 /* COLOR PALETTE */
-
+:root {
+    --teal-light: #8FA5A0;   /* Gray-teal */
+    --teal-medium: #5E7975;  /* Muted teal */
+    --teal-dark: #3B5452;    /* Charcoal-teal */
+}
 
 .star-circle-pattern-illustration-container {
     height: 100%;
     width: 100%;
-    background-color: white;
+    background-color: var(--teal-medium);
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -14,25 +28,45 @@
 .circle {
     width: 100px;
     height: 100px;
-    background-color: orange;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .star {
-    font-size: 100px;
+    font-size: 143px;
     line-height: 0;
     position: absolute;
-    top: 45%;
+    top: 42%;
     left: 50%;
-       transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     margin: 0;
     padding: 0;
-    color: red;
     display: block;
     text-align: center;
     vertical-align: middle;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+/* COLORS */
+
+.circle.light {
+    background-color: var(--teal-light);
+}
+
+.circle.dark {
+    background-color: var(--teal-dark);
+}
+
+.star.light {
+    color: var(--teal-medium);
+}
+
+.star.dark {
+    color: var(--teal-light);
 }
