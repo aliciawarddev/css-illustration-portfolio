@@ -72,15 +72,24 @@
       background: var(--lightest);
       border: 2px solid var(--dark);
       border-radius: 25px;
-      padding: var(--space-2xl);
       box-shadow: -6px 6px 0 0 var(--mustard);
-      min-height: 400px;
+      padding: var(--space-xl);  /* Change from space-2xl to space-xl */
+      /* Add these specific dimensions */
+      width: 900px;
+      height: 600px;
+      max-width: 100%; /* Responsive */
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: var(--space-2xl);
+      margin: 0 auto var(--space-2xl) auto;
       position: relative;
+      overflow: hidden;
     }
+
+    .illustration-container > * {
+      width: 100%;
+      height: 100%;
+}
 
     .site-title {
       font-size: 1.2em;
