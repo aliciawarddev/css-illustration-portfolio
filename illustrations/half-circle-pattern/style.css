@@ -1,8 +1,9 @@
 /* COLORS */
 :root {
-    --color1: #FFB5BA; 
-    --color2: #FF6B6B;
-    --background: #FFF4F0; 
+    --color1: #FF9FA5;      /* Warmer, more balanced pink */
+    --color2: #FF6B6B;      /* Keep the coral */
+    --color3: #FF5252;      /* Deeper accent coral */
+    --background: #FFF8F5;  /* Warmer, creamier background */
 }
 
 .half-circle-pattern-illustration-container {
@@ -47,14 +48,16 @@
     width: 100px;
     height: 50px;
     border-radius: 0 0 50px 50px;
-    background-color: var(--color1);
+    background: linear-gradient(135deg, var(--color1) 0%, #FFB5BA 100%);
+    box-shadow: inset 0 2px 4px rgba(255, 107, 107, 0.15);
 }
 
 .half-bottom {
     width: 100px;
     height: 50px;
     border-radius: 50px 50px 0 0;
-    background-color: var(--color2);
+    background: linear-gradient(315deg, var(--color2) 0%, #FF7F7F 100%);
+    box-shadow: inset 0 -2px 4px rgba(255, 107, 107, 0.15);
 }
 
 /* HORIZONTAL */
@@ -62,12 +65,14 @@
     width: 50px;
     height: 100px;
     border-radius: 0 50px 50px 0;
-    background-color: var(--color1);
+    background: linear-gradient(45deg, var(--color1) 0%, #FFB5BA 100%);
+    box-shadow: inset -2px 0 4px rgba(255, 107, 107, 0.15);
 }
 
 .half-right {
     width: 50px;
     height: 100px;
     border-radius: 50px 0 0 50px;
-    background-color: var(--color2);
+    background: linear-gradient(225deg, var(--color2) 0%, #FF7F7F 100%);
+    box-shadow: inset 2px 0 4px rgba(255, 107, 107, 0.15);
 }
