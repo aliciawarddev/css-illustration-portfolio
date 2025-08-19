@@ -1,0 +1,221 @@
+/* COLOR PALETTE */
+:root {
+    --blush: #FFD4C1;
+    --apricot: #FF9B6D;
+    --terracotta: #E96543;
+    --rust: #C23B1C;
+}
+
+.circle-pattern-illustration-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oval {
+    width: 55px;
+    height: 80px;
+    border-radius: 50%;
+    transform: rotate(30deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 4 COLOR COMBINATIONS */
+
+/* Combo 1 */
+.square.c1 {
+    background-color: var(--blush);
+}
+
+.circle.c1 {
+    background-color: var(--rust);
+}
+
+.oval.c1 {
+    background-color: var(--apricot);
+}
+
+/* Combo 2 */
+.square.c2 {
+    background-color: var(--rust);
+}
+
+.circle.c2 {
+    background-color: var(--blush);
+}
+
+.oval.c2 {
+    background-color: var(--terracotta);
+}
+
+/* Combo 3 */
+.square.c3 {
+    background-color: var(--apricot);
+}
+
+.circle.c3 {
+    background-color: var(--terracotta);
+}
+
+.oval.c3 {
+    background-color: var(--blush);
+}
+
+/* Combo 4 */
+.square.c4 {
+    background-color: var(--terracotta);
+}
+
+.circle.c4 {
+    background-color: var(--apricot);
+}
+
+.oval.c4 {
+    background-color: var(--rust);
+}
+
+/* PATTERNS */
+
+/* Define row offsets */
+.row:nth-child(1) { --offset: 0; }
+.row:nth-child(2) { --offset: 1; }
+.row:nth-child(3) { --offset: 2; }
+.row:nth-child(4) { --offset: 3; }
+.row:nth-child(5) { --offset: 0; }
+.row:nth-child(6) { --offset: 1; }
+
+/* Apply combinations based on position + offset */
+/* Pattern 1 */
+.row:nth-child(1) .square:nth-child(4n+1),
+.row:nth-child(2) .square:nth-child(4n+4),
+.row:nth-child(3) .square:nth-child(4n+3),
+.row:nth-child(4) .square:nth-child(4n+2),
+.row:nth-child(5) .square:nth-child(4n+1),
+.row:nth-child(6) .square:nth-child(4n+4) {
+   background-color: var(--blush);
+}
+.row:nth-child(1) .square:nth-child(4n+1) .circle,
+.row:nth-child(2) .square:nth-child(4n+4) .circle,
+.row:nth-child(3) .square:nth-child(4n+3) .circle,
+.row:nth-child(4) .square:nth-child(4n+2) .circle,
+.row:nth-child(5) .square:nth-child(4n+1) .circle,
+.row:nth-child(6) .square:nth-child(4n+4) .circle {
+   background-color: var(--rust);
+}
+.row:nth-child(1) .square:nth-child(4n+1) .oval,
+.row:nth-child(2) .square:nth-child(4n+4) .oval,
+.row:nth-child(3) .square:nth-child(4n+3) .oval,
+.row:nth-child(4) .square:nth-child(4n+2) .oval,
+.row:nth-child(5) .square:nth-child(4n+1) .oval,
+.row:nth-child(6) .square:nth-child(4n+4) .oval {
+   background-color: var(--apricot);
+}
+
+/* Pattern 2 */
+.row:nth-child(1) .square:nth-child(4n+2),
+.row:nth-child(2) .square:nth-child(4n+1),
+.row:nth-child(3) .square:nth-child(4n+4),
+.row:nth-child(4) .square:nth-child(4n+3),
+.row:nth-child(5) .square:nth-child(4n+2),
+.row:nth-child(6) .square:nth-child(4n+1) {
+   background-color: var(--rust);
+}
+.row:nth-child(1) .square:nth-child(4n+2) .circle,
+.row:nth-child(2) .square:nth-child(4n+1) .circle,
+.row:nth-child(3) .square:nth-child(4n+4) .circle,
+.row:nth-child(4) .square:nth-child(4n+3) .circle,
+.row:nth-child(5) .square:nth-child(4n+2) .circle,
+.row:nth-child(6) .square:nth-child(4n+1) .circle {
+   background-color: var(--blush);
+}
+.row:nth-child(1) .square:nth-child(4n+2) .oval,
+.row:nth-child(2) .square:nth-child(4n+1) .oval,
+.row:nth-child(3) .square:nth-child(4n+4) .oval,
+.row:nth-child(4) .square:nth-child(4n+3) .oval,
+.row:nth-child(5) .square:nth-child(4n+2) .oval,
+.row:nth-child(6) .square:nth-child(4n+1) .oval {
+   background-color: var(--terracotta);
+}
+
+/* Pattern 3 */
+.row:nth-child(1) .square:nth-child(4n+3),
+.row:nth-child(2) .square:nth-child(4n+2),
+.row:nth-child(3) .square:nth-child(4n+1),
+.row:nth-child(4) .square:nth-child(4n+4),
+.row:nth-child(5) .square:nth-child(4n+3),
+.row:nth-child(6) .square:nth-child(4n+2) {
+   background-color: var(--apricot);
+}
+.row:nth-child(1) .square:nth-child(4n+3) .circle,
+.row:nth-child(2) .square:nth-child(4n+2) .circle,
+.row:nth-child(3) .square:nth-child(4n+1) .circle,
+.row:nth-child(4) .square:nth-child(4n+4) .circle,
+.row:nth-child(5) .square:nth-child(4n+3) .circle,
+.row:nth-child(6) .square:nth-child(4n+2) .circle {
+   background-color: var(--terracotta);
+}
+.row:nth-child(1) .square:nth-child(4n+3) .oval,
+.row:nth-child(2) .square:nth-child(4n+2) .oval,
+.row:nth-child(3) .square:nth-child(4n+1) .oval,
+.row:nth-child(4) .square:nth-child(4n+4) .oval,
+.row:nth-child(5) .square:nth-child(4n+3) .oval,
+.row:nth-child(6) .square:nth-child(4n+2) .oval {
+   background-color: var(--blush);
+}
+
+/* Pattern 4 */
+.row:nth-child(1) .square:nth-child(4n+4),
+.row:nth-child(2) .square:nth-child(4n+3),
+.row:nth-child(3) .square:nth-child(4n+2),
+.row:nth-child(4) .square:nth-child(4n+1),
+.row:nth-child(5) .square:nth-child(4n+4),
+.row:nth-child(6) .square:nth-child(4n+3) {
+    background-color: var(--terracotta);
+}
+.row:nth-child(1) .square:nth-child(4n+4) .circle,
+.row:nth-child(2) .square:nth-child(4n+3) .circle,
+.row:nth-child(3) .square:nth-child(4n+2) .circle,
+.row:nth-child(4) .square:nth-child(4n+1) .circle,
+.row:nth-child(5) .square:nth-child(4n+4) .circle,
+.row:nth-child(6) .square:nth-child(4n+3) .circle {
+    background-color: var(--apricot);
+}
+.row:nth-child(1) .square:nth-child(4n+4) .oval,
+.row:nth-child(2) .square:nth-child(4n+3) .oval,
+.row:nth-child(3) .square:nth-child(4n+2) .oval,
+.row:nth-child(4) .square:nth-child(4n+1) .oval,
+.row:nth-child(5) .square:nth-child(4n+4) .oval,
+.row:nth-child(6) .square:nth-child(4n+3) .oval {
+    background-color: var(--rust);
+}
