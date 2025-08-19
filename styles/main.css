@@ -333,8 +333,15 @@ footer p {
     outline-offset: 2px;
 }
 
-.btn:focus,
-.filter-btn:focus {
+/* Remove outline on click, keep for keyboard navigation */
+.btn:focus:not(:focus-visible),
+.filter-btn:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Keep outline for keyboard navigation */
+.btn:focus-visible,
+.filter-btn:focus-visible {
     outline: 3px solid var(--teal);
     outline-offset: 4px;
 }
