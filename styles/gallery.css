@@ -214,16 +214,6 @@
     justify-self: center;
 }
 
-/* 
-.gallery-item {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-*/ 
-
 .gallery-item.hidden {
     display: none;
 }
