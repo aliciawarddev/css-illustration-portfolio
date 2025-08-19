@@ -1,8 +1,8 @@
 /* COLOR PALETTE */
 :root {
-    --teal-light: #8FA5A0;   /* Gray-teal */
-    --teal-medium: #5E7975;  /* Muted teal */
-    --teal-dark: #3B5452;    /* Charcoal-teal */
+    --teal-light: #7FC4B3;   /* Gray-teal */
+    --teal-medium: #4A9A8C;  /* Muted teal */
+    --teal-dark: #2A6B63;    /* Charcoal-teal */
 }
 
 .star-circle-pattern-illustration-container {
