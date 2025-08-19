@@ -55,17 +55,53 @@
     }
     
     .illustration-title {
-      font-size: 2.5rem;
-      color: var(--teal);
-      margin-bottom: var(--space-md);
-      border: none;
+        font-size: 2.5rem;
+        color: var(--teal);
+        margin-bottom: var(--space-md);
+        border: none;
     }
     
     .illustration-meta {
-      font-size: 0.9rem;
-      color: var(--dark);
-      opacity: 0.8;
-      font-style: italic;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meta-title {
+        font-size: 1rem;
+        color: var(--dark);
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        text-align: center;
+    }
+
+    .techniques-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        width: fit-content;
+    }
+
+    .techniques-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 0.85rem;
+        color: var(--dark);
+        text-align: left;
+    }
+
+    .techniques-list li::before {
+        content: '✦';
+        position: absolute;
+        left: 0;
+        color: var(--mustard);
+        font-size: 1rem;
     }
     
     .illustration-container {
@@ -87,8 +123,8 @@
     }
 
     .illustration-container > * {
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
     .site-title {
@@ -121,8 +157,17 @@
       
       <!-- Illustration Header -->
       <div class="illustration-header">
-        <h2 class="illustration-title">TODO-TITLE</h2>
-        <p class="illustration-meta">Techniques: TODO-TECHNIQUES</p>
+        <h2 class="illustration-title">TODO- TITLE</h2>
+        <div clas="illustration-meta">
+            <p class="meta-title">Techniques Used:</p>
+            <ul class="techniques-list">
+                <li> TODO-CSS Border-Radius for perfect half-circles</li>
+                <li>Linear & radial gradients for depth</li>
+                <li>Inset box-shadows for subtle dimension</li>
+                <li>Flexbox grid layout system</li>
+                <li>CSS custom properties for color theming</li>
+            </ul>
+        </div>
       </div>
       
       <!-- Illustration Display -->
