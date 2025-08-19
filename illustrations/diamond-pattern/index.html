@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-
     /* Illustration Page Specific Styles */
     .illustration-page {
       max-width: 1000px;
@@ -56,17 +55,53 @@
     }
     
     .illustration-title {
-      font-size: 2.5rem;
-      color: var(--teal);
-      margin-bottom: var(--space-md);
-      border: none;
+        font-size: 2.5rem;
+        color: var(--teal);
+        margin-bottom: var(--space-md);
+        border: none;
     }
     
     .illustration-meta {
-      font-size: 0.9rem;
-      color: var(--dark);
-      opacity: 0.8;
-      font-style: italic;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meta-title {
+        font-size: 1rem;
+        color: var(--dark);
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        text-align: center;
+    }
+
+    .techniques-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        width: fit-content;
+    }
+
+    .techniques-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 0.85rem;
+        color: var(--dark);
+        text-align: left;
+    }
+
+    .techniques-list li::before {
+        content: '✦';
+        position: absolute;
+        left: 0;
+        color: var(--mustard);
+        font-size: 1rem;
     }
     
     .illustration-container {
@@ -74,8 +109,8 @@
       border: 2px solid var(--dark);
       border-radius: 25px;
       box-shadow: -6px 6px 0 0 var(--mustard);
-      padding: var(--space-xl);
-          /* Standardized size for all illustrations */
+      padding: var(--space-xl);  /* Change from space-2xl to space-xl */
+      /* Add these specific dimensions */
       width: 900px;
       height: 600px;
       max-width: 100%; /* Responsive */
@@ -84,7 +119,7 @@
       justify-content: center;
       margin: 0 auto var(--space-2xl) auto;
       position: relative;
-      overflow: hidden; /* Ensures content stays within borders */
+      overflow: hidden;
     }
 
     .illustration-container > * {
@@ -93,13 +128,12 @@
 }
 
     .site-title {
-        font-size: 1.2em;
+      font-size: 1.2em;
     }
 
     .image-container {
-        position: relative;
+      position: relative;
     }
-
   </style>
 </head>
 
