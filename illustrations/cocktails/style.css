@@ -24,7 +24,7 @@
    /* Old Fashioned Drink */
     --orange-light: #f6761a;
     --orange-medium: #d64912;
-    --orange-dark: #cf4812;
+    --orange-dark: #922b0f;
     --cherry-light: #ef8b39;
     --cherry-medium: #e05513;
     --cherry-dark: #b83510;
@@ -34,11 +34,12 @@
     --ice-cube-dark: #db5210;
 
    /* Old Fashioned Glass */
-    --of-glass-1: #fbe3b5;
-    --of-glass-2: #ecc584;
-    --of-glass-3: #a4a77a;
-    --of-glass-4: #5d7c65;
-    --of-glass-5: #356659;
+    --glass-1: #fbe3b5;
+    --glass-2: #ecc584;
+    --glass-3: #a4a77a;
+    --glass-4: #5d7c65;
+    --glass-5: #356659;
+    --glass-shadow: #515241;
 }
 
 .cocktails-illustration-container {
@@ -117,3 +118,46 @@
     background-color: var(--cherry-light);
 }
 
+/* GLASS */
+.glass-outer {
+    width: 200px;
+    height: 200px;
+    background-color: var(--glass-5);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 0 0 var(--glass-shadow);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* DRINK */
+.drink-outer {
+    background-color: var(--orange-dark);
+    width: 180px;
+    height: 110px;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.drink-inner {
+    width: 140px;
+    height: 95px;
+    background-color: var(--orange-medium);
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.drink-inner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    background-color: var(--orange-light);
+    border-radius: 0 0 0 20px;
+}
