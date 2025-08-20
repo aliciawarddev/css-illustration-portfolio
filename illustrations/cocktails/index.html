@@ -55,37 +55,77 @@
     }
     
     .illustration-title {
-      font-size: 2.5rem;
-      color: var(--teal);
-      margin-bottom: var(--space-md);
-      border: none;
+        font-size: 2.5rem;
+        color: var(--teal);
+        margin-bottom: var(--space-md);
+        border: none;
     }
     
     .illustration-meta {
-      font-size: 0.9rem;
-      color: var(--dark);
-      opacity: 0.8;
-      font-style: italic;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meta-title {
+        font-size: 1rem;
+        color: var(--dark);
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        text-align: center;
+    }
+
+    .techniques-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        width: fit-content;
+    }
+
+    .techniques-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 0.85rem;
+        color: var(--dark);
+        text-align: left;
+    }
+
+    .techniques-list li::before {
+        content: '✦';
+        position: absolute;
+        left: 0;
+        color: var(--mustard);
+        font-size: 1rem;
     }
     
     .illustration-container {
       background: var(--lightest);
       border: 2px solid var(--dark);
       border-radius: 25px;
-      padding: var(--space-2xl);
       box-shadow: -6px 6px 0 0 var(--mustard);
-      min-height: 400px;
+      padding: var(--space-xl);  /* Change from space-2xl to space-xl */
+      /* Add these specific dimensions */
+      width: 900px;
+      height: 600px;
+      max-width: 100%; /* Responsive */
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: var(--space-2xl);
+      margin: 0 auto var(--space-2xl) auto;
       position: relative;
-      cursor: zoom-in;
+      overflow: hidden;
     }
 
-    .illustration-container:hover {
-      cursor: zoom-in;
-    }
+    .illustration-container > * {
+    width: 100%;
+    height: 100%;
+}
 
     .site-title {
       font-size: 1.2em;
@@ -93,43 +133,6 @@
 
     .image-container {
       position: relative;
-      cursor: zoom-in;
-    }
-
-    .zoom-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.95);
-      z-index: 1000;
-      cursor: zoom-out;
-      padding: 20px;
-    }
-
-    .zoom-modal.active {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .zoom-modal img {
-      max-width: 90%;
-      max-height: 90%;
-      object-fit: contain;
-    }
-
-    .zoom-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
-      font-size: 40px;
-      cursor: pointer;
-      background: none;
-      border: none;
     }
   </style>
 </head>
@@ -155,58 +158,29 @@
       <!-- Illustration Header -->
       <div class="illustration-header">
         <h2 class="illustration-title">COCKTAILS</h2>
-        <p class="illustration-meta">Techniques: TODO-TECHNIQUES</p>
+        <div clas="illustration-meta">
+            <p class="meta-title">Techniques Used:</p>
+            <ul class="techniques-list">
+                <li> obs</li>
+                <li>oBS</li>
+                <li>OBS</li>
+                <li>OBS</li>
+                <li>OBS</li>
+            </ul>
+        </div>
       </div>
       
       <!-- Illustration Display -->
-      <div class="illustration-container" onclick="openZoom()">
-        <!-- COCKTAILS HTML CODE -->
-         <div class="cocktails-illustration-container">
-            
-         </div>
-
-
-
-
-
-
-
+      <div class="illustration-container" >
+        <!-- COCKTAILS -->
+        <div class="cocktails-illustration-container">
+          <div class="old-fashioned-wrapper">
+            <div class="of-glass"></div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
-
-  <!-- Zoom Modal -->
-  <div class="zoom-modal" id="zoomModal" onclick="closeZoom()">
-    <button class="zoom-close" onclick="closeZoom()">&times;</button>
-    <img src="" alt="Zoomed illustration" id="zoomedImage">
-  </div>
-
-  <!-- Zoom Script -->
-  <script>
-    function openZoom() {
-      const modal = document.getElementById('zoomModal');
-      
-      // Since this is a CSS illustration, not an image, we'll capture it
-      const illustration = document.querySelector('.your-illustration-container');
-      
-      // Clone the illustration into the modal
-      modal.innerHTML = '<button class="zoom-close" onclick="closeZoom()">&times;</button>';
-      const clone = illustration.cloneNode(true);
-      clone.style.transform = 'scale(2)';
-      modal.appendChild(clone);
-      
-      modal.classList.add('active');
-    }
-
-    function closeZoom() {
-      document.getElementById('zoomModal').classList.remove('active');
-    }
-
-    // ESC key to close
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeZoom();
-    });
-  </script>
 
 </body>
 </html>

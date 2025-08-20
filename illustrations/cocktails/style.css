@@ -11,3 +11,15 @@
     --glass-medium: #5f7f67;
     --glass-dark: #326256;
 }
+
+.cocktails-illustration-container {
+    width: 100%;
+    height: 100%;
+}
+
+.old-fashioned-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
