@@ -5,12 +5,12 @@
    --background-shadow: #f9d492;
    
    /* Cocktail Shaker */
-   --shaker-1: #FAE6C8;
-   --shaker-2: #E6C88A;
-   --shaker-3: #B8956A;
-   --shaker-4: #6B6B5A;
-   --shaker-5: #3A4A42;
-   --shaker-shadow: #493426;
+    --shaker-1: #FFEBB8;    /* Bright champagne gold */
+    --shaker-2: #F4CE7A;    /* Vibrant light gold */
+    --shaker-3: #E0B055;    /* Rich honey gold */
+    --shaker-4: #C49440;    /* Warm bronze-gold */
+    --shaker-5: #B8843A;    /* Rich deep bronze */
+    --shaker-shadow: #6B5A45; /* Warm shadow */
    
    /* Martini Glass */
    --teal-light: #7FC4B8;
@@ -18,42 +18,46 @@
    --teal-martini: #2A6B63;
    --glass-highlight: #E8F4F0;
    
-   /* Details */
-   --olive-green: #7A8B4A;
-   --black-stirrer: #2C2C2C;
-   --shadow-base: #D4C4B0;
 
    /* Old Fashioned Drink */
-    --orange-light: #f6761a;
-    --orange-medium: #d64912;
-    --orange-dark: #922b0f;
-    --cherry-light: #ef8b39;
-    --cherry-medium: #e05513;
-    --cherry-dark: #b83510;
-    --toothpick: #402719;
-    --ice-cube-light: #fc9937;
-    --ice-cube-medium: #f57e21;
-    --ice-cube-dark: #db5210;
+    --orange-light: #FFA042;    /* Bright amber */
+    --orange-medium: #E87A28;   /* Rich whiskey orange */
+    --orange-dark: #C25818;     /* Deep bourbon */
+
+    --cherry-light: #FF6B6B;    /* Bright maraschino red */
+    --cherry-medium: #E84545;   /* Classic cherry red */
+    --cherry-dark: #C23030;     /* Deep cherry red */
+
+    --toothpick: #4A3A2C;       /* Warm dark brown */
+
+    --ice-cube-light: #FFBC7A;  /* Light amber glow */
+    --ice-cube-medium: #FFA558; /* Whiskey-tinted */
+    --ice-cube-dark: #E88840;   /* Deep amber */
+
 
    /* Old Fashioned Outer Glass */
-    --glass-1: #fbe3b5;
-    --glass-2: #ecc584;
-    --glass-3: #a4a77a;
-    --glass-4: #5d7c65;
-    --glass-5: #356659; 
-    --glass-shadow: #515241;
+    --glass-1: #fbe3b5;      /* Keep your base */
+    --glass-2: #E5CFA0;      /* Warm with subtle teal hint */
+    --glass-3: #B8B08A;      /* Olive with teal undertone */
+    --glass-4: #7A9280;      /* Teal-bronze */
+    --glass-5: #5F7E70;     /* Deep teal-green */
+    --glass-shadow: #3A4A42; /* Teal shadow */
 
-    /* Old Fashioned Inner Glass */
-    --glass-inner-1: #feefcf;  /* Lightest - pale cream */
-    --glass-inner-2: #f6dfb1;  /* Light tan */
-    --glass-inner-3: #bdb581;  /* Medium olive-tan */
-    --glass-inner-4: #b4af80;  /* Darkest - muted olive */
+    /* Old Fashioned Inner Glass */ 
+    --glass-inner-1: #FEF8ED;  /* Very close to background */
+    --glass-inner-2: #FDF4E2;  /* Nearly background */
+    --glass-inner-3: #FAEDD4;  /* Subtle variation */
+    --glass-inner-4: #F7E8C8;  /* Lightest tint */
 }
 
 .cocktails-illustration-container {
     width: 100%;
     height: 100%;
     background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .old-fashioned-wrapper {
@@ -64,7 +68,8 @@
     position: relative;
     height: 250px;
     width: 250px;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-top: 70px;
 }
 
 /* DRINK BOTTOM SHADOW */
@@ -162,7 +167,7 @@
     width: 200px;
     height: 200px;
     background-color: var(--glass-5);
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px;
     box-shadow: 0 10px 0 0 var(--glass-shadow);
     display: flex;
     flex-direction: column;
@@ -297,7 +302,6 @@
     height: 100%;
     background-color: var(--glass-inner-4);
 }
-
 
 /* DRINK */
 .drink-outer {
@@ -694,4 +698,17 @@
     width: 120px;
     height: 10px;
     border-radius: 0 0 20px 20px;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+.shaker-ground-shadow {
+    position: relative;
+    width: 200px;
+    height: 15px;
+    background-color: var(--background-shadow);
+    border-radius: 50%;
+    margin-top: -7px;
 }
