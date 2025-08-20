@@ -1,20 +1,50 @@
 /* COLOR PALETTE */
 :root {
-    /* Shaker */
-    --shaker-lightest: #fbd492;
-    --shaker-light: #7d6a45;
-    --shaker-medium: #af8347;
-    --shaker-dark: #222a28;
-    /* Glass */
-    --glass-lightest: #f6deb0;
-    --glass-light: #d5c087;
-    --glass-medium: #5f7f67;
-    --glass-dark: #326256;
+   /* Background */
+   --bg-cream: #F4E6D9;
+   
+   /* Cocktail Shaker */
+   --gold-light: #E6C88A;
+   --bronze-medium: #B8956A;
+   --bronze-dark: #8B6F4D;
+   --teal-shadow: #2C5F5F;
+   --teal-dark: #1A3A3A;
+   
+   /* Martini Glass */
+   --teal-light: #7FC4B8;
+   --teal-medium: #4A9A8C;
+   --teal-martini: #2A6B63;
+   --glass-highlight: #E8F4F0;
+   
+   /* Details */
+   --olive-green: #7A8B4A;
+   --black-stirrer: #2C2C2C;
+   --shadow-base: #D4C4B0;
+
+   /* Old Fashioned Drink */
+    --orange-light: #f6761a;
+    --orange-medium: #d64912;
+    --orange-dark: #cf4812;
+    --cherry-light: #ef8b39;
+    --cherry-medium: #e05513;
+    --cherry-dark: #b83510;
+    --toothpick: #402719;
+    --ice-cube-light: #fc9937;
+    --ice-cube-medium: #f57e21;
+    --ice-cube-dark: #db5210;
+
+   /* Old Fashioned Glass */
+    --of-glass-1: #fbe3b5;
+    --of-glass-2: #ecc584;
+    --of-glass-3: #a4a77a;
+    --of-glass-4: #5d7c65;
+    --of-glass-5: #356659;
 }
 
 .cocktails-illustration-container {
     width: 100%;
     height: 100%;
+    background-color: white;
 }
 
 .old-fashioned-wrapper {
@@ -22,4 +52,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+/* TOOTHPICK */
+.toothpick {
+    width: 5px;
+    height: 50px;
+    background-color: 
 }
