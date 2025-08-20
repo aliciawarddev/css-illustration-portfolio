@@ -33,13 +33,19 @@
     --ice-cube-medium: #f57e21;
     --ice-cube-dark: #db5210;
 
-   /* Old Fashioned Glass */
+   /* Old Fashioned Outer Glass */
     --glass-1: #fbe3b5;
     --glass-2: #ecc584;
     --glass-3: #a4a77a;
     --glass-4: #5d7c65;
-    --glass-5: #356659;
+    --glass-5: #356659; 
     --glass-shadow: #515241;
+
+    /* Old Fashioned Inner Glass */
+    --glass-inner-1: #feefcf;  /* Lightest - pale cream */
+    --glass-inner-2: #f6dfb1;  /* Light tan */
+    --glass-inner-3: #bdb581;  /* Medium olive-tan */
+    --glass-inner-4: #b4af80;  /* Darkest - muted olive */
 }
 
 .cocktails-illustration-container {
@@ -53,6 +59,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 200px;
 }
 
 /* TOOTHPICK & CHERRY */
@@ -63,6 +70,9 @@
     justify-content: center;
     position: relative;
     transform: rotate(30deg);
+    z-index: 3;
+    margin-top: -220px;
+    margin-left: 100px;
 }
 
 /* TOOTHPICK */
@@ -90,7 +100,7 @@
     height: 40px;
     border-radius: 50%;
     background-color: red;
-    margin-top: -90px;
+    margin-top: -70px;
 }
 
 .cherry-half {
@@ -126,9 +136,139 @@
     border-radius: 0 0 20px 20px;
     box-shadow: 0 10px 0 0 var(--glass-shadow);
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Left outer highlight */
+.glass-outer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-color: var(--glass-2);
+}
+
+/* Right outer lowlight */
+.glass-outer::after {
+    content: '';
+    position: absolute;
+    right: 0;  /* This is the key change */
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-color: var(--glass-4);
+}
+
+/* Glass Inner */
+.glass-inner {
+    z-index: 1;
+    width: 140px;
+    height: 100%;
+    background-color: var(--glass-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Glass inner highlight */
+.glass-inner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    background-color: var(--glass-1);
+}
+
+/* Glass inner lowlight */
+.glass-inner::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-color: var(--glass-5);
+}
+
+/* GLASS INNER TOP */
+.glass-top {
+    width: 180px;
+    height: 50px;
+    background-color: var(--glass-inner-3);
+    margin-top: 10px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
+
+/* highlight */
+.glass-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background-color: var(--glass-inner-2);
+}
+
+/* Lowlight */
+.glass-top::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background-color: var(--glass-inner-3);
+}
+
+/* Glass top inner */
+.glass-top-inner {
+    width: 140px;
+    height: 100%;
+    background-color: var(--glass-inner-3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Highlight */
+.glass-top-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background-color: var(--glass-inner-1);
+}
+
+/* Lowlight */
+.glass-top-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    background-color: var(--glass-inner-4);
+}
+
 
 /* DRINK */
 .drink-outer {
@@ -140,6 +280,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    z-index: 5;
 }
 
 .drink-inner {
@@ -151,6 +292,7 @@
     position: relative;
 }
 
+/* Drink Highlight */
 .drink-inner::before {
     content: '';
     position: absolute;
