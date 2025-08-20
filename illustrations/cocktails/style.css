@@ -5,11 +5,12 @@
    --background-shadow: #f9d492;
    
    /* Cocktail Shaker */
-   --gold-light: #E6C88A;
-   --bronze-medium: #B8956A;
-   --bronze-dark: #8B6F4D;
-   --teal-shadow: #2C5F5F;
-   --teal-dark: #1A3A3A;
+   --shaker-1: #FAE6C8;
+   --shaker-2: #E6C88A;
+   --shaker-3: #B8956A;
+   --shaker-4: #6B6B5A;
+   --shaker-5: #3A4A42;
+   --shaker-shadow: #493426;
    
    /* Martini Glass */
    --teal-light: #7FC4B8;
@@ -333,4 +334,364 @@
     height: 100%;
     background-color: var(--orange-light);
     border-radius: 0 0 0 20px;
+}
+
+/* ================== SHAKER ==================*/
+
+.shaker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* CAP */
+.shaker-cap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100px;
+    height: 60px;
+    border-radius: 20px 20px 5px 5px;
+    box-shadow: 0 5px 0 0 var(--shaker-shadow);
+    z-index: 4;
+    overflow: hidden;
+}
+
+/* Cap - Highlight */
+.shaker-cap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background-color: var(--shaker-3);
+}
+
+/* Cap - Lowlight */
+.shaker-cap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background-color: var(--shaker-4);
+}
+
+/* Inner Cap */
+.cap-inner {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--shaker-2);
+}
+
+/* Inner Cap - Highlight */
+.cap-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background-color: var(--shaker-1);
+}
+
+/* Inner Cap - Lowlight */
+.cap-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 100%;
+    background-color: var(--shaker-5);
+}
+
+/* NECK */
+
+.shaker-neck {
+    background-color: var(--shaker-3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 90px;
+    height: 20px;
+    z-index: 3;
+    margin-bottom: -7px;
+    overflow: hidden;
+}
+
+/* Neck - Highlight */
+.shaker-neck::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background-color: var(--shaker-3);
+}
+
+/* Neck - Lowlight */
+.shaker-neck::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 100%;
+    background-color: var(--shaker-4);
+}
+
+/* Inner Neck */
+.neck-inner {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--shaker-2);
+}
+
+/* Inner Neck - Highlight */
+.neck-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 100%;
+    background-color: var(--shaker-1);
+}
+
+/* Inner Neck - Lowlight */
+.neck-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 100%;
+    background-color: var(--shaker-5);
+}
+
+/* SHAKER EDGE */
+.shaker-edge {
+    width: 210px;
+    height: 15px;
+    background-color: var(--shaker-3);
+    z-index: 4;
+    box-shadow: 0 5px 0 0 var(--shaker-shadow);
+    margin-top: -10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Edge - Lowlight */
+.shaker-edge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    background-color: var(--shaker-4);
+}
+
+/* Inner Edge */
+.edge-inner {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--shaker-2);
+}
+
+/* Inner Edge - Highlight */
+.edge-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 100%;
+    background-color: var(--shaker-1);
+}
+
+/* Inner Edge - Lowlight */
+.edge-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 100%;
+    background-color: var(--shaker-5);
+}
+
+/* MIDDLE */
+
+.shaker-middle-wrapper {
+    background-color: var(--shaker-3); /* Left half color */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    border-radius: 80px 80px 0 0;
+    z-index: 2;
+    
+    overflow: hidden;
+}
+
+.shaker-middle-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0; /* Position on right side */
+    width: 50%; /* Half the width */
+    height: 100%;
+    background-color: var(--shaker-4); /* Right half color */
+    border-radius: 0 80px 0 0; /* Match right side curvature */
+}
+
+.middle-inner {
+    width: 140px;
+    height: 80px;
+    border-radius: 80px 80px 0 0;
+    background-color: var(--shaker-1);
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--shaker-5);
+    border-radius: 0 80px 0 0;
+}
+
+.middle-center {
+    width: 90px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: var(--shaker-2);
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+/* BOTTOM */
+.shaker-bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 200px; /* container width */
+    height: 250px;
+    background-color: var(--shaker-3);
+    clip-path: polygon(
+                0 0,           /* top-left */
+        200px 0,       /* top-right */
+        160px 250px,   /* bottom-right (40px in from edge) */
+        40px 250px     /* bottom-left (40px in from edge) */
+    );
+    z-index: 1;
+    overflow: hidden;
+}
+
+.shaker-bottom::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Right half */
+    height: 100%;
+    background-color: var(--shaker-4); /* Right half color */
+}
+
+/* Inner Bottom */
+.bottom-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px; 
+    height: 250px;
+    background-color: var(--shaker-1);
+    clip-path: polygon(
+        0 0,           /* top-left */
+        140px 0,       /* top-right */
+        112px 250px,   /* bottom-right (28px in from edge) */
+        28px 250px     /* bottom-left (28px in from edge) */
+    );
+    z-index: 2;
+    overflow: hidden;
+}
+
+.bottom-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Right half */
+    height: 100%;
+    background-color: var(--shaker-5); /* Right half color */
+}
+
+/* Center Bottom */
+.bottom-center {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px; /* 50px narrower (140px - 50px) */
+    height: 250px;
+    background-color: var(--shaker-2);
+    clip-path: polygon(
+        0 0,           /* top-left */
+        90px 0,        /* top-right */
+        72px 250px,    /* bottom-right (18px in from edge) */
+        18px 250px     /* bottom-left (18px in from edge) */
+    );
+    z-index: 3;
+    overflow: hidden;
+}
+
+/* BOTTOM SHADOW */
+.shaker-bottom-shadow {
+    background-color: var(--shaker-shadow);
+    width: 120px;
+    height: 10px;
+    border-radius: 0 0 20px 20px;
 }
