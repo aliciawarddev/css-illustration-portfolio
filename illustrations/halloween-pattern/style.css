@@ -144,6 +144,69 @@
     z-index: 1;
 }
 
+/* BAT */
+.wrapper.bat-square {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Body & Head */
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Ears */
+.ears-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: -4px;
+    margin-left: 0.25px;
+}
+
+.ear-left {
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid white;
+    border-left: 0px solid transparent;
+    border-right: 7px solid transparent;
+}
+
+.ear-right {
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid white;
+    border-left: 7px solid transparent;
+    border-right: 0px solid transparent;
+}
+
+.head {
+    background-color: white;
+    width: 14px;
+    height: 14px;
+    border-radius: 5px;
+}
+
+.body {
+    width: 15px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: -5px;
+}
+
+/* ARCHIVE */
+
 /* X-LINES 
 .wrapper.x-lines-square {
     background-color: black;
