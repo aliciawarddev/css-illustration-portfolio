@@ -88,6 +88,43 @@
     margin-left: -15px;
 }
 
+/* WITCH HAT */
+.wrapper.witch-hat-square {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hat-top {
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    margin-bottom: -5px;
+    z-index: 1;
+}
+
+.hat-band {
+    width: 35px;
+    height: 7px;
+    background-color: black;
+    z-index: 2;
+    margin-bottom: -2px;
+}
+
+.hat-brim {
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid white;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    margin-top: -5px;
+    z-index: 1;
+}
+
 /* X-LINES 
 .wrapper.x-lines-square {
     background-color: black;
