@@ -1,5 +1,45 @@
+
+/* GENERAL */
 .halloween-pattern-illustration-container {
-    position: relative;
     width: 100%;
     height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* WRAPPER */
+.wrapper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* GHOST */
+.wrapper.ghost-square {
+    background-color: black;
+}
+
+.ghost {
+    background-color: white;
+    height: 70px;
+    width: 40px;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.eye {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 15px;
 }
