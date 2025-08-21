@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid pink;
 }
 
 /* GHOST */
@@ -91,3 +92,70 @@
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
 }
+
+/* PUMPKIN */
+.wrapper.pumpkin-square {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pumpkin-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stem */
+.stem {
+    width: 15px;
+    height: 20px;
+    border-radius: 15px 0 0 0;
+    border: 5px solid white;
+    border-right: none;
+    border-bottom: none;
+    margin-bottom: -5px;
+    margin-left: 10px;
+}
+
+
+/* Bulge */
+.bulge {
+    background-color: white;
+    height: 50px;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Create 10px overlap with negative margins */
+.bulge:not(:first-child) {
+    margin-left: -15px;
+}
+
+/* Optional: Control stacking order */
+.bulge.left { z-index: 4; }
+.bulge.left-middle { z-index: 3; }
+.bulge.right-middle { z-index: 2; }
+.bulge.right { z-index: 1; }
+
+/* 
+.bulge.left {
+    margin-right: -10px;
+}
+
+.bulge.left-middle {
+    margin-right: -5px;
+}
+ 
+.bulge.right-middle {
+    margin-left: -5px;
+}
+
+.bulge-right {
+    margin-left: -5px;
+}
+*/ 
