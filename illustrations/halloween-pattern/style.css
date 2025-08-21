@@ -43,3 +43,51 @@
     border-radius: 50%;
     margin-top: 15px;
 }
+
+/* X-LINES */
+.wrapper.x-lines-square {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.line-1 {
+    background-color: white;
+    width: 5px;
+    height: 150px;
+    transform: rotate(-45deg);
+}
+
+.line-2 {
+    background-color: white;
+    width: 5px;
+    height: 150px;
+    transform: rotate(45deg);
+}
+
+/* X-FILLED */
+.wrapper.x-filled-square {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.triangle-top {
+    width: 0;
+    height: 0;
+    border-top: 50px solid white;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.triangle-bottom {
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid white;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
