@@ -1,0 +1,800 @@
+.aquarium-illustration-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* AQUARIUM COLOR PALETTE */
+:root {
+    /* Seaweed */
+    --seaweed-dark: #2D9B5E;;
+    --seaweed-light: #4FC778;
+    --seaweed-accent: #8FE8A8;
+
+    /* Goldfish */
+    --goldfish-light: #FFB380;
+    --goldfish-medium: #FF9458;
+    --goldfish-dark: #FF7538;
+    --goldfish-accent: #ffe4d1;
+
+    /* Water */
+    --aquarium-light: #5DCDEE;
+    --aquarium-medium: #2CA6D4;
+    --aquarium-dark: #1E7FA8;
+    
+    /* Jellyfish */
+    --jellyfish: rgba(255, 180, 220, 0.9); 
+    --jellyfish-glow: #FF8FC7; 
+
+    /* Bubble */
+    --bubble: rgba(255, 255, 255, 0.7);
+
+    /* Sand */
+    --sand:#FFD98E;    
+}
+
+/* GENERAL */
+.aquarium-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 800px;
+    height: 600px;
+    position: relative;
+    border: 3px solid var(--aquarium-light);
+}
+
+.aquarium-top {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    position: relative;
+}
+
+.aquarium-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 80%;
+    background: 
+        radial-gradient(ellipse at top, 
+            rgba(0, 217, 255, 0.3) 0%, 
+            transparent 50%),
+        linear-gradient(180deg, 
+            var(--aquarium-light) 0%,      /* Bright surface */
+            var(--aquarium-light) 20%,     /* Light water */
+            var(--aquarium-medium) 50%,    /* Mid water */
+            var(--aquarium-dark) 100%);    /* Deep water */
+    position: relative;
+    gap: -10px;
+}
+
+.aquarium-bottom {
+    width: 100%;
+    height: 10%;
+    background: 
+        /* Subtle noise texture */
+        radial-gradient(ellipse at 20% 50%, 
+            rgba(255, 217, 61, 0.2) 0%, 
+            transparent 20%),
+        radial-gradient(ellipse at 80% 70%, 
+            rgba(240, 185, 15, 0.3) 0%, 
+            transparent 30%),
+        radial-gradient(ellipse at 60% 30%, 
+            rgba(255, 217, 61, 0.2) 0%, 
+            transparent 25%),
+        linear-gradient(to bottom, 
+            var(--sand) 0%, 
+            color-mix(in srgb, var(--sand) 80%, var(--goldfish-dark)) 100%);
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.2),
+                inset 0 -5px 15px rgba(255, 217, 61, 0.3);
+    display: flex;
+    position: relative;
+    z-index: 10;
+}
+
+.aquarium-bottom::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Speckled sand texture */
+    background-image: 
+        radial-gradient(circle at 20% 80%, #8B6914 0%, transparent 2%),
+        radial-gradient(circle at 60% 60%, #A0522D 0%, transparent 1.5%),
+        radial-gradient(circle at 85% 30%, #8B6914 0%, transparent 2%),
+        radial-gradient(circle at 10% 40%, #D2691E 0%, transparent 1%),
+        radial-gradient(circle at 40% 20%, #A0522D 0%, transparent 1.5%),
+        radial-gradient(circle at 75% 90%, #8B6914 0%, transparent 2%),
+        radial-gradient(circle at 30% 50%, #D2691E 0%, transparent 1%);
+    opacity: 0.6;
+}
+
+/* Keep the oblong pebbles as they are */
+.aquarium-bottom::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        /* Oval pebbles using ellipse */
+        radial-gradient(ellipse 8px 5px at 12% 25%, #654321 0%, transparent 100%),
+        radial-gradient(ellipse 10px 6px at 30% 45%, #704214 0%, transparent 100%),
+        radial-gradient(ellipse 7px 4px at 65% 35%, #5C4033 0%, transparent 100%),
+        radial-gradient(ellipse 9px 5px at 80% 65%, #6F4E37 0%, transparent 100%),
+        radial-gradient(ellipse 6px 4px at 45% 75%, #8B6F47 0%, transparent 100%),
+        radial-gradient(ellipse 11px 7px at 20% 15%, #654321 0%, transparent 100%),
+        radial-gradient(ellipse 8px 5px at 50% 55%, #704214 0%, transparent 100%),
+        radial-gradient(ellipse 9px 6px at 75% 85%, #5C4033 0%, transparent 100%),
+        radial-gradient(ellipse 7px 5px at 35% 90%, #6F4E37 0%, transparent 100%),
+        radial-gradient(ellipse 10px 6px at 60% 10%, #8B6F47 0%, transparent 100%);
+    opacity: 0.5;
+}
+
+/* BUBBLES */ 
+.bubbles-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    transform: scale(0.6);
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+    height: 100%;
+}
+
+.bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bubble);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.3);
+    position: absolute;
+    opacity: 0.3;
+    animation: rise 10s ease-in infinite;
+}
+
+.bubble-shine {
+    width: 20px;
+    height: 20px;
+    border-left: 5px solid white;
+    border-radius: 20px 0 0 0;
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.bubble.large {
+    transform: scale(1.0);
+    margin-left: 40px;
+    animation-delay: 1s;
+}
+
+.bubble.medium {
+    transform: scale(0.85);
+}
+
+.bubble.medium:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.bubble.medium:nth-of-type(3) {
+    animation-delay: 3s;
+}
+
+.bubble.small {
+    transform: scale(0.7);
+    margin-left: 30px;
+    animation-delay: 4.5s;
+}
+
+.bubble.smallest {
+    transform: scale(0.5);
+    animation-delay: 6s;
+}
+
+.bubble.smallest.second {
+    transform: scale(0.5);
+    margin-left: 20px;
+    animation-delay: 7.5s;
+}
+
+/* BUBBLES ANIMATION */
+/* Updated keyframes to maintain original scale and margin */
+@keyframes rise {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+        transform: translateY(-20px); /* Just translate, don't override scale */
+    }
+}
+
+/* SEAWEED */
+.seaweed-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.seaweed-wrapper.large {
+    transform: scale(0.8);
+    margin-bottom: -40px;
+    margin-left: 20px;
+}
+
+.seaweed-wrapper.small {
+    transform: scale(0.6);
+    position: relative;
+    margin-bottom: -75px;
+}
+
+.strand-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.strand1-wrapper,
+.strand2-wrapper,
+.strand3-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom center; 
+    filter: drop-shadow(0 0 5px rgba(127, 255, 212, 0.3)); /* Unified glow */
+}
+
+/* Define size and color variants using CSS variables */
+.strand1-wrapper {
+    --strand-color: var(--seaweed-dark);
+    --strand-scale: 1;
+    margin-bottom: 0;
+    filter: drop-shadow(0 0 12px rgba(0, 168, 107, 0.4)); /* Jade glow */
+}
+
+.strand2-wrapper {
+    --strand-color: var(--seaweed-light);
+    --strand-scale: 1.2;
+    transform: scale(var(--strand-scale)) scaleX(-1); /* Added horizontal flip */
+    margin-bottom: 0;
+    filter: drop-shadow(0 0 12px rgba(80, 200, 120, 0.4)); /* Emerald glow */
+}
+
+.strand3-wrapper {
+    --strand-color: var(--seaweed-dark);
+    --strand-scale: 0.8;
+    margin-bottom: 0;
+    filter: drop-shadow(0 0 12px rgba(127, 255, 212, 0.3)); /* Aquamarine glow */
+}
+
+/* Base wrapper styles */
+.strand1-wrapper,
+.strand3-wrapper {
+    transform: scale(var(--strand-scale));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Base strand piece using the CSS variable for color */
+.strand {
+    background-color: var(--strand-color);
+    height: 100px;
+    width: 25px;
+    transform: skewX(15deg);
+    margin-bottom: -1px;
+}
+
+.strand.p1 {
+    height: 70px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin-left: 8px;
+    background: linear-gradient(to top, 
+        var(--strand-color) 0%, 
+        var(--seaweed-accent) 100%); /* Aquamarine tips */
+}
+
+/* Fix the margin for flipped strand2 */
+.strand2-wrapper .strand.p1 {
+    margin-left: 8px;
+}
+
+.strand.p2 {
+    transform: skewX(-15deg) scaleX(-1);
+}
+
+.strand.p3 {
+}
+
+.strand.p4 {
+    transform: skewX(-15deg) scaleX(-1);
+}
+
+/* Different colors for variety between large and small seaweed */
+.seaweed-wrapper.large .strand1-wrapper {
+    --strand-color: var(--seaweed-dark);
+}
+
+.seaweed-wrapper.large .strand2-wrapper {
+    --strand-color: var(--seaweed-light);
+}
+
+.seaweed-wrapper.large .strand3-wrapper {
+    --strand-color: var(--seaweed-dark);
+}
+
+.seaweed-wrapper.small .strand1-wrapper {
+    --strand-color: var(--seaweed-light); /* Swap colors for variety */
+}
+
+.seaweed-wrapper.small .strand2-wrapper {
+    --strand-color: var(--seaweed-dark);
+}
+
+.seaweed-wrapper.small .strand3-wrapper {
+    --strand-color: var(--seaweed-light);
+}
+
+/* SEAWEED ANIMATIONS */
+/* LARGE SEAWEED */
+.seaweed-wrapper.large .strand1-wrapper {
+    animation: sway-left 4s ease-in-out infinite;
+}
+
+.seaweed-wrapper.large .strand2-wrapper {
+    animation: sway-right 3.5s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.seaweed-wrapper.large .strand3-wrapper {
+    animation: sway-left 4.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* SMALL SEAWEED - Different timing and delays */
+.seaweed-wrapper.small .strand1-wrapper {
+    animation: sway-left 5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.seaweed-wrapper.small .strand2-wrapper {
+    animation: sway-right 4.5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.seaweed-wrapper.small .strand3-wrapper {
+    animation: sway-left 5.5s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+
+/* Shared keyframes for both sizes */
+@keyframes sway-left {
+    0%, 100% {
+        transform: scale(var(--strand-scale)) rotate(0deg);
+    }
+    50% {
+        transform: scale(var(--strand-scale)) rotate(-5deg);
+    }
+}
+
+@keyframes sway-right {
+    0%, 100% {
+        transform: scale(var(--strand-scale)) scaleX(-1) rotate(0deg);
+    }
+    50% {
+        transform: scale(var(--strand-scale)) scaleX(-1) rotate(5deg);
+    }
+}
+
+/* JELLYFISH */
+.jellyfish-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: float 8s ease-in-out infinite;
+}
+
+.jellyfish-wrapper.large {
+    transform: scale(0.7);
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.jellyfish-wrapper.small {
+    transform: scale(0.5);
+    position: relative;
+    animation: float 7s ease-in-out infinite;
+    animation-delay: 2s;
+    margin-bottom: 30px;
+}
+
+.jellyfish-top {
+    background-color: var(--jellyfish);
+    box-shadow: 0 0 20px var(--jellyfish-glow),
+                inset 0 0 10px rgba(255, 255, 255, 0.3); /* Inner glow */
+    width: 100px;
+    height: 60px;
+    border-radius: 60px 60px 0 0;
+    position: relative;
+    animation: pulse 3s ease-in-out infinite;
+    margin-bottom: 300px;
+}
+
+/* Tentacles */
+.tentacles-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    width: 70px;
+    z-index: -1;
+    bottom: 185px;
+}
+
+.tentacle {
+    width: 5px;
+    height: 100px;
+    background-color: var(--jellyfish);
+}
+
+.tentacle.left {
+    transform: skewY(50deg);
+    height: 80px;
+}
+
+.tentacle.middle-left {
+    transform: skewY(50deg);
+}
+
+.tentacle.middle {
+    height: 115px;
+}
+
+.tentacle.middle-right {
+    transform: skewY(-50deg);
+}
+
+.tentacle.right {
+    transform: skewY(-50deg);
+    height: 80px;
+}
+
+/* JELLYFISH ANIMATIONS */ 
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-30px) translateX(10px);
+    }
+    50% {
+        transform: translateY(-20px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(-40px) translateX(5px);
+    }
+}
+
+/* Jellyfish pulsing - applies to both sizes */
+.jellyfish-top {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95, 1.05); /* Slight vertical stretch */
+    }
+}
+
+/* Tentacle Animations */
+/* Tentacle sway for both large and small jellyfish */
+.tentacle {
+    transform-origin: top center;
+}
+
+.tentacle.left {
+    animation: tentacle-sway-left 4s ease-in-out infinite;
+}
+
+.tentacle.middle-left {
+    animation: tentacle-sway-gentle 3.5s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.tentacle.middle {
+    animation: tentacle-sway-center 4.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.tentacle.middle-right {
+    animation: tentacle-sway-gentle 3.5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.tentacle.right {
+    animation: tentacle-sway-right 4s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+/* Tentacle keyframes */
+@keyframes tentacle-sway-left {
+    0%, 100% {
+        transform: skewY(50deg) rotate(0deg);
+    }
+    50% {
+        transform: skewY(50deg) rotate(-3deg);
+    }
+}
+
+@keyframes tentacle-sway-right {
+    0%, 100% {
+        transform: skewY(-50deg) rotate(0deg);
+    }
+    50% {
+        transform: skewY(-50deg) rotate(3deg);
+    }
+}
+
+@keyframes tentacle-sway-gentle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes tentacle-sway-center {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+}
+
+/* Small jellyfish specific animations to maintain scale */
+.jellyfish-wrapper.small {
+    animation: float-small 7s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes float-small {
+    0%, 100% {
+        transform: scale(0.5) translateY(0) translateX(0);
+    }
+    25% {
+        transform: scale(0.5) translateY(-30px) translateX(10px);
+    }
+    50% {
+        transform: scale(0.5) translateY(-20px) translateX(-10px);
+    }
+    75% {
+        transform: scale(0.5) translateY(-40px) translateX(5px);
+    }
+}
+
+/* Different pulse timing for small jellyfish */
+.jellyfish-wrapper.small .jellyfish-top {
+    animation: pulse 3.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+
+/* GOLDFISH */
+.goldfish-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+    position: relative;
+    margin-left: -50px;
+    margin-right: -30px;
+    animation: swim 15s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(255, 140, 66, 0.4));
+}
+
+/* Body */
+.goldfish-body {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, 
+        var(--goldfish-light) 0%, 
+        var(--goldfish-medium) 50%, 
+        var(--goldfish-dark) 100%);
+    position: relative;
+    transform: rotate(45deg);
+    overflow: hidden;
+}
+
+.goldfish-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 8px,
+            rgba(255, 255, 255, 0.2) 8px,
+            rgba(255, 255, 255, 0.2) 9px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 8px,
+            rgba(255, 255, 255, 0.2) 8px,
+            rgba(255, 255, 255, 0.2) 9px
+        );
+    border-radius: inherit;
+    /* Gradient mask to make grid lighter at top */
+    mask-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.3) 0%,    /* 30% opacity at top */
+        rgba(0, 0, 0, 0.7) 50%,   /* 70% opacity at middle */
+        rgba(0, 0, 0, 1) 100%);   /* Full opacity at bottom */
+    -webkit-mask-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.3) 0%, 
+        rgba(0, 0, 0, 0.7) 50%, 
+        rgba(0, 0, 0, 1) 100%);
+}
+
+/* Tail */
+.goldfish-tail-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 30px;
+}
+
+.tail-top {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid var(--goldfish-medium);
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    transform: skewX(45deg);
+}
+
+.tail-bottom {
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--goldfish-dark);
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    transform: skewX(-45deg);
+}
+
+/* Head */
+.goldfish-head-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-left: -87px;
+}
+
+.head-top {
+    width: 70px;
+    height: 63px;
+    background-color: var(--goldfish-light);
+    transform: skewX(45deg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+
+.head-bottom {
+    transform: skewX(-45deg);
+    width: 70px;
+    height: 63px;
+    background-color: var(--goldfish-light);
+    margin-top: -1px;
+}
+
+.goldfish-eye {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, 
+        white 0%, 
+        white 20%, 
+        #333 20%, 
+        #333 60%, 
+        #111 60%);
+    transform: skewX(-45deg);
+    margin-right: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Fin */
+.fin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 65px;
+}
+
+.fin-flip-top {
+    width: 0;
+    height: 0;
+    border-bottom: 60px solid var(--goldfish-medium);
+    border-left: 38px solid transparent;
+    border-right: 35px solid transparent;
+    transform: skewx(55deg);
+    margin-right: 80px;
+    margin-bottom: -1px;
+    box-shadow: inset 2px 2px 5px rgba(255, 107, 43, 0.5);
+}
+
+.fin-flip-bottom {
+    width: 0;
+    height: 0;
+    border-top: 60px solid var(--goldfish-dark);
+    border-left: 38px solid transparent;
+    border-right: 35px solid transparent;
+    transform: skewx(-55deg);
+    margin-right: 80px;
+    margin-top: -1px;
+}
+
+/* GOLDFISH ANIMATIONS */
+@keyframes swim {
+    0% {
+        transform: scale(0.8) translateX(0) scaleX(1);
+    }
+    45% {
+        transform: scale(0.8) translateX(300px) scaleX(1);
+    }
+    50% {
+        transform: scale(0.8) translateX(300px) scaleX(-1); /* Flip horizontally */
+    }
+    95% {
+        transform: scale(0.8) translateX(0) scaleX(-1);
+    }
+    100% {
+        transform: scale(0.8) translateX(0) scaleX(1); /* Flip back */
+    }
+}
