@@ -1,0 +1,414 @@
+.desert-illustration-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.desert-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    container-type: size;
+}
+
+/* Desert Color Palette */
+:root {
+    --desert-sky-light:#fdd06e;
+    --desert-sky-dark: #feab47;
+    --desert-sun: #feeba3;
+    --desert-cloud: #fecd63;
+    --desert-layer-5: #fda83f;
+    --desert-layer-4: #eb7e2c;
+    --desert-layer-3: #cf6826;
+    --desert-layer-2: #854a22;
+    --desert-layer-1: #583620;
+}
+
+
+/* SKY */
+.sky-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100cqw;
+    height: 55cqh;
+    background: linear-gradient(to top, var(--desert-sky-light), var(--desert-sky-dark));
+}
+
+/* Clouds */
+.desert-cloud {
+    position: relative;
+    top: 15cqh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cloud-bulb-large {
+    height: 4cqh;
+    width: 20cqw;
+    border-radius: 50% 50% 0 50%;
+    background-color: var(--desert-cloud);
+}
+
+.cloud-bulb-small {
+    height: 2.5cqh;
+    width: 7cqw;
+    border-radius: 0 50% 50% 0;
+    background-color: var(--desert-cloud);
+    margin-left: -1cqw;
+}
+
+.desert-cloud-.eft {
+    margin-left: 10cqw;
+}
+
+/* Sun */
+.desert-sun {
+    width: 20cqw;
+    height: 20cqw;
+    border-radius: 50%;
+    background-color: var(--desert-sun);
+    position: relative;
+    margin-top: 7cqh;
+    margin-left: 10cqw; 
+}
+
+/* Template */
+.desert-bush{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bush-spike {
+    height: 0;
+    width: 0;
+    left: 50%;
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom center;
+}
+
+.bush-spike:nth-child(1) { transform: translateX(-50%) rotate(-75deg); }
+.bush-spike:nth-child(2) { transform: translateX(-50%) rotate(-50deg); }
+.bush-spike:nth-child(3) { transform: translateX(-50%) rotate(-25deg); }
+.bush-spike:nth-child(4) { transform: translateX(-50%) rotate(0deg); }
+.bush-spike:nth-child(5) { transform: translateX(-50%) rotate(25deg); }
+.bush-spike:nth-child(6) { transform: translateX(-50%) rotate(50deg); }
+.bush-spike:nth-child(7) { transform: translateX(-50%) rotate(75deg); }
+
+/* Bush - Layer 1 */
+.desert-bush.layer1 {
+    margin-top: -10cqh;
+    height: 10cqh;
+    width: 14cqw;
+    left: -11cqw;
+}
+
+.bush-spike.layer1 {
+    border-bottom: 7cqw solid var(--desert-layer-1);
+    border-left: 1cqh solid transparent;
+    border-right: 1cqh solid transparent;
+}
+
+/* Bush - Layer 2 */
+.desert-bush.layer2 {
+    margin-top: -7.5cqh;
+    height: 10cqh;
+    width: 14cqw;
+    transform: scale(0.5);
+    left: 12cqw;
+    bottom: 2cqh;
+}
+
+.bush-spike.layer2 {
+    border-bottom: 7cqw solid var(--desert-layer-2);
+    border-left: 1cqh solid transparent;
+    border-right: 1cqh solid transparent;
+}
+
+/* CACTUS */
+
+.desert-cactus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: 30cqh;
+    width: 30cqw;
+    position: relative;
+}
+
+/* Middle */
+.desert-cactus-middle {
+    width: 3cqw;
+    height: 30cqh;
+    background-color: var(--desert-layer-1);
+    border-radius: 3cqw 3cqw 0 0;
+}
+
+/* Left side */
+.desert-cactus-left {
+    margin-top: 3cqw;
+    display: flex;
+    flex-direction: column;
+    margin-right: -1px;
+}
+
+.cactus-top-left {
+    width: 2.5cqw;
+    height: 4cqh;
+    border-radius: 3cqw 3cqw 0 0;
+    margin-bottom: -1px;
+}
+
+.cactus-bottom-left {
+    width: 2cqw;
+    height: 5cqw;
+    border-radius: 0 0 0 10cqw;
+    border-left-width: 2.5cqw;
+    border-left-style: solid;
+    border-bottom-width: 2.5cqw;
+    border-bottom-style: solid;
+}
+
+/* Right side */
+.desert-cactus-right {
+    margin-top: 5cqw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: -1px;
+}
+
+.cactus-top-right {
+    width: 2.5cqw;
+    height: 7cqh;
+    border-radius: 3cqw 3cqw 0 0;
+    margin-bottom: -1px;
+}
+
+.cactus-bottom-right {
+    width: 2cqw;
+    height: 5cqw;
+    border-radius: 0 0 10cqw 0;
+    border-right-width: 2.5cqw;
+    border-right-style: solid;
+    border-bottom-width: 2.5cqw;
+    border-bottom-style: solid;
+}
+
+/* Layer-specific styles */
+/* Layer 1 */
+.desert-cactus.layer1 {
+    margin-top: -32cqh;
+    margin-left: -25cqw;
+}
+
+.desert-cactus.layer1 .desert-cactus-middle,
+.desert-cactus.layer1 .cactus-top-left,
+.desert-cactus.layer1 .cactus-top-right {
+    background-color: var(--desert-layer-1);
+}
+
+.desert-cactus.layer1 .cactus-bottom-left,
+.desert-cactus.layer1 .cactus-bottom-right {
+    border-color: var(--desert-layer-1);
+}
+
+/* Layer 2 */
+.desert-cactus.layer2 {
+    transform: scale(0.5);
+    margin-top: -25cqh;
+    margin-left: 12cqw;
+}
+
+.desert-cactus.layer2 .desert-cactus-middle,
+.desert-cactus.layer2 .cactus-top-left,
+.desert-cactus.layer2 .cactus-top-right {
+    background-color: var(--desert-layer-2);
+}
+
+.desert-cactus.layer2 .cactus-bottom-left,
+.desert-cactus.layer2 .cactus-bottom-right {
+    border-color: var(--desert-layer-2);
+}
+
+/* ROCKS */
+.rock-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rocks-top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: -10cqh;
+    gap: 1cqw;
+}
+
+.rocks-base {
+    height: 0;
+    width: 0;
+    border-bottom: 15cqw solid var(--desert-layer-4);
+    border-left: 15cqw solid transparent;
+    border-right: 15cqw solid transparent;
+}
+
+.rock-square {
+    background-color: var(--desert-layer-4);
+    width: 12cqw;
+    height: 15cqh;
+    border-radius: 2cqw 2cqw 0 0;
+}
+
+.rock-column {
+    background-color: var(--desert-layer-4);
+    height: 10cqh;
+    width: 2cqw;
+    border-radius: 3cqw 3cqw 0 0;
+}
+
+/* Left Rock Group */
+.rock-group.left {
+    bottom: 11cqh;
+    left: -18cqw;
+    transform: scale(1.1);
+}
+
+/* Right Rock Group */
+.rock-group.right {
+    transform: scale(0.8);
+    bottom: 10cqh;
+}
+
+
+/* LAYER 1 - Furthest Forward */ 
+.layer-1-wrapper {
+    position: relative;
+    width: 100cqw;
+    height: 15cqh;
+    background-color: var(--desert-layer-1);
+    z-index: 5;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+/* LAYER 2 */
+.layer-2-wrapper {
+    position: relative;
+    width: 100cqw;
+    height: 5cqh;
+    background-color: var(--desert-layer-2);
+    z-index: 4;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+/* LAYER 3 */
+.layer-3-wrapper {
+    position: relative;
+    width: 100cqw;
+    height: 5cqh;
+    background-color: var(--desert-layer-3);
+    z-index: 3;
+    overflow: visible;
+}
+
+/* LAYER 4 */
+.layer-4-wrapper {
+    position: relative;
+    width: 100cqw;
+    height: 12cqh;
+    background-color: var(--desert-layer-4);
+    z-index: 2;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* LAYER 5 - Furthest Back */
+.layer-5-wrapper {
+    position: relative;
+    width: 100cqw;
+    height: 8cqh;
+    background-color: var(--desert-layer-5);
+    z-index: 1;
+    overflow: visible;
+}
+
+/* WAVY LINES - LAYERS */
+
+/* SVG Wave Styles */
+.wave-svg {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        overflow: visible;
+        line-height: 0;
+    }
+
+.wave-svg svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+
+/* Different wave heights for variety */
+.layer-1-wrapper .wave-svg svg { 
+    height: 60px; 
+    top: -40px;
+    fill: var(--desert-layer-1);
+}
+
+.layer-2-wrapper .wave-svg svg { 
+    height: 70px; 
+    fill: var(--desert-layer-2);
+    top: -50px;
+}
+
+.layer-3-wrapper .wave-svg svg { 
+    height: 60px; 
+    fill: var(--desert-layer-3);
+    top: -50px;
+}
+
+.layer-4-wrapper .wave-svg svg { 
+    height: 90px; 
+    fill: var(--desert-layer-4);
+    top: -65px;
+}
+
+.layer-5-wrapper .wave-svg svg { 
+    height: 80px; 
+    fill: var(--desert-layer-5);
+    top: -50px;
+}

@@ -1,0 +1,503 @@
+.lightbulb-plant-illustration-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Color Palette */
+/* 
+bulb - background: #ffe4ab
+bulb - border: #fed17e
+bulb - shine: #fff3d8
+plant - stem: #5c8b23
+plant - leaf: #7ea323
+soil - light: #98552e
+soil - dark: #683c20
+thread - light: #f0a532
+thread - dark: #e67521
+shadow: #f08457
+foot: #683c20
+*/ 
+
+.lightbulb-plant-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbulb-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-50deg);
+}
+
+/* Bulb */
+.lightbulb-bulb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bulb-circle {
+    height: 250px;
+    width: 250px;
+    background-color: #ffe4ab;
+    border-radius: 50%;
+    border: 10px solid #fed17e;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bulb-shine {
+    width: 75px;
+    height: 75px;
+    border: 20px solid #fff3d8;
+    border-radius: 100px 0 0 0;
+    border-bottom: none;
+    border-right: none;
+    position: absolute;
+    top: 0px;
+    left: 85px;
+    transform: rotate(50deg);
+}
+
+.bulb-rectangle {
+    width: 130px;
+    height: 50px;
+    background-color: #ffe4ab;
+    border: 10px solid #fed17e;
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+    margin-top: -28px;
+    z-index: 2;
+    overflow: hidden; 
+}
+
+/* Cap */
+.cap-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.thread1-top {
+    width: 165px;
+    height: 20px;
+    background-color: #f0a532;
+    border-radius: 8px;
+    margin-top: -5px;
+    z-index: 2;
+}
+
+.thread1-bottom {
+    width: 150px;
+    height: 20px;
+    background-color: #e67521;
+    margin-top: -5px;
+    z-index: 1;
+}
+
+.thread2-top {
+    width: 160px;
+    height: 20px;
+    background-color: #f0a532;
+    border-radius: 8px;
+    z-index: 2;
+    margin-top: -3px;
+}
+
+.thread2-bottom {
+    width: 145px;
+    height: 20px;
+    background-color: #e67521;
+    z-index: 1;
+    margin-top: -5px;
+}
+
+.thread3-top {
+    width: 155px;
+    height: 20px;
+    background-color: #f0a532;
+    border-radius: 8px;
+    z-index: 2;
+    margin-top: -3px;
+}
+
+.thread3-bottom {
+    width: 140px;
+    height: 20px;
+    background-color: #e67521;
+    z-index: 1;
+    margin-top: -5px;
+}
+
+.thread4-top {
+    width: 150px;
+    height: 20px;
+    background-color: #f0a532;
+    border-radius: 8px;
+    z-index: 2;
+    margin-top: -3px;
+}
+
+.thread4-bottom {
+    width: 135px;
+    height: 20px;
+    background-color: #e67521;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+    margin-top: -5px;
+}
+
+.lightbulb-foot {
+    width: 90px;
+    height: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #683c20;
+}
+
+/* Soil 1 - Bulb Circle*/
+.soil1 {
+    background-color: #683c20;
+    width: 260px;
+    height: 80px;
+    transform: rotate(50deg);
+    position: absolute;
+    bottom: 10px;
+    left: -70px;
+    z-index: 3;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 250px;
+}
+
+.soil1-top1 {
+    background-color: #98552e;
+    width: 80px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    bottom: 67px;
+    left: 0;
+    transform: rotate(-10deg);
+}
+
+.soil1-top2 {
+    background-color: #98552e;
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    top: -30px;
+    left: 60px;
+    transform: rotate(-5deg);
+}
+
+.soil1-top3 {
+    background-color: #98552e;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    top: -35px;
+    left: 105px;
+}
+
+.soil1-top4 {
+    background-color: #98552e;
+    width: 65px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    top: -30px;
+    right: 60px;
+    transform: rotate(5deg);
+}
+
+.soil1-top5 {
+    background-color: #98552e;
+    width: 70px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    top: -25px;
+    right: 0px;
+    transform: rotate(10deg);
+}
+
+.soil1-bottom1 {
+    background-color: #98552e;
+    width: 100px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    bottom: 55px;
+    left: 0;
+    transform: rotate(10deg);
+}
+
+.soil1-bottom2 {
+    position: absolute;
+    background-color: #98552e;
+    width: 60px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0;
+    left: 90px;
+}
+
+.soil1-bottom3 {
+    position: absolute;
+    background-color: #98552e;
+    width: 80px;
+    height: 30px;
+    border-radius: 50%;
+    top: -7px;
+    left: 140px;
+    transform: rotate(-10deg);
+}
+
+.soil1-top-layer {
+    background-color: #98552e;
+    width: 280px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    top: -20px;
+    left: 0;
+}
+
+.plant-base {
+    width: 40px;
+    height: 10px;
+    background-color: #683c20;
+    z-index: 5;
+    position: absolute;
+    top: -10px;
+    left: 94px;
+    border-radius: 50%;
+}
+
+/* Soil 2 - Bulb Rectangle*/
+.soil2 {
+    width: 130px;
+    height: 100px;
+    background-color: #683c20;
+    transform: rotate(50deg);
+    position: absolute;
+    bottom: -37px;
+    left: -20px;
+    z-index: 3;
+}
+
+.soil2-top-layer {
+    background-color: #98552e;
+    width: 280px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -140px;
+}
+
+.soil2-bottom1 {
+    position: absolute;
+    background-color: #98552e;
+    width: 80px;
+    height: 30px;
+    border-radius: 50%;
+    top: -7px;
+    left: -15px;
+}
+
+.soil2-bottom2 {
+    position: absolute;
+    background-color: #98552e;
+    width: 55px;
+    height: 20px;
+    border-radius: 50%;
+    top: -4px;
+    right: 15px;
+    transform: rotate(-10deg);
+}
+
+.soil2-top1 {
+    background-color: #98552e;
+    width: 70px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    top: -24px;
+    right: 10px;
+    transform: rotate(10deg);
+}
+
+/* Soil Dots - General*/
+.dot-light {
+    background-color: #98552e;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 6;
+}
+
+.dot-dark {
+    background-color: #683c20;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 6;
+}
+
+/* Soil 1 - Bulb Circle */
+.dot-dark.dot3 { top: -10px; right: -70px; }
+.dot-dark.dot4 { top: 20px; right: -50px;}
+.dot-dark.dot5 { top: 0; right: -25px;}
+.dot-dark.dot6 { top: 15px; right: 0px;}
+.dot-dark.dot7 { top: 25px; right: 40px;}
+.dot-dark.dot8 { top: 0; right: 60px;}
+.dot-dark.dot9 { top: 20px; right: 80px;}
+.dot-dark.dot10 { top: 5px; right: 110px;}
+
+.dot-light.dot4 { top: 45px; right: -5px;}
+.dot-light.dot5 { top: 35px; right: 30px;}
+.dot-light.dot6 { top: 50px; right: 60px;}
+.dot-light.dot7 { top: 35px; right: 90px;}
+
+/* Soil 2 - Bulb Rectangle */
+.dot-dark.dot1 { top: 10px; right: 15px; }
+.dot-dark.dot2 { top: 25px; right: 40px; }
+
+.dot-light.dot1 { bottom: -10px; right: -20px;}
+.dot-light.dot2 { bottom: -15px; right: 20px;}
+.dot-light.dot3 { bottom: -45px; right: 20px;}
+
+/* Shadow */
+.lightbulb-shadow {
+    width: 450px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f08457;
+    z-index: -1;
+    position: absolute;
+    transform: rotate(50deg);
+    left: -230px;
+    bottom: 120px;
+}
+
+/* Sprout */ 
+
+.lightbulb-sprout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    height: 150px;
+    transform: rotate(50deg) scale(0.9);
+    margin-top: -20px;
+    margin-right: -20px;
+    z-index: 10;
+}
+
+/* Branches */
+
+.sprout-branch-left {
+    position: relative;
+}
+
+.sprout-branch-middle {
+    position: relative;
+}
+
+.sprout-branch-right {
+    position: relative;
+}
+
+.branch-left {
+    height: 40px;
+    width: 5px;
+    border-radius: 50% 50% 0 0;
+    background-color: #5c8b23;
+    z-index: 8;
+    transform: rotate(-40deg) translateY(-30px) translateX(15px);
+    position: relative;
+}
+
+.branch-middle {
+    height: 90px;
+    width: 8px;
+    background-color: #5c8b23;
+    z-index: 8;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+}
+
+.branch-right {
+    height: 40px;
+    width: 5px;
+    border-radius: 50% 50% 0 0;
+    background-color: #5c8b23;
+    z-index: 8;
+    transform: rotate(40deg) translateY(-18px) translateX(-5px);
+    position: relative;
+    margin-top: -40px;
+}
+
+/* Leaves */ 
+.leaf-left {
+    background-color: #7ea323;
+    height: 40px;
+    width: 40px;
+    border-radius: 0 30px;
+    position: absolute;
+    top: -50px;
+    left: -40px;
+    z-index: 7;
+}
+
+.leaf-middle {
+    background-color: #7ea323;
+    height: 45px;
+    width: 45px;
+    border-radius: 0 35px;
+    position: absolute;
+    top: -30px;
+    left: -17px;
+    z-index: 7;
+    transform: rotate(45deg);
+}
+
+.leaf-right {
+    background-color: #7ea323;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px 0;
+    position: absolute;
+    top: -75px;
+    left: 7px;
+    z-index: 7;
+}

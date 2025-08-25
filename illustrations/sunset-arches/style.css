@@ -1,0 +1,301 @@
+.sunset-arches-illustration-container {
+    width: 100%;
+    height: 100%;
+}
+
+.sunset-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 700px;
+}
+
+/* Arch */ 
+.arch-shadow-1 {
+    height: 350px;
+    width: 200px;
+    border-radius: 150px 150px 0 0;
+    background: linear-gradient(135deg, #e6b398, #d9a085);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.arch-shadow-2 {
+    height: 350px;
+    width: 200px;
+    border-radius: 150px 150px 0 0;
+    background-color: #e6b398;
+}
+
+.arch-shadow-3 {
+    height: 350px;
+    width: 200px;
+    border-radius: 150px 150px 0 0;
+    background-color: #e6b398;
+}
+
+.arch-bottom-shadow-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.arch-bottom-shadow-left {
+    background-color: #e6d1b0;
+    height: 15px;
+    width: 1800px;
+    position: absolute;
+    top: 0;
+    left: -100px;
+}
+
+.arch-bottom-shadow-right {
+    width: 0;
+    height: 0;
+    border-top: 13px solid #d9a085;        
+    border-left: 18px solid transparent;  
+    border-right: 0;                   
+    position: absolute;
+    top: 0px;
+    right: -100px;
+}
+
+/* Static background layers */ 
+.arch-sky {
+    background: 
+        radial-gradient(ellipse at 70% 20%, rgba(255,255,255,0.2) 20%, transparent 50%),
+        linear-gradient(180deg, #f6d9de 0%, #f2c2c9 100%);
+    width: 185px;
+    height: 230px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.arch-sky-sun {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #ff6b47, #e34021);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: -10px;
+    z-index: 2;
+    box-shadow: 
+        0 0 20px rgba(227, 64, 33, 0.6),
+        0 0 40px rgba(227, 64, 33, 0.3);
+}   
+
+.arch-water {
+    width: 185px;
+    height: 100px;
+    background: linear-gradient(to bottom, #c8d8e5, #b8ccd8);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.arch-water-reflection {
+    background: linear-gradient(to bottom, #d4453a 0%, #c73b30 30%, transparent 100%);
+    opacity: 0.25;
+    width: 70px;
+    height: 40px;
+    border-radius: 35px 35px 0 0;
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    z-index: 4;
+    transform: scaleY(0.6);
+}
+
+/* Arch 1*/ 
+.arch-inside-1 {
+    height: 330px;
+    width: 185px;
+    background-color: white;
+    border-radius: 150px 150px 0 0;
+    position: relative;
+    margin-top: -5px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.arch-mountains-container {
+    position: relative;
+    z-index: 2; /* Above sky and water */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 220px; /* Account for sky height */
+    padding-bottom: 100px; /* Account for water height */
+    box-sizing: border-box;
+}
+
+.arch-mountains-top-1 {
+    background: linear-gradient(to bottom, #a085a2, #6b4569);
+    width: 220px;
+    height: 90px;
+    transform: rotate(-3deg);
+    position: absolute;
+    bottom: 83px;
+    clip-path: polygon(
+        0% 75%, 
+        15% 60%, 
+        25% 45%, 
+        35% 55%, 
+        50% 35%, 
+        65% 50%, 
+        80% 40%, 
+        90% 60%, 
+        100% 80%
+    );
+    opacity: 0.85;
+}
+
+.arch-mountains-bottom-1 {
+    background: linear-gradient(to bottom, #b377ae, #5d3a58);
+    width: 220px;
+    height: 70px;
+    position: absolute;
+    bottom: 75px;
+    left: -25px;
+    clip-path: polygon(
+        0% 70%, 
+        20% 50%, 
+        35% 30%, 
+        50% 55%, 
+        65% 40%, 
+        80% 25%, 
+        95% 60%, 
+        100% 75%
+    );
+    transform: rotate(-2deg);
+    z-index: 2;
+}
+
+/* Arch 2*/ 
+.arch-inside-2 {
+    height: 330px;
+    width: 185px;
+    background-color: white;
+    border-radius: 150px 150px 0 0;
+    position: relative;
+    margin-top: -5px;
+    margin-right: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.arch-mountains-top-2 {
+    background: linear-gradient(to bottom, #a085a2, #6b4569);
+    width: 220px;
+    height: 70px;
+    transform: rotate(-3deg);
+    position: absolute;
+    bottom: 80px;
+    clip-path: polygon(
+        0% 70%, 
+        20% 35%, 
+        30% 10%, 
+        45% 45%, 
+        60% 25%, 
+        75% 40%, 
+        85% 10%, 
+        95% 60%, 
+        100% 75%
+    );
+    opacity: 0.85
+}
+
+.arch-mountains-bottom-2 {
+    background: linear-gradient(to bottom, #b377ae, #5d3a58);
+    width: 220px;
+    height: 70px;
+    position: absolute;
+    bottom: 80px;
+    left: -25px;
+    transform: rotate(-2deg);
+    clip-path: polygon(
+        0% 75%, 
+        15% 60%, 
+        30% 50%, 
+        45% 35%, 
+        60% 50%, 
+        75% 30%, 
+        90% 65%, 
+        100% 80%
+    );
+    z-index: 2;
+}
+
+/* Arch 3 */
+.arch-inside-3 {
+    height: 330px;
+    width: 185px;
+    background-color: white;
+    border-radius: 150px 150px 0 0;
+    position: relative;
+    margin-top: -5px;
+    margin-right: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.arch-mountains-top-3 {
+    background: linear-gradient(to bottom, #a085a2, #6b4569);
+    width: 200px;
+    height: 80px;
+    transform: rotate(-3deg);
+    position: absolute;
+    bottom: 85px;
+    clip-path: polygon(
+        0% 80%, 
+        20% 45%, 
+        30% 35%, 
+        40% 50%, 
+        55% 20%, 
+        65% 45%, 
+        80% 40%, 
+        90% 65%, 
+        100% 85%
+    );
+    opacity: 0.85;
+}
+
+.arch-mountains-bottom-3 {
+    background: linear-gradient(to bottom, #b377ae, #5d3a58);
+    width: 240px;
+    height: 60px;
+    position: absolute;
+    bottom: 85px;
+    left: -40px;
+    transform: rotate(-2deg);
+    clip-path: polygon(
+        0% 80%, 
+        18% 65%, 
+        32% 45%, 
+        48% 30%, 
+        62% 55%, 
+        78% 35%, 
+        92% 70%, 
+        100% 85%
+    );
+}
