@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cityscape - Pure CSS illustration">
+  <meta name="author" content="Alicia Ward">
+  
+  <!-- Page Title -->
+  <title>Cityscape | CSS Illustrations</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FAF3E0' rx='10'/><text x='50' y='70' font-family='Bebas Neue, sans-serif' font-size='50' fill='%233B9C9C' text-anchor='middle' font-weight='400'>AW</text></svg>">
+  
+  <!-- Font Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Illustration Page Specific Styles */
+    .illustration-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--space-md);
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--orange);
+      text-decoration: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-xl);
+      transition: color 0.3s ease;
+    }
+    
+    .back-link:hover {
+      color: var(--orange-dark);
+    }
+    
+    .illustration-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .illustration-title {
+        font-size: 2.5rem;
+        color: var(--teal);
+        margin-bottom: var(--space-md);
+        border: none;
+    }
+    
+    .illustration-meta {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meta-title {
+        font-size: 1rem;
+        color: var(--dark);
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        text-align: center;
+    }
+
+    .techniques-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        width: fit-content;
+    }
+
+    .techniques-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 0.85rem;
+        color: var(--dark);
+        text-align: left;
+    }
+
+    .techniques-list li::before {
+        content: '✦';
+        position: absolute;
+        left: 0;
+        color: var(--mustard);
+        font-size: 1rem;
+    }
+    
+    .illustration-container {
+      background: var(--lightest);
+      border: 2px solid var(--dark);
+      border-radius: 25px;
+      box-shadow: -6px 6px 0 0 var(--mustard);
+      padding: var(--space-xl);  /* Change from space-2xl to space-xl */
+      /* Add these specific dimensions */
+      width: 900px;
+      height: 600px;
+      max-width: 100%; /* Responsive */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-2xl) auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .illustration-container > * {
+    width: 100%;
+    height: 100%;
+}
+
+    .site-title {
+      font-size: 1.2em;
+    }
+
+    .image-container {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header>
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="../../" class="btn" aria-label="Return to main gallery">
+          ← Back to Gallery
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="illustration-page">
+      
+      <!-- Illustration Header -->
+      <div class="illustration-header">
+        <h2 class="illustration-title">CityScape</h2>
+        <div clas="illustration-meta">
+            <p class="meta-title">Techniques Used:</p>
+            <ul class="techniques-list">
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Illustration Display -->
+      <div class="illustration-container" >
+        <!-- Cityscape -->
+        <div class="cityscape-illustration-container">
+            <section class="styled-section" style="background: radial-gradient(circle at 0% 0%, #fee5c4 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%, #cce8d7 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, #fef4d6 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, #fef4d6 0%, transparent 50%),
+        #f0e8d0;">
+        <div class="drawing-container">
+            <!-- Scaling wrapper-->
+            <div class="drawing-scaling-wrapper scale-cityscape">
+                <div class="cityscape-wrapper">
+                    <div class="cityscape-background">
+                        <div class="cityscape-ground"></div>
+                        <div class="cityscape-buildings">
+                            <!-- TREE 1-->
+                             <div class="tree1">
+                                <div class="tree-crown">
+                                    <div class="tree1-crown1"></div>
+                                    <div class="tree1-crown2"></div>
+                                </div>
+                                <div class="tree-trunk">
+                                    <div class="tree1-branch1"></div>
+                                    <div class="tree1-trunk"></div>
+                                    <div class="tree1-branch2"></div>
+                                </div>
+                             </div>
+                            
+                            <!-- BUILDING 2-->
+                            <div class="b2">
+                                <!-- B2 - HALF 1-->
+                                 <div class="b2-half1">
+                                    <!-- Top -->
+                                     <div class="b2-half1-top"></div>
+                                    <!-- Top Margin-->
+                                     <div class="b2-half1-top-margin"></div>
+                                    <!-- 1st Floor-->
+                                     <div class="b2-half1-f1-w1"></div>
+                                     <div class="b2-half1-f1-w2"></div>
+                                     <div class="b2-half1-f1-w3"></div>
+                                     <div class="b2-half1-f1-w4"></div>
+                                     <div class="b2-half1-f1-w5"></div>
+                                     <div class="b2-half1-f1-w6"></div>
+                                     <div class="b2-half1-f1-w7"></div>
+                                     <div class="b2-half1-f1-w8"></div>
+                                    <!-- 2nd Floor-->
+                                     <div class="b2-half1-f2-w1"></div>
+                                     <div class="b2-half1-f2-w2"></div>
+                                     <div class="b2-half1-f2-w3"></div>
+                                     <div class="b2-half1-f2-w4"></div>
+                                     <div class="b2-half1-f2-w5"></div>
+                                     <div class="b2-half1-f2-w6"></div>
+                                     <div class="b2-half1-f2-w7"></div>
+                                     <div class="b2-half1-f2-w8"></div>
+                                    <!-- 3rd Floor-->
+                                     <div class="b2-half1-f3-w1"></div>
+                                     <div class="b2-half1-f3-w2"></div>
+                                     <div class="b2-half1-f3-w3"></div>
+                                     <div class="b2-half1-f3-w4"></div>
+                                     <div class="b2-half1-f3-w5"></div>
+                                     <div class="b2-half1-f3-w6"></div>
+                                     <div class="b2-half1-f3-w7"></div>
+                                     <div class="b2-half1-f3-w8"></div>
+                                    <!-- 4th Floor-->
+                                     <div class="b2-half1-f4-w1"></div>
+                                     <div class="b2-half1-f4-w2"></div>
+                                     <div class="b2-half1-f4-w3"></div>
+                                     <div class="b2-half1-f4-w4"></div>
+                                     <div class="b2-half1-f4-w5"></div>
+                                     <div class="b2-half1-f4-w6"></div>
+                                     <div class="b2-half1-f4-w7"></div>
+                                     <div class="b2-half1-f4-w8"></div>
+                                    <!-- 5th Floor-->
+                                     <div class="b2-half1-f5-w1"></div>
+                                     <div class="b2-half1-f5-w2"></div>
+                                     <div class="b2-half1-f5-w3"></div>
+                                     <div class="b2-half1-f5-w4"></div>
+                                     <div class="b2-half1-f5-w5"></div>
+                                     <div class="b2-half1-f5-w6"></div>
+                                     <div class="b2-half1-f5-w7"></div>
+                                     <div class="b2-half1-f5-w8"></div>
+                                    <!-- 6th Floor-->
+                                     <div class="b2-half1-f6-w1"></div>
+                                     <div class="b2-half1-f6-w2"></div>
+                                     <div class="b2-half1-f6-w3"></div>
+                                     <div class="b2-half1-f6-w4"></div>
+                                     <div class="b2-half1-f6-w5"></div>
+                                     <div class="b2-half1-f6-w6"></div>
+                                     <div class="b2-half1-f6-w7"></div>
+                                     <div class="b2-half1-f6-w8"></div>
+                                    <!-- 7th Floor-->
+                                     <div class="b2-half1-f7-w1"></div>
+                                     <div class="b2-half1-f7-w2"></div>
+                                     <div class="b2-half1-f7-w3"></div>
+                                     <div class="b2-half1-f7-w4"></div>
+                                     <div class="b2-half1-f7-w5"></div>
+                                     <div class="b2-half1-f7-w6"></div>
+                                     <div class="b2-half1-f7-w7"></div>
+                                     <div class="b2-half1-f7-w8"></div>
+                                    <!-- 8th Floor-->
+                                     <div class="b2-half1-f8-w1"></div>
+                                     <div class="b2-half1-f8-w2"></div>
+                                     <div class="b2-half1-f8-w3"></div>
+                                     <div class="b2-half1-f8-w4"></div>
+                                     <div class="b2-half1-f8-w5"></div>
+                                     <div class="b2-half1-f8-w6"></div>
+                                     <div class="b2-half1-f8-w7"></div>
+                                     <div class="b2-half1-f8-w8"></div>
+                                     <!-- 9th Floor-->
+                                     <div class="b2-half1-f9-w1"></div>
+                                     <div class="b2-half1-f9-w2"></div>
+                                     <div class="b2-half1-f9-w3"></div>
+                                     <div class="b2-half1-f9-w4"></div>
+                                     <div class="b2-half1-f9-w5"></div>
+                                     <div class="b2-half1-f9-w6"></div>
+                                     <div class="b2-half1-f9-w7"></div>
+                                     <div class="b2-half1-f9-w8"></div>
+                                     <!-- 10th Floor-->
+                                     <div class="b2-half1-f10-w1"></div>
+                                     <div class="b2-half1-f10-w2"></div>
+                                     <div class="b2-half1-f10-w3"></div>
+                                     <div class="b2-half1-f10-w4"></div>
+                                     <div class="b2-half1-f10-w5"></div>
+                                     <div class="b2-half1-f10-w6"></div>
+                                     <div class="b2-half1-f10-w7"></div>
+                                     <div class="b2-half1-f10-w8"></div>
+                                 </div>
+                            <!-- B2 - Half 2-->
+                                 <div class="b2-half2">
+                                    <!-- Top -->
+                                     <div class="b2-half2-top"></div>
+                                    <!-- Top Margin-->
+                                     <div class="b2-half2-top-margin"></div>
+                                    <!-- 1st Floor-->
+                                     <div class="b2-half2-f1-w1"></div>
+                                     <div class="b2-half2-f1-w2"></div>
+                                     <div class="b2-half2-f1-w3"></div>
+                                     <div class="b2-half2-f1-w4"></div>
+                                    <!-- 2nd Floor-->
+                                     <div class="b2-half2-f2-w1"></div>
+                                     <div class="b2-half2-f2-w2"></div>
+                                     <div class="b2-half2-f2-w3"></div>
+                                     <div class="b2-half2-f2-w4"></div>
+                                    <!-- 3rd Floor-->
+                                     <div class="b2-half2-f3-w1"></div>
+                                     <div class="b2-half2-f3-w2"></div>
+                                     <div class="b2-half2-f3-w3"></div>
+                                     <div class="b2-half2-f3-w4"></div>
+                                    <!-- 4th Floor-->
+                                     <div class="b2-half2-f4-w1"></div>
+                                     <div class="b2-half2-f4-w2"></div>
+                                     <div class="b2-half2-f4-w3"></div>
+                                     <div class="b2-half2-f4-w4"></div>
+                                    <!-- 5th Floor-->
+                                     <div class="b2-half2-f5-w1"></div>
+                                     <div class="b2-half2-f5-w2"></div>
+                                     <div class="b2-half2-f5-w3"></div>
+                                     <div class="b2-half2-f5-w4"></div>
+                                    <!-- 6th Floor-->
+                                     <div class="b2-half2-f6-w1"></div>
+                                     <div class="b2-half2-f6-w2"></div>
+                                     <div class="b2-half2-f6-w3"></div>
+                                     <div class="b2-half2-f6-w4"></div>
+                                    <!-- 7th Floor-->
+                                     <div class="b2-half2-f7-w1"></div>
+                                     <div class="b2-half2-f7-w2"></div>
+                                     <div class="b2-half2-f7-w3"></div>
+                                     <div class="b2-half2-f7-w4"></div>
+                                    <!-- 8th Floor-->
+                                     <div class="b2-half2-f8-w1"></div>
+                                     <div class="b2-half2-f8-w2"></div>
+                                     <div class="b2-half2-f8-w3"></div>
+                                     <div class="b2-half2-f8-w4"></div>
+                                     <!-- 9th Floor-->
+                                     <div class="b2-half2-f9-w1"></div>
+                                     <div class="b2-half2-f9-w2"></div>
+                                     <div class="b2-half2-f9-w3"></div>
+                                     <div class="b2-half2-f9-w4"></div>
+                                     <!-- 10th Floor-->
+                                     <div class="b2-half2-f10-w1"></div>
+                                     <div class="b2-half2-f10-w2"></div>
+                                     <div class="b2-half2-f10-w3"></div>
+                                     <div class="b2-half2-f10-w4"></div>
+                                 </div>
+                            </div>
+                         <!-- TREE 2-->
+                             <div class="tree2">
+                                <div class="tree-crown">
+                                    <div class="tree2-crown1"></div>
+                                    <div class="tree2-crown2"></div>
+                                </div>
+                                <div class="tree-trunk">
+                                    <div class="tree2-branch1"></div>
+                                    <div class="tree2-trunk"></div>
+                                    <div class="tree2-branch2"></div>
+                                </div>
+                             </div>
+                        <!-- BUILDING 1-->
+                            <div class="b1">
+                                <!-- B1 - HALF 1-->
+                                <div class="b1-half1">
+                                    <!-- 1st Floor -->
+                                    <div class="b1-half1-f1-w1"></div>
+                                    <div class="b1-half1-f1-w2"></div>
+                                    <div class="b1-half1-f1-w3"></div>
+                                    
+                                    <!-- 2nd Floor -->
+                                    <div class="b1-half1-f2-w1"></div>
+                                    <div class="b1-half1-f2-w2"></div>
+                                    <div class="b1-half1-f2-w3"></div>
+                                    
+                                    <!-- 3rd Floor -->
+                                    <div class="b1-half1-f3-w1"></div>
+                                    <div class="b1-half1-f3-w2"></div>
+                                    <div class="b1-half1-f3-w3"></div>
+                                    
+                                    <!-- 4th Floor -->
+                                    <div class="b1-half1-f4-w1"></div>
+                                    <div class="b1-half1-f4-w2"></div>
+                                    <div class="b1-half1-f4-w3"></div>
+                                    
+                                    <!-- 5th Floor -->
+                                    <div class="b1-half1-f5-w1"></div>
+                                    <div class="b1-half1-f5-w2"></div>
+                                    <div class="b1-half1-f5-w3"></div>
+
+                                    <!-- 6th Floor -->
+                                    <div class="b1-half1-f6-w1"></div>
+                                    <div class="b1-half1-f6-w2"></div>
+                                    <div class="b1-half1-f6-w3"></div>
+                                </div>
+                                <!-- B1 - HALF 2-->
+                                <div class="b1-half2">
+                                    <!-- 1st Floor -->
+                                    <div class="b1-half2-f1-w1"></div>
+                                    <div class="b1-half2-f1-w2"></div>
+                                    <div class="b1-half2-f1-w3"></div>
+                                    
+                                    <!-- 2nd Floor -->
+                                    <div class="b1-half2-f2-w1"></div>
+                                    <div class="b1-half2-f2-w2"></div>
+                                    <div class="b1-half2-f2-w3"></div>
+                                    
+                                    <!-- 3rd Floor -->
+                                    <div class="b1-half2-f3-w1"></div>
+                                    <div class="b1-half2-f3-w2"></div>
+                                    <div class="b1-half2-f3-w3"></div>
+                                    
+                                    <!-- 4th Floor-->
+                                    <div class="b1-half2-f4-w1"></div>
+                                    <div class="b1-half2-f4-w2"></div>
+                                    <div class="b1-half2-f4-w3"></div>
+                                    
+                                    <!-- 5th Floor -->
+                                    <div class="b1-half2-f5-w1"></div>
+                                    <div class="b1-half2-f5-w2"></div>
+                                    <div class="b1-half2-f5-w3"></div>
+
+                                    <!-- 6th Floor -->
+                                    <div class="b1-half2-f6-w1"></div>
+                                    <div class="b1-half2-f6-w2"></div>
+                                    <div class="b1-half2-f6-w3"></div>
+                                </div>
+                            </div>
+                        <!-- BUILDING 3-->
+                         <div class="b3">
+                            <!-- B3 - Half 1-->
+                             <div class="b3-half1">
+                                <!-- 1st Floor-->
+                                <div class="b3-half1-f1-w1"></div>
+                                <div class="b3-half1-f1-w2"></div>
+                                <div class="b3-half1-f1-w3"></div>
+                                <div class="b3-half1-f1-w4"></div>
+                                <div class="b3-half1-f1-w5"></div>
+                                <div class="b3-half1-f1-w6"></div>
+                                <!-- 2nd Floor-->
+                                <div class="b3-half1-f2-w1"></div>
+                                <div class="b3-half1-f2-w2"></div>
+                                <div class="b3-half1-f2-w3"></div>
+                                <div class="b3-half1-f2-w4"></div>
+                                <div class="b3-half1-f2-w5"></div>
+                                <div class="b3-half1-f2-w6"></div>
+                                <!-- 3rd Floor-->
+                                <div class="b3-half1-f3-w1"></div>
+                                <div class="b3-half1-f3-w2"></div>
+                                <div class="b3-half1-f3-w3"></div>
+                                <div class="b3-half1-f3-w4"></div>
+                                <div class="b3-half1-f3-w5"></div>
+                                <div class="b3-half1-f3-w6"></div>
+                                <!-- 4th Floor-->
+                                <div class="b3-half1-f4-w1"></div>
+                                <div class="b3-half1-f4-w2"></div>
+                                <div class="b3-half1-f4-w3"></div>
+                                <div class="b3-half1-f4-w4"></div>
+                                <div class="b3-half1-f4-w5"></div>
+                                <div class="b3-half1-f4-w6"></div>
+                                <!-- 5th Floor-->
+                                <div class="b3-half1-f5-w1"></div>
+                                <div class="b3-half1-f5-w2"></div>
+                                <div class="b3-half1-f5-w3"></div>
+                                <div class="b3-half1-f5-w4"></div>
+                                <div class="b3-half1-f5-w5"></div>
+                                <div class="b3-half1-f5-w6"></div>
+                                <!-- 6th Floor-->
+                                <div class="b3-half1-f6-w1"></div>
+                                <div class="b3-half1-f6-w2"></div>
+                                <div class="b3-half1-f6-w3"></div>
+                                <div class="b3-half1-f6-w4"></div>
+                                <div class="b3-half1-f6-w5"></div>
+                                <div class="b3-half1-f6-w6"></div>
+                                <!-- 7th Floor-->
+                                <div class="b3-half1-f7-w1"></div>
+                                <div class="b3-half1-f7-w2"></div>
+                                <div class="b3-half1-f7-w3"></div>
+                                <div class="b3-half1-f7-w4"></div>
+                                <div class="b3-half1-f7-w5"></div>
+                                <div class="b3-half1-f7-w6"></div>
+                                <!-- 8th Floor-->
+                                <div class="b3-half1-f8-w1"></div>
+                                <div class="b3-half1-f8-w2"></div>
+                                <div class="b3-half1-f8-w3"></div>
+                                <div class="b3-half1-f8-w4"></div>
+                                <div class="b3-half1-f8-w5"></div>
+                                <div class="b3-half1-f8-w6"></div>
+                                <!-- 9th Floor-->
+                                <div class="b3-half1-f9-w1"></div>
+                                <div class="b3-half1-f9-w2"></div>
+                                <div class="b3-half1-f9-w3"></div>
+                                <div class="b3-half1-f9-w4"></div>
+                                <div class="b3-half1-f9-w5"></div>
+                                <div class="b3-half1-f9-w6"></div>
+                                <!-- 10th Floor-->
+                                <div class="b3-half1-f10-w1"></div>
+                                <div class="b3-half1-f10-w2"></div>
+                                <div class="b3-half1-f10-w3"></div>
+                                <div class="b3-half1-f10-w4"></div>
+                                <div class="b3-half1-f10-w5"></div>
+                                <div class="b3-half1-f10-w6"></div>
+                                <!-- 11th Floor-->
+                                <div class="b3-half1-f11-w1"></div>
+                                <div class="b3-half1-f11-w2"></div>
+                                <div class="b3-half1-f11-w3"></div>
+                                <div class="b3-half1-f11-w4"></div>
+                                <div class="b3-half1-f11-w5"></div>
+                                <div class="b3-half1-f11-w6"></div>
+                                <!-- 12th Floor-->
+                                <div class="b3-half1-f12-w1"></div>
+                                <div class="b3-half1-f12-w2"></div>
+                                <div class="b3-half1-f12-w3"></div>
+                                <div class="b3-half1-f12-w4"></div>
+                                <div class="b3-half1-f12-w5"></div>
+                                <div class="b3-half1-f12-w6"></div>
+                             </div>
+                             <!-- B3 - Half 2-->
+                             <div class="b3-half2">
+                                <!-- 1st Floor-->
+                                <div class="b3-half2-f1-w1"></div>
+                                <div class="b3-half2-f1-w2"></div>
+                                <div class="b3-half2-f1-w3"></div>
+                                <!-- 2nd Floor-->
+                                <div class="b3-half2-f2-w1"></div>
+                                <div class="b3-half2-f2-w2"></div>
+                                <div class="b3-half2-f2-w3"></div>
+                                <!-- 3rd Floor-->
+                                <div class="b3-half2-f3-w1"></div>
+                                <div class="b3-half2-f3-w2"></div>
+                                <div class="b3-half2-f3-w3"></div>
+                                <!-- 4th Floor-->
+                                <div class="b3-half2-f4-w1"></div>
+                                <div class="b3-half2-f4-w2"></div>
+                                <div class="b3-half2-f4-w3"></div>
+                                <!-- 5th Floor-->
+                                <div class="b3-half2-f5-w1"></div>
+                                <div class="b3-half2-f5-w2"></div>
+                                <div class="b3-half2-f5-w3"></div>
+                                <!-- 6th Floor-->
+                                <div class="b3-half2-f6-w1"></div>
+                                <div class="b3-half2-f6-w2"></div>
+                                <div class="b3-half2-f6-w3"></div>
+                                <!-- 7th Floor-->
+                                <div class="b3-half2-f7-w1"></div>
+                                <div class="b3-half2-f7-w2"></div>
+                                <div class="b3-half2-f7-w3"></div>
+                                <!-- 8th Floor-->
+                                <div class="b3-half2-f8-w1"></div>
+                                <div class="b3-half2-f8-w2"></div>
+                                <div class="b3-half2-f8-w3"></div>
+                                <!-- 9th Floor-->
+                                <div class="b3-half2-f9-w1"></div>
+                                <div class="b3-half2-f9-w2"></div>
+                                <div class="b3-half2-f9-w3"></div>
+                                <!-- 10th Floor-->
+                                <div class="b3-half2-f10-w1"></div>
+                                <div class="b3-half2-f10-w2"></div>
+                                <div class="b3-half2-f10-w3"></div>
+                                <!-- 11th Floor-->
+                                <div class="b3-half2-f11-w1"></div>
+                                <div class="b3-half2-f11-w2"></div>
+                                <div class="b3-half2-f11-w3"></div>
+                                <!-- 12th Floor-->
+                                <div class="b3-half2-f12-w1"></div>
+                                <div class="b3-half2-f12-w2"></div>
+                                <div class="b3-half2-f12-w3"></div>
+                             </div>
+                         </div>
+                        <!-- TREE 3-->
+                             <div class="tree3">
+                                <div class="tree-crown">
+                                    <div class="tree3-crown1"></div>
+                                    <div class="tree3-crown2"></div>
+                                </div>
+                                <div class="tree-trunk">
+                                    <div class="tree3-branch1"></div>
+                                    <div class="tree3-trunk"></div>
+                                    <div class="tree3-branch2"></div>
+                                </div>
+                             </div>
+                        <!-- BUILDING 4 -->
+                         <div class="b4">
+                            <!-- B4 - HALF 1-->
+                            <div class="b4-half1">
+                                <!-- 1st Floor-->
+                                 <div class="b4-half1-f1-w1"></div>
+                                 <div class="b4-half1-f1-w2"></div>
+                                 <div class="b4-half1-f1-w3"></div>
+                                <!-- 2nd Floor-->
+                                 <div class="b4-half1-f2-w1"></div>
+                                 <div class="b4-half1-f2-w2"></div>
+                                 <div class="b4-half1-f2-w3"></div>
+                                <!-- 3rd Floor-->
+                                 <div class="b4-half1-f3-w1"></div>
+                                 <div class="b4-half1-f3-w2"></div>
+                                 <div class="b4-half1-f3-w3"></div>
+                                <!-- 4th Floor-->
+                                 <div class="b4-half1-f4-w1"></div>
+                                 <div class="b4-half1-f4-w2"></div>
+                                 <div class="b4-half1-f4-w3"></div>
+                                <!-- 5th Floor-->
+                                 <div class="b4-half1-f5-w1"></div>
+                                 <div class="b4-half1-f5-w2"></div>
+                                 <div class="b4-half1-f5-w3"></div>
+                                 <!-- 6th Floor-->
+                                 <div class="b4-half1-f6-w1"></div>
+                                 <div class="b4-half1-f6-w2"></div>
+                                 <div class="b4-half1-f6-w3"></div>
+                            </div>
+                            <!-- B4 - HALF 2-->
+                             <div class="b4-half2">
+                                <!-- 1st Floor-->
+                                 <div class="b4-half2-f1-w1"></div>
+                                 <div class="b4-half2-f1-w2"></div>
+                                 <div class="b4-half2-f1-w3"></div>
+                                <!-- 2nd Floor-->
+                                 <div class="b4-half2-f2-w1"></div>
+                                 <div class="b4-half2-f2-w2"></div>
+                                 <div class="b4-half2-f2-w3"></div>
+                                <!-- 3rd Floor-->
+                                 <div class="b4-half2-f3-w1"></div>
+                                 <div class="b4-half2-f3-w2"></div>
+                                 <div class="b4-half2-f3-w3"></div>
+                                <!-- 4th Floor-->
+                                 <div class="b4-half2-f4-w1"></div>
+                                 <div class="b4-half2-f4-w2"></div>
+                                 <div class="b4-half2-f4-w3"></div>
+                                <!-- 5th Floor-->
+                                 <div class="b4-half2-f5-w1"></div>
+                                 <div class="b4-half2-f5-w2"></div>
+                                 <div class="b4-half2-f5-w3"></div>
+                                 <!-- 6th Floor-->
+                                 <div class="b4-half2-f6-w1"></div>
+                                 <div class="b4-half2-f6-w2"></div>
+                                 <div class="b4-half2-f6-w3"></div>
+                             </div>
+                         </div>
+                         <!-- TREE 4-->
+                             <div class="tree4">
+                                <div class="tree-crown">
+                                    <div class="tree4-crown1"></div>
+                                    <div class="tree4-crown2"></div>
+                                </div>
+                                <div class="tree-trunk">
+                                    <div class="tree4-branch1"></div>
+                                    <div class="tree4-trunk"></div>
+                                    <div class="tree4-branch2"></div>
+                                </div>
+                             </div>
+                         <!-- BUILDING 5-->
+                          <div class="b5">
+                            <!-- B5 HALF 1-->
+                             <div class="b5-half1">
+                                <!-- 1st Tier-->
+                                 <div class="b5-half1-tier1"></div>
+                                <!-- 2nd Tier-->
+                                 <div class="b5-half1-tier2"></div>
+                                <!-- WINDOWS -->
+                                    <!-- 1st Floor-->
+                                     <div class="b5-half1-f1-w1"></div>
+                                     <div class="b5-half1-f1-w2"></div>
+                                     <div class="b5-half1-f1-w3"></div>
+                                    <!-- 2nd Floor-->
+                                     <div class="b5-half1-f2-w1"></div>
+                                     <div class="b5-half1-f2-w2"></div>
+                                     <div class="b5-half1-f2-w3"></div>
+                                    <!-- 3rd Floor-->
+                                     <div class="b5-half1-f3-w1"></div>
+                                     <div class="b5-half1-f3-w2"></div>
+                                     <div class="b5-half1-f3-w3"></div>
+                                    <!-- 4th Floor-->
+                                     <div class="b5-half1-f4-w1"></div>
+                                     <div class="b5-half1-f4-w2"></div>
+                                     <div class="b5-half1-f4-w3"></div>
+                                    <!-- 5th Floor-->
+                                     <div class="b5-half1-f5-w1"></div>
+                                     <div class="b5-half1-f5-w2"></div>
+                                     <div class="b5-half1-f5-w3"></div>
+                                    <!-- 6th Floor-->
+                                     <div class="b5-half1-f6-w1"></div>
+                                     <div class="b5-half1-f6-w2"></div>
+                                     <div class="b5-half1-f6-w3"></div>
+                                    <!-- 7th Floor-->
+                                     <div class="b5-half1-f7-w1"></div>
+                                     <div class="b5-half1-f7-w2"></div>
+                                     <div class="b5-half1-f7-w3"></div>
+                                    <!-- 8th Floor-->
+                                     <div class="b5-half1-f8-w1"></div>
+                                     <div class="b5-half1-f8-w2"></div>
+                                     <div class="b5-half1-f8-w3"></div>
+                                    <!-- 9th Floor-->
+                                     <div class="b5-half1-f9-w1"></div>
+                                     <div class="b5-half1-f9-w2"></div>
+                                     <div class="b5-half1-f9-w3"></div>
+                             </div>
+                             <!-- B5 HALF 2-->
+                              <div class="b5-half2">
+                                <!-- 1st Tier-->
+                                 <div class="b5-half2-tier1"></div>
+                                <!-- 2nd Tier-->
+                                 <div class="b5-half2-tier2"></div>
+                                <!-- 3rd Tier-->
+                                 <div class="b5-half2-tier3"></div>
+                                 <!-- WINDOWS -->
+                                    <!-- 1st Floor-->
+                                     <div class="b5-half2-f1-w1"></div>
+                                     <div class="b5-half2-f1-w2"></div>
+                                     <div class="b5-half2-f1-w3"></div>
+                                     <div class="b5-half2-f1-w4"></div>
+                                     <div class="b5-half2-f1-w5"></div>
+                                    <!-- 2nd Floor-->
+                                     <div class="b5-half2-f2-w1"></div>
+                                     <div class="b5-half2-f2-w2"></div>
+                                     <div class="b5-half2-f2-w3"></div>
+                                     <div class="b5-half2-f2-w4"></div>
+                                     <div class="b5-half2-f2-w5"></div>
+                                    <!-- 3rd Floor-->
+                                     <div class="b5-half2-f3-w1"></div>
+                                     <div class="b5-half2-f3-w2"></div>
+                                     <div class="b5-half2-f3-w3"></div>
+                                     <div class="b5-half2-f3-w4"></div>
+                                     <div class="b5-half2-f3-w5"></div>
+                                    <!-- 4th Floor-->
+                                     <div class="b5-half2-f4-w1"></div>
+                                     <div class="b5-half2-f4-w2"></div>
+                                     <div class="b5-half2-f4-w3"></div>
+                                     <div class="b5-half2-f4-w4"></div>
+                                     <div class="b5-half2-f4-w5"></div>
+                                    <!-- 5th Floor-->
+                                     <div class="b5-half2-f5-w1"></div>
+                                     <div class="b5-half2-f5-w2"></div>
+                                     <div class="b5-half2-f5-w3"></div>
+                                     <div class="b5-half2-f5-w4"></div>
+                                     <div class="b5-half2-f5-w5"></div>
+                                    <!-- 6th Floor-->
+                                     <div class="b5-half2-f6-w1"></div>
+                                     <div class="b5-half2-f6-w2"></div>
+                                     <div class="b5-half2-f6-w3"></div>
+                                     <div class="b5-half2-f6-w4"></div>
+                                     <div class="b5-half2-f6-w5"></div>
+                                    <!-- 7th Floor-->
+                                     <div class="b5-half2-f7-w1"></div>
+                                     <div class="b5-half2-f7-w2"></div>
+                                     <div class="b5-half2-f7-w3"></div>
+                                     <div class="b5-half2-f7-w4"></div>
+                                     <div class="b5-half2-f7-w5"></div>
+                                    <!-- 8th Floor-->
+                                     <div class="b5-half2-f8-w1"></div>
+                                     <div class="b5-half2-f8-w2"></div>
+                                     <div class="b5-half2-f8-w3"></div>
+                                     <div class="b5-half2-f8-w4"></div>
+                                     <div class="b5-half2-f8-w5"></div>
+                                    <!-- 9th Floor-->
+                                     <div class="b5-half2-f9-w1"></div>
+                                     <div class="b5-half2-f9-w2"></div>
+                                     <div class="b5-half2-f9-w3"></div>
+                              </div>
+                          </div>
+                          <!-- BUILDING 6-->
+                           <div class="b6">
+                                <!-- B6 HALF 1 -->
+                                <div class="b6-half1">
+                                    <!-- 1st Floor-->
+                                     <div class="b6-half1-f1-w1"></div>
+                                     <div class="b6-half1-f1-w2"></div>
+                                     <div class="b6-half1-f1-w3"></div>
+                                    <!-- 2nd Floor-->
+                                     <div class="b6-half1-f2-w1"></div>
+                                     <div class="b6-half1-f2-w2"></div>
+                                     <div class="b6-half1-f2-w3"></div>
+                                     <div class="b6-half1-f2-w4"></div>
+                                     <div class="b6-half1-f2-w5"></div>
+                                    <!-- 3rd Floor-->
+                                     <div class="b6-half1-f3-w1"></div>
+                                     <div class="b6-half1-f3-w2"></div>
+                                     <div class="b6-half1-f3-w3"></div>
+                                     <div class="b6-half1-f3-w4"></div>
+                                     <div class="b6-half1-f3-w5"></div>
+                                    <!-- 4th Floor-->
+                                     <div class="b6-half1-f4-w1"></div>
+                                     <div class="b6-half1-f4-w2"></div>
+                                     <div class="b6-half1-f4-w3"></div>
+                                     <div class="b6-half1-f4-w4"></div>
+                                     <div class="b6-half1-f4-w5"></div>
+                                    <!-- 5th Floor-->
+                                     <div class="b6-half1-f5-w1"></div>
+                                     <div class="b6-half1-f5-w2"></div>
+                                     <div class="b6-half1-f5-w3"></div>
+                                     <div class="b6-half1-f5-w4"></div>
+                                     <div class="b6-half1-f5-w5"></div>
+                                    <!-- 6th Floor-->
+                                     <div class="b6-half1-f6-w1"></div>
+                                     <div class="b6-half1-f6-w2"></div>
+                                     <div class="b6-half1-f6-w3"></div>
+                                     <div class="b6-half1-f6-w4"></div>
+                                     <div class="b6-half1-f6-w5"></div>
+                                    <!-- 7th Floor-->
+                                     <div class="b6-half1-f7-w1"></div>
+                                     <div class="b6-half1-f7-w2"></div>
+                                     <div class="b6-half1-f7-w3"></div>
+                                     <div class="b6-half1-f7-w4"></div>
+                                     <div class="b6-half1-f7-w5"></div>
+                                    <!-- 8th Floor-->
+                                     <div class="b6-half1-f8-w1"></div>
+                                     <div class="b6-half1-f8-w2"></div>
+                                     <div class="b6-half1-f8-w3"></div>
+                                     <div class="b6-half1-f8-w4"></div>
+                                     <div class="b6-half1-f8-w5"></div>
+                                    <!-- 9th Floor-->  
+                                     <div class="b6-half1-f9-w1"></div>
+                                     <div class="b6-half1-f9-w2"></div>
+                                     <div class="b6-half1-f9-w3"></div>
+                                     <div class="b6-half1-f9-w4"></div>
+                                     <div class="b6-half1-f9-w5"></div>    
+                                </div>
+                                <!-- B5 HALF 2 -->
+                                <div class="b6-half2">
+                                    <!-- 1st Floor-->
+                                     <div class="b6-half2-f1-w1"></div>
+                                    <!-- 2nd Floor-->
+                                     <div class="b6-half2-f2-w1"></div>
+                                     <div class="b6-half2-f2-w2"></div>
+                                     <div class="b6-half2-f2-w3"></div>
+                                    <!-- 3rd Floor-->
+                                     <div class="b6-half2-f3-w1"></div>
+                                     <div class="b6-half2-f3-w2"></div>
+                                     <div class="b6-half2-f3-w3"></div>
+                                    <!-- 4th Floor-->
+                                     <div class="b6-half2-f4-w1"></div>
+                                     <div class="b6-half2-f4-w2"></div>
+                                     <div class="b6-half2-f4-w3"></div>
+                                    <!-- 5th Floor-->
+                                     <div class="b6-half2-f5-w1"></div>
+                                     <div class="b6-half2-f5-w2"></div>
+                                     <div class="b6-half2-f5-w3"></div>
+                                    <!-- 6th Floor-->
+                                     <div class="b6-half2-f6-w1"></div>
+                                     <div class="b6-half2-f6-w2"></div>
+                                     <div class="b6-half2-f6-w3"></div>
+                                    <!-- 7th Floor-->
+                                     <div class="b6-half2-f7-w1"></div>
+                                     <div class="b6-half2-f7-w2"></div>
+                                     <div class="b6-half2-f7-w3"></div>
+                                    <!-- 8th Floor-->
+                                     <div class="b6-half2-f8-w1"></div>
+                                     <div class="b6-half2-f8-w2"></div>
+                                     <div class="b6-half2-f8-w3"></div>
+                                    <!-- 9th Floor-->  
+                                     <div class="b6-half2-f9-w1"></div>
+                                     <div class="b6-half2-f9-w2"></div>
+                                     <div class="b6-half2-f9-w3"></div>
+                                </div>
+                           </div>
+                           <!-- TREE 5-->
+                             <div class="tree5">
+                                <div class="tree-crown">
+                                    <div class="tree5-crown1"></div>
+                                    <div class="tree5-crown2"></div>
+                                </div>
+                                <div class="tree-trunk">
+                                    <div class="tree5-branch1"></div>
+                                    <div class="tree5-trunk"></div>
+                                    <div class="tree5-branch2"></div>
+                                </div>
+                             </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
