@@ -1,0 +1,279 @@
+.burger-illustration-container {
+    width: 100%;
+    height: 100%;
+}
+
+.burger-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Top Bun */
+.burger-bun-top {
+    background-color: #D8A05B;
+    width: 300px;
+    height: 110px;
+    position: relative;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    z-index: 3;
+    overflow: hidden;
+    margin-bottom: -1px;
+}
+
+/* Stripe */ 
+.burger-bun-top::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: #F0C674;
+}
+
+/* Highlight */
+.bun-top-highlight {
+    background-color: #E8B96B;
+    width: 300px;
+    height: 110px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    overflow: hidden;
+}
+
+.bun-top-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: #F5D485;
+}
+
+/* Bottom Bun */
+
+.burger-bun-bottom {
+    background-color: #D8A05B;
+    width: 290px;
+    height: 45px;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Stripe */
+
+.burger-bun-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: #F0C674;
+}
+
+/* Bottom bun highlight */
+
+.bun-bottom-highlight {
+    background-color: #E8B96B;
+    width: 290px;
+    height: 45px;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+    left: 40px;
+}
+
+.bun-bottom-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: #F5D485;
+}
+
+/* Sesame Seeds */ 
+
+.bun-seed {
+    background-color: #F5E6D3;
+    width: 10px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+}
+
+/* Individual seed positions - scattered on top 50% */
+.seed-1 { top: 8px; left: 72px; transform: rotate(45deg); background-color: #E6D7C3; }
+.seed-2 { top: 35px; left: 205px; transform: rotate(-35deg); }
+.seed-3 { top: 18px; left: 40px; transform: rotate(70deg); background-color: #E6D7C3;}
+.seed-4 { top: 25px; left: 140px; transform: rotate(-55deg);  }
+.seed-5 { top: 10px; left: 220px; transform: rotate(15deg); }
+.seed-6 { top: 35px; left: 65px; transform: rotate(-80deg); }
+.seed-8 { top: 12px; left: 170px; transform: rotate(-25deg); }
+.seed-9 { top: 15px; left: 110px; transform: rotate(85deg); }
+.seed-10 { top: 15px; left: 200px; transform: rotate(-65deg);  }
+
+/* Cheese */
+
+.burger-cheese {
+    width: 0;     
+    height: 0;    
+    border-left: 165px solid transparent;
+    border-right: 165px solid transparent;
+    border-top: 30px solid #FFA500;
+    position: relative;
+    margin-bottom: -27px;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+/* Highlight */
+
+.burger-cheese-highlight {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;  /* Smaller triangle */
+    border-right: 165px solid transparent;
+    border-top: 30px solid #FFB84D;       /* Shadow color */
+    top: -30px;    /* Position relative to parent triangle */
+    left: -99px;  /* Center it within parent */
+    border-radius: 10px;
+}
+
+/* Patty */
+
+.burger-patty {
+    background-color: #6B3E26;
+    width: 310px;
+    height: 35px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Highlight */
+
+.patty-highlight {
+    background-color: #8B5538;
+    width: 310px;
+    height: 35px;
+    border-radius: 40px;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    z-index: 2;
+}
+
+/* Tomato */
+
+.burger-tomato {
+    background-color: #E53935;
+    position: relative;
+    width: 270px;
+    height: 15px;
+    z-index: 3;
+    overflow: hidden;
+    margin-bottom: -1.5px;
+}
+
+.tomato-highlight {
+    background-color: #F06292;
+    position: absolute;
+    width: 270px;
+    height: 15px;
+    z-index: 2;
+    top: 0;
+    left: 35px;
+}
+
+/* Lettuce */
+
+.burger-lettuce {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: -15px;
+    z-index: 2;
+}
+
+.lettuce-leaf {
+    background-color: #81C784;
+    border-radius: 0% 0% 50% 50%;
+    margin-left: -1px;
+}
+
+.lettuce-leaf-1 {
+    width: 80px;
+    height: 30px;
+    border-radius: 50% 0% 50% 50%;
+    margin-left: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #4CAF50;
+}
+
+.lettuce-highlight {
+    background-color: #81C784;
+    border-radius: 50% 0% 50% 50%;
+    width: 80px;
+    height: 30px;
+    top: 0;
+    left: 40px;
+    position: absolute;
+}
+
+.lettuce-leaf-2 {
+    width: 80px;
+    height: 30px;
+}
+
+.lettuce-leaf-3 {
+    width: 80px;
+    height: 30px;
+}
+
+.lettuce-leaf-4 {
+    width: 80px;
+    height: 30px;
+    border-radius: 0% 50% 50% 50%;
+}
+
+.burger-shadow {
+    width: 360px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #2E5266;
+    margin-top: -25px;
+    margin-left: -60px;
+}
