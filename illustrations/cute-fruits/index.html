@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cute Fruits - Pure CSS illustration">
+  <meta name="author" content="Alicia Ward">
+  
+  <!-- Page Title -->
+  <title>Cute Fruits | CSS Illustrations</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FAF3E0' rx='10'/><text x='50' y='70' font-family='Bebas Neue, sans-serif' font-size='50' fill='%233B9C9C' text-anchor='middle' font-weight='400'>AW</text></svg>">
+  
+  <!-- Font Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Illustration Page Specific Styles */
+    .illustration-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--space-md);
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--orange);
+      text-decoration: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-xl);
+      transition: color 0.3s ease;
+    }
+    
+    .back-link:hover {
+      color: var(--orange-dark);
+    }
+    
+    .illustration-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .illustration-title {
+        font-size: 2.5rem;
+        color: var(--teal);
+        margin-bottom: var(--space-md);
+        border: none;
+    }
+    
+    .illustration-meta {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meta-title {
+        font-size: 1rem;
+        color: var(--dark);
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        text-align: center;
+    }
+
+    .techniques-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        width: fit-content;
+    }
+
+    .techniques-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 0.85rem;
+        color: var(--dark);
+        text-align: left;
+    }
+
+    .techniques-list li::before {
+        content: '✦';
+        position: absolute;
+        left: 0;
+        color: var(--mustard);
+        font-size: 1rem;
+    }
+    
+    .illustration-container {
+      background: var(--lightest);
+      border: 2px solid var(--dark);
+      border-radius: 25px;
+      box-shadow: -6px 6px 0 0 var(--mustard);
+      padding: var(--space-xl);  /* Change from space-2xl to space-xl */
+      /* Add these specific dimensions */
+      width: 900px;
+      height: 600px;
+      max-width: 100%; /* Responsive */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-2xl) auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .illustration-container > * {
+    width: 100%;
+    height: 100%;
+}
+
+    .site-title {
+      font-size: 1.2em;
+    }
+
+    .image-container {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header>
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="../../" class="btn" aria-label="Return to main gallery">
+          ← Back to Gallery
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="illustration-page">
+      
+      <!-- Illustration Header -->
+      <div class="illustration-header">
+        <h2 class="illustration-title">Cute Fruits</h2>
+        <div clas="illustration-meta">
+            <p class="meta-title">Techniques Used:</p>
+            <ul class="techniques-list">
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Illustration Display -->
+      <div class="illustration-container" >
+        <!-- CUTE FRUITS -->
+        <div class="cute-fruits-illustration-container">
+            <section class="styled-section" style="background-color: #FDF6E3;">
+        <div class="drawing-container">
+            <!-- Scaling wrapper-->
+            <div class="drawing-scaling-wrapper scale-cute-fruits">
+                <div class="cute-fruits-wrapper">
+                    <div class="cf-apple">
+                        <div class="apple-top">
+                            <div class="cf-apple-stem"></div>
+                            <div class="cf-apple-leaf"></div>
+                        </div>
+                        <div class="cf-apple-left">
+                            <div class="cf-apple-highlight"></div>
+                        </div>
+                        <div class="cf-apple-right"></div>
+                        <div class="cf-eyes">
+                            <div class="cf-eye-white-left">
+                                <div class="cf-eye-black-left">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                            <div class="cf-eye-white-right">
+                                <div class="cf-eye-black-right">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf-mouth">
+                            <div class="cf-smile"></div>
+                        </div>
+                        <div class="cf-cheeks-light">
+                            <div class="cf-cheek-light-left"></div>
+                            <div class="cf-cheek-light-right"></div>
+                        </div>
+                    </div>
+                    <div class="cf-orange">
+                        <div class="orange-top">
+                            <div class="cf-orange-stem"></div>
+                            <div class="cf-orange-leaf"></div>
+                        </div>
+                        <div class="cf-orange-body">
+                            <div class="cf-orange-highlight"></div>
+                        </div>
+                        <div class="cf-eyes">
+                            <div class="cf-eye-white-left">
+                                <div class="cf-eye-black-left">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                            <div class="cf-eye-white-right">
+                                <div class="cf-eye-black-right">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf-mouth">
+                            <div class="cf-smile"></div>
+                        </div>
+                        <div class="cf-cheeks-dark">
+                            <div class="cf-cheek-dark-left"></div>
+                            <div class="cf-cheek-dark-right"></div>
+                        </div>
+                    </div>
+                    <div class="cf-strawberry">
+                        <div class="cf-strawberry-leaves">
+                            <div class="cf-strawberry-leaf s-leaf-1"></div>
+                            <div class="cf-strawberry-leaf s-leaf-2"></div>
+                            <div class="cf-strawberry-leaf s-leaf-3"></div>
+                            <div class="cf-strawberry-leaf s-leaf-4"></div>
+                            <div class="cf-strawberry-leaf s-leaf-5"></div>
+                        </div>
+                        <div class="cf-strawberry-body">
+                            <div class="cf-strawberry-highlight"></div>
+                        </div>
+                        <div class="cf-eyes">
+                            <div class="cf-eye-white-left">
+                                <div class="cf-eye-black-left">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                            <div class="cf-eye-white-right">
+                                <div class="cf-eye-black-right">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf-mouth">
+                            <div class="cf-smile"></div>
+                        </div>
+                        <div class="cf-cheeks-light">
+                            <div class="cf-cheek-light-left"></div>
+                            <div class="cf-cheek-light-right"></div>
+                        </div>
+                    </div>
+                    <div class="cf-pear">
+                        <div class="cf-pear-stem"></div>
+                        <div class="cf-pear-leaf"></div>
+                        <div class="cf-pear-top">
+                            <div class="pear-top-highlight"></div>
+                        </div>
+                        <div class="cf-pear-bottom">
+                            <div class="pear-bottom-highlight"></div>
+                        </div>
+                        <div class="pear-highlight-cover"></div>
+                        <div class="cf-eyes">
+                            <div class="cf-eye-white-left">
+                                <div class="cf-eye-black-left">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                            <div class="cf-eye-white-right">
+                                <div class="cf-eye-black-right">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf-mouth">
+                            <div class="cf-smile"></div>
+                        </div>
+                        <div class="cf-cheeks-dark">
+                            <div class="cf-cheek-dark-left"></div>
+                            <div class="cf-cheek-dark-right"></div>
+                        </div>
+                    </div>
+                    <div class="cf-raspberry">
+                        <div class="cf-raspberry-leaves">
+                            <div class="cf-raspberry-leaf r-leaf-1"></div>
+                            <div class="cf-raspberry-leaf r-leaf-2"></div>
+                            <div class="cf-raspberry-leaf r-leaf-3"></div>
+                        </div>
+                        <div class="cf-raspberry-row1">
+                            <div class="cf-raspberry-circle">
+                                <div class="cf-raspberry-highlight"></div>
+                            </div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                        </div>
+                        <div class="cf-raspberry-row2">
+                            <div class="cf-raspberry-circle">
+                                <div class="cf-raspberry-highlight"></div>
+                            </div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                        </div>
+                        <div class="cf-raspberry-row3">
+                            <div class="cf-raspberry-circle">
+                                <div class="cf-raspberry-highlight"></div>
+                            </div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                        </div>
+                        <div class="cf-raspberry-row4">
+                            <div class="cf-raspberry-circle">
+                                <div class="cf-raspberry-highlight"></div>
+                            </div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                        </div>
+                        <div class="cf-raspberry-row5">
+                            <div class="cf-raspberry-circle">
+                                <div class="cf-raspberry-highlight"></div>
+                            </div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                        </div>
+                        <div class="cf-raspberry-row6">
+                            <div class="cf-raspberry-circle">
+                                <div class="cf-raspberry-highlight"></div>
+                            </div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                            <div class="cf-raspberry-circle no-highlight"></div>
+                        </div>
+                        <div class="cf-eyes">
+                            <div class="cf-eye-white-left">
+                                <div class="cf-eye-black-left">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                            <div class="cf-eye-white-right">
+                                <div class="cf-eye-black-right">
+                                    <div class="cf-eye-shine-large"></div>
+                                    <div class="cf-eye-shine-small"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf-mouth">
+                            <div class="cf-smile"></div>
+                        </div>
+                        <div class="cf-cheeks-light">
+                            <div class="cf-cheek-light-left"></div>
+                            <div class="cf-cheek-light-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

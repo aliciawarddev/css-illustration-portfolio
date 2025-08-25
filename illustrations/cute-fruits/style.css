@@ -1,0 +1,675 @@
+.cute-fruits-illustration-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* General */
+.cute-fruits-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    gap: 50px;
+}
+
+/* Apple */ 
+.cf-apple {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 0px;
+}
+
+.cf-apple-left {
+    background-color: #DC143C;
+    border-radius: 50%;
+    height: 210px;
+    width: 150px;
+    margin-right: -75px;
+    transform: rotate(-15deg);
+    overflow: hidden;
+}
+
+.cf-apple-right {
+    background-color: #FF6B6B;
+    border-radius: 50%;
+    height: 210px;
+    width: 150px;
+    transform: rotate(15deg);
+}
+
+.cf-apple-highlight {
+    position: absolute;
+    background-color: #FF6B6B;
+    border-radius: 50%;
+    height: 210px;
+    width: 150px;
+    left: 20px;
+    top: 0;
+}
+
+.cf-apple-stem {
+    width: 60px;
+    height: 80px;
+    border: 10px solid #8B4513;
+    border-right: none;
+    border-bottom: none;
+    background: transparent;
+    border-radius: 250px 0 0 0;
+    top: -65px;
+    left: 108px;
+    position: absolute;
+    z-index: -1;
+}
+
+.cf-apple-leaf {
+    background-color: #228B22;
+    width: 80px;
+    height: 70px;
+    border-radius: 0 80px 0 80px;
+    transform: rotate(20deg);
+    top: -60px;
+    left: 42px;
+    position: absolute;
+    z-index: -2;
+}
+
+/* Eyes */
+
+.cf-eyes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    z-index: 4;
+}
+
+.cf-eye-white-left {
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transform: translateX(-40px); 
+    z-index: 4;
+}
+
+.cf-eye-white-right {
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transform: translateX(40px); 
+    z-index: 4;
+}
+
+.cf-eye-black-left {
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 7px;
+    right: 2.5px;
+    z-index: 5;
+}
+
+.cf-eye-black-right {
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 7px;
+    left: 2px;
+    z-index: 5;
+}
+
+.cf-eye-shine-large {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    z-index: 6;
+}
+
+.cf-eye-shine-small {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    top: 17px;
+    left: 5px;
+    position: absolute;
+    z-index: 6;
+}
+
+/* Mouth */
+.cf-mouth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.cf-smile {
+    width: 30px;
+    height: 25px;
+    border: 15px solid black;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 4;
+    top: -20px;
+}
+
+/* CHEEKS */
+
+/* Light cheeks */
+.cf-cheeks-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    z-index: 3;
+}
+
+.cf-cheek-light-left {
+    position: absolute;
+    background-color: #FFCCCB;
+    border-radius: 50%;
+    width: 25px;
+    height: 20px;
+    left: 35px;
+    top: 75px;
+    opacity: 0.5;
+}
+
+.cf-cheek-light-right {
+    position: absolute;
+    background-color: #FFCCCB;
+    border-radius: 50%;
+    width: 25px;
+    height: 20px;
+    right: 35px;
+    top: 75px;
+    opacity: 0.5;
+}
+
+/* Dark cheeks */
+.cf-cheeks-dark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    z-index: 3;
+}
+
+.cf-cheek-dark-left {
+    position: absolute;
+    background-color: #FF69B4;
+    border-radius: 50%;
+    width: 25px;
+    height: 20px;
+    left: 35px;
+    top: 75px;
+    opacity: 0.5;
+}
+
+.cf-cheek-dark-right {
+    position: absolute;
+    background-color: #FF69B4;
+    border-radius: 50%;
+    width: 25px;
+    height: 20px;
+    right: 35px;
+    top: 75px;
+    opacity: 0.5;
+}
+
+
+/* 
+.cf-smile2 {
+    height: 25px;
+    width: 25px;
+    border: 5px solid black;
+    background-color: transparent;
+    z-index: 4;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.cf-smile-cover1 {
+    height: 20px;
+    width: 30px;
+    background-color: #FFB347;
+    z-index: 5;
+    top: -10px;
+    position: absolute;
+    left: -10px;
+    transform: rotate(-80deg);
+}
+
+.cf-smile-cover2 {
+    height: 20px;
+    width: 30px;
+    background-color: #FFB347;
+    z-index: 5;
+    top: -10px;
+    position: absolute;
+    right: -10px;
+    transform: rotate(80deg);
+}
+*/ 
+
+/* Orange */
+.cf-orange {
+    position: relative;
+    z-index: 1;
+}
+
+.cf-orange-body {
+    background-color: #FF8C00;
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cf-orange-highlight {
+    background-color:#FFB347;
+    border-radius: 50%;
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    left: 25px;
+    top: 0;
+}
+
+.cf-orange-stem {
+    width: 30px;
+    height: 50px;
+    border: 10px solid #CD853F;
+    border-left: none;
+    border-bottom: none;
+    background: transparent;
+    border-radius: 0 50px 0px 0;
+    top: -55px;
+    left: 75px;
+    position: absolute;
+    z-index: -1;
+}
+
+.cf-orange-leaf {
+    background-color: #32CD32;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px 0 50px 0;
+    transform: rotate(0deg);
+    top: -55px;
+    left: 115px;
+    position: absolute;
+    z-index: -2;
+}
+
+/* Strawberry */
+.cf-strawberry {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cf-strawberry-body {
+    width: 180px;
+    height: 210px;
+    background-color: #E53E3E;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.cf-strawberry-highlight {
+    background-color: #FF7A7A;
+    position: absolute;
+    width: 180px;
+    height: 210px;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    top: 0;
+    left: 25px;
+    z-index: 2;
+}
+
+.cf-strawberry-leaves {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.cf-strawberry-leaf {
+    background-color: #4CBB17;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px 0 50px 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.s-leaf-1 {top: -25px; left: -60px; transform: rotate(-90deg); }
+.s-leaf-2 {top: -27.5px; left: -40px; transform: rotate(-67.5deg); } 
+.s-leaf-3 {top: -30px; left: -20px; transform: rotate(-45deg); }
+.s-leaf-4 {top: -27.5px; left: 0px; transform: rotate(-22.5deg); }
+.s-leaf-5 {top: -25px; left: 20px; transform: rotate(0deg); } 
+
+/* Pear */
+.cf-pear {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cf-pear-top {
+    background-color: #9ACD32;
+    border-radius: 65px 65px 0px 0px;
+    height: 110px;
+    width: 130px;
+    margin-bottom: -60px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    top: -10px;
+}
+
+.cf-pear-bottom {
+    background-color: #9ACD32;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pear-top-highlight {
+    background-color: #C5E063;
+    border-radius: 65px 65px 30px 30px;
+    height: 130px;
+    width: 130px;
+    margin-bottom: -60px;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    z-index: 3;
+}
+
+.pear-bottom-highlight {
+    background-color: #C5E063;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    z-index: 2;
+}
+
+.pear-highlight-cover {
+    background-color: #C5E063 ;
+    border-radius: 65px 65px 0px 0px;
+    height: 110px;
+    width: 100px;
+    margin-bottom: -60px;
+    position: absolute;
+    z-index: 3;
+    top: -10px;
+    left: 60px;
+}
+
+.cf-pear-stem {
+    width: 30px;
+    height: 60px;
+    border: 10px solid #654321;
+    border-left: none;
+    border-bottom: none;
+    background: transparent;
+    border-radius: 0 200px 0 0;
+    top: -65px;
+    left: 65px;
+    position: absolute;
+    z-index: -1;
+}
+
+.cf-pear-leaf {
+    background-color: #50C878;
+    width: 70px;
+    height: 70px;
+    border-radius: 90px 0 90px 0;
+    transform: rotate(-5deg);
+    top: -72px;
+    right: 30px;
+    position: absolute;
+    z-index: -2;
+}
+
+.cf-pear .cf-eyes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35%; /* Adjust this value to position vertically on the pear */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    z-index: 4;
+}
+
+.cf-pear .cf-mouth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 64%; /* Adjust this value to position vertically on the pear */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.cf-pear .cf-cheeks-dark {
+    position: absolute;
+    top: 52%; /* Adjust this value to center between eyes and mouth */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    z-index: 3;
+}
+
+/* Raspberry */
+.cf-raspberry {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cf-raspberry-row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.cf-raspberry-row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.cf-raspberry-row3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.cf-raspberry-row4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.cf-raspberry-row5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.cf-raspberry-row6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.cf-raspberry-circle {
+    background-color: #E91E63;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: -12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cf-raspberry-circle.no-highlight {
+    background-color: #FF6B9D;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: -7px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.cf-raspberry-highlight {
+    background-color: #FF6B9D;  /* Lighter pink highlight color */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 1;
+}
+
+.cf-raspberry-leaves {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+.cf-raspberry-leaf {
+    background-color: #4CBB17;
+    width: 60px;
+    height: 60px;
+    border-radius: 80px 0 80px 0;
+    z-index: -1;
+    transform-origin: center;
+    position: relative;
+}
+
+.r-leaf-1 { margin-right: -20px; transform: rotate(-90deg);}
+.r-leaf-2 { transform: rotate(-45deg); }
+.r-leaf-3 { margin-left: -20px; transform: rotate(0deg);}
+
+.cf-raspberry .cf-eyes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 43%; /* Adjust this value to position vertically */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    z-index: 4;
+}
+
+.cf-raspberry .cf-mouth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70%; /* Adjust this value to position vertically */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.cf-raspberry .cf-cheeks-light {
+    position: absolute;
+    top: 59%; /* Adjust this value to center between eyes and mouth */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    z-index: 3;
+}
