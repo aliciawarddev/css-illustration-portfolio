@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TODO-DESCRIPTION - Pure CSS illustration">
+  <meta name="author" content="Alicia Ward">
+  
+  <!-- Page Title -->
+  <title>TODO-TITLE | CSS Illustrations</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FAF3E0' rx='10'/><text x='50' y='70' font-family='Bebas Neue, sans-serif' font-size='50' fill='%233B9C9C' text-anchor='middle' font-weight='400'>AW</text></svg>">
+  
+  <!-- Font Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Illustration Page Specific Styles */
+    .illustration-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--space-md);
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--orange);
+      text-decoration: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-xl);
+      transition: color 0.3s ease;
+    }
+    
+    .back-link:hover {
+      color: var(--orange-dark);
+    }
+    
+    .illustration-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .illustration-title {
+        font-size: 2.5rem;
+        color: var(--teal);
+        margin-bottom: var(--space-md);
+        border: none;
+    }
+    
+    .illustration-meta {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meta-title {
+        font-size: 1rem;
+        color: var(--dark);
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+        text-align: center;
+    }
+
+    .techniques-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        width: fit-content;
+    }
+
+    .techniques-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 0.85rem;
+        color: var(--dark);
+        text-align: left;
+    }
+
+    .techniques-list li::before {
+        content: '✦';
+        position: absolute;
+        left: 0;
+        color: var(--mustard);
+        font-size: 1rem;
+    }
+    
+    .illustration-container {
+      background: var(--lightest);
+      border: 2px solid var(--dark);
+      border-radius: 25px;
+      box-shadow: -6px 6px 0 0 var(--mustard);
+      padding: var(--space-xl);  /* Change from space-2xl to space-xl */
+      /* Add these specific dimensions */
+      width: 900px;
+      height: 600px;
+      max-width: 100%; /* Responsive */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-2xl) auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .illustration-container > * {
+    width: 100%;
+    height: 100%;
+}
+
+    .site-title {
+      font-size: 1.2em;
+    }
+
+    .image-container {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header>
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="../../" class="btn" aria-label="Return to main gallery">
+          ← Back to Gallery
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="illustration-page">
+      
+      <!-- Illustration Header -->
+      <div class="illustration-header">
+        <h2 class="illustration-title">Workspace</h2>
+        <div clas="illustration-meta">
+            <p class="meta-title">Techniques Used:</p>
+            <ul class="techniques-list">
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+                <li> TODO</li>
+            </ul>
+        </div>
+      </div>
+      
+      <!-- Illustration Display -->
+      <div class="illustration-container" >
+        <!-- WORKSPACE -->
+        <div class="workspace-illustration-container">
+        <section class="styled-section" style="background-color: white;">
+        <div class="drawing-container">
+            <div class="botanical-workspace-wrapper">
+            <!-- WINDOW -->
+            <div class="window-wrapper">
+                <div class="frame-outer">
+                    <!-- Top Window-->
+                    <div class="window-wrapper-top">
+                        <div class="inner-frame-top"></div>
+                        <div class="inner-frame-left"></div>
+                        <div class="window-top">
+                            <div class="window-shine-wrapper-top">
+                                <div class="window-shine-top"></div>
+                            </div>
+                        </div>
+                    <!-- Bottom Window -->
+                        <div class="inner-frame-left"></div>
+                        <div class="inner-frame-bottom"></div>
+                        <div class="window-bottom">
+                            <div class="window-shine-wrapper-bottom">
+                                <div class="window-shine-bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Table -->
+            <div class="table-wrapper">
+                <div class="table-top">
+                </div>
+                <div class="table-sides">
+                    <div class="table-side-left"></div>
+                    <div class="table-side-right"></div>
+                </div>
+                <div class="table-cover"></div>
+            </div>
+            <!-- Pencil Cup-->
+            <div class="pencil-cup-wrapper">
+                <div class="pc-pen-wrapper">
+                    <div class="pc-pen-1">
+                        <div class="pc-pen-1-cap"></div>
+                    </div>
+                    <div class="pc-pen-2"></div>
+                </div>
+                <div class="pc-top"></div>
+                <div class="pc-bottom">
+                    <div class="pc-front"></div>
+                    <div class="pc-side"></div>
+                </div>
+            </div>
+                <!-- Mug -->
+                <div class="mug-wrapper">
+                    <div class="steam-lines">
+                        <svg width="25" height="60" class="wavy-line">
+                            <path d="M12,0 Q7,10 12,20 Q17,30 12,40 Q7,50 12,60" 
+                                fill="none" 
+                                stroke="rgba(255,255,255,0.3)" 
+                                stroke-width="6" 
+                                stroke-linecap="round"/>
+                        </svg>
+                        
+                        <svg width="25" height="60" class="wavy-line">
+                            <path d="M12,0 Q7,10 12,20 Q17,30 12,40 Q7,50 12,60" 
+                                fill="none" 
+                                stroke="rgba(255,255,255,0.3)" 
+                                stroke-width="6" 
+                                stroke-linecap="round"/>
+                        </svg>
+                        
+                        <svg width="25" height="60" class="wavy-line">
+                            <path d="M12,0 Q7,10 12,20 Q17,30 12,40 Q7,50 12,60" 
+                                fill="none" 
+                                stroke="rgba(255,255,255,0.3)" 
+                                stroke-width="6" 
+                                stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="mug-bottom">
+                        <div class="mug-front">
+                            <div class="mug-top-border">
+                                <div class="mug-coffee"></div>
+                            </div>
+                        </div>
+                        <div class="mug-handle"></div>
+                    </div>
+                </div>
+                <!-- Succulent - Small -->
+                <div class="succulent-wrapper small">
+                    <div class="succulent-plant-wrapper">
+                        <div class="succulent-leaf-left"></div>
+                        <div class="succulent-leaf-middle"></div>
+                        <div class="succulent-leaf-right"></div>
+                    </div>
+                    <div class="pot-top">
+                        <div class="pot-soil"></div>
+                    </div>
+                    <div class="pot-bottom">
+                    </div>
+                </div>
+                <!-- Succulent - Large -->
+                 <div class="succulent-wrapper large">
+                    <div class="succulent-plant-wrapper">
+                        <div class="succulent-leaf-left"></div>
+                        <div class="succulent-leaf-middle"></div>
+                        <div class="succulent-leaf-right"></div>
+                    </div>
+                    <div class="pot-top">
+                        <div class="pot-soil"></div>
+                    </div>
+                    <div class="pot-bottom">
+                    </div>
+                </div>
+            <!-- Snake Plant-->
+            <div class="snake-plant-pot-wrapper">
+                <div class="snake-plant-wrapper">
+                    <div class="snake-plant-leaf-dark first">
+                        <div class="snake-line-light"></div>
+                    </div>
+                    <div class="snake-plant-leaf-light first">
+                        <div class="snake-line-dark"></div>
+                    </div>
+                    <div class="snake-plant-leaf-dark second">
+                        <div class="snake-line-light"></div>
+                    </div>
+                    <div class="snake-plant-leaf-light second">
+                        <div class="snake-line-dark"></div>
+                    </div>
+                    <div class="snake-plant-leaf-dark third">
+                        <div class="snake-line-light"></div>
+                    </div>
+                </div>
+                <div class="snake-pot-wrapper">
+                    <div class="snake-pot-top"></div>
+                    <div class="snake-pot-top-edge"></div>
+                    <div class="snake-pot-middle"></div>
+                </div>
+            </div>
+            <!-- Hanging Pothos -->
+            <div class="pothos-container">
+                <div class="pothos-plant-wrapper">
+                    <div class="pothos-strings">
+                        <svg width="20" height="280" class="wavy-line">
+                            <path d="M10,0 Q5,25 10,50 Q15,75 10,100 Q5,125 10,150 Q15,175 10,200 Q5,225 10,250 Q15,265 10,280" 
+                                fill="none" 
+                                stroke="#4d7f61" 
+                                stroke-width="5" 
+                                stroke-linecap="round"/>
+                        </svg>
+                        <!-- Medium (180px) -->
+                        <svg width="20" height="180" class="wavy-line">
+                            <path d="M10,0 Q5,20 10,40 Q15,60 10,80 Q5,100 10,120 Q15,140 10,160 Q5,170 10,180" 
+                                fill="none" 
+                                stroke="#4d7f61" 
+                                stroke-width="5" 
+                                stroke-linecap="round"/>
+                        </svg>
+                        <!-- Short (120px) -->
+                        <svg width="20" height="120" class="wavy-line">
+                            <path d="M10,0 Q5,15 10,30 Q15,45 10,60 Q5,75 10,90 Q15,105 10,120" 
+                                fill="none" 
+                                stroke="#4d7f61" 
+                                stroke-width="5" 
+                                stroke-linecap="round"/>
+                        </svg>
+                        <!-- 2nd Longest (250px) -->
+                        <svg width="20" height="250" class="wavy-line">
+                            <path d="M10,0 Q5,20 10,40 Q15,60 10,80 Q5,100 10,120 Q15,140 10,160 Q5,180 10,200 Q15,220 10,240" 
+                                fill="none" 
+                                stroke="#4d7f61" 
+                                stroke-width="5" 
+                                stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <!-- Light Leaves-->
+                    <div class="pothos-leaf-light pothos-light-1">
+                        <div class="pothos-leaf-light-line"></div>
+                    </div>
+                    <div class="pothos-leaf-light pothos-light-2">
+                        <div class="pothos-leaf-light-line"></div>
+                    </div>
+                    <div class="pothos-leaf-light pothos-light-3">
+                        <div class="pothos-leaf-light-line"></div>
+                    </div>
+                    <div class="pothos-leaf-light pothos-light-4">
+                        <div class="pothos-leaf-light-line"></div>
+                    </div>
+                    <div class="pothos-leaf-light pothos-light-5">
+                        <div class="pothos-leaf-light-line"></div>
+                    </div>
+                    <div class="pothos-leaf-light pothos-light-6">
+                        <div class="pothos-leaf-light-line"></div>
+                    </div>
+                    <div class="pothos-leaf-light pothos-light-7">
+                        <div class="pothos-leaf-light-line"></div>
+                    </div>
+                    <div class="pothos-leaf-light pothos-light-8">
+                        <div class="pothos-leaf-light-line"></div>
+                    </div>
+                    <!-- Dark Leaves-->
+                    <div class="pothos-leaf-dark pothos-dark-1">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-2">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-3">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-4">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-5">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-6">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-7">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-8">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-9">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                    <div class="pothos-leaf-dark pothos-dark-10">
+                        <div class="pothos-leaf-dark-line"></div>
+                    </div>
+                </div>
+
+                <div class="pothos-pot-wrapper">
+                    <div class="pothos-hanger-wrapper">
+                        <div class="pothos-hanger-left"></div>
+                        <div class="pothos-hanger-right"></div>
+                    </div>
+                    <div class="pothos-pot-top"></div>
+                    <div class="pothos-pot-bottom"></div>
+                </div>
+            </div>
+                <!-- Laptop -->
+                 <div class="laptop-wrapper">
+                    <div class="laptop-top"></div>
+                    <div class="laptop-bottom-wrapper">
+                        <div class="laptop-bottom">
+                            <div class="keyboard"></div>
+                        </div>
+                        <div class="laptop-bottom-side-left"></div>
+                        <div class="laptop-bottom-side-right"></div>
+                    </div>
+                 </div>
+                 <div class="desk-chair-wrapper">
+                    <div class="chair-back"></div>
+                 </div>
+            </div>
+        </div>
+     </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
