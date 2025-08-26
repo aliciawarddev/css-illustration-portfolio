@@ -1,6 +1,34 @@
+/* Color Variables */
+:root {
+    /* Bun */
+    --bun-main: #E6A85C;
+    --bun-highlight: #F4C47A;
+    --bun-stripe-main: #FFD08B;
+    --bun-stripe-highlight: #FFE0A5;
+    /* Sesame Seeds */
+    --sesame-main: #F4E5D3;
+    --sesame-highlight: #FFF6E8;
+    /* Cheese */
+    --cheese-main: #FFBD21;
+    --cheese-highlight: #FFCC47;
+    /* Patty */
+    --patty-main: #7A4633;
+    --patty-highlight: #9B6348;
+    /* Tomato */
+    --tomato-main: #FF5252;
+    --tomato-highlight: #FF7A7A;
+    /* Lettuce */
+    --lettuce-main: #5CB85C;
+    --lettuce-highlight: #7ED47E;
+    /* Background */
+    --bg: #6B9BD1;
+    --bg-shadow: #4A7BA7;
+}
+
 .burger-illustration-container {
     width: 100%;
     height: 100%;
+    background-color: var(--bg);
 }
 
 .burger-wrapper {
@@ -8,12 +36,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    margin-top: 15%;
 }
 
 /* Top Bun */
 .burger-bun-top {
-    background-color: #D8A05B;
+    background-color: var(--bun-main);
     width: 300px;
     height: 110px;
     position: relative;
@@ -34,12 +62,12 @@
     left: 0;
     width: 100%;
     height: 12px;
-    background-color: #F0C674;
+    background-color: var(--bun-stripe-main);
 }
 
 /* Highlight */
 .bun-top-highlight {
-    background-color: #E8B96B;
+    background-color: var(--bun-highlight);
     width: 300px;
     height: 110px;
     border-top-left-radius: 200px;
@@ -53,6 +81,7 @@
     overflow: hidden;
 }
 
+/* Stripe Highlight */
 .bun-top-highlight::after {
     content: '';
     position: absolute;
@@ -60,13 +89,14 @@
     left: 0;
     width: 100%;
     height: 12px;
-    background-color: #F5D485;
+    background-color: var(--bun-stripe-highlight);
 }
 
-/* Bottom Bun */
+/* BOTTOM BUN */
 
+/* Bun */
 .burger-bun-bottom {
-    background-color: #D8A05B;
+    background-color: var(--bun-main);
     width: 290px;
     height: 45px;
     position: relative;
@@ -79,7 +109,6 @@
 }
 
 /* Stripe */
-
 .burger-bun-bottom::before {
     content: '';
     position: absolute;
@@ -87,13 +116,12 @@
     left: 0;
     width: 100%;
     height: 12px;
-    background-color: #F0C674;
+    background-color: VAR(--bun-stripe-main);
 }
 
 /* Bottom bun highlight */
-
 .bun-bottom-highlight {
-    background-color: #E8B96B;
+    background-color: VAR(--bun-highlight);
     width: 290px;
     height: 45px;
     position: absolute;
@@ -107,6 +135,7 @@
     left: 40px;
 }
 
+/* Stripe highlight */
 .bun-bottom-highlight::before {
     content: '';
     position: absolute;
@@ -114,13 +143,12 @@
     left: 0;
     width: 100%;
     height: 12px;
-    background-color: #F5D485;
+    background-color: var(--bun-stripe-highlight);
 }
 
-/* Sesame Seeds */ 
-
+/* Sesame Seeds - Light */ 
 .bun-seed {
-    background-color: #F5E6D3;
+    background-color: var(--sesame-highlight);
     width: 10px;
     height: 5px;
     border-radius: 50%;
@@ -129,9 +157,9 @@
 }
 
 /* Individual seed positions - scattered on top 50% */
-.seed-1 { top: 8px; left: 72px; transform: rotate(45deg); background-color: #E6D7C3; }
+.seed-1 { top: 8px; left: 72px; transform: rotate(45deg); background-color: var(--sesame-main); } /* Darker color */
 .seed-2 { top: 35px; left: 205px; transform: rotate(-35deg); }
-.seed-3 { top: 18px; left: 40px; transform: rotate(70deg); background-color: #E6D7C3;}
+.seed-3 { top: 18px; left: 40px; transform: rotate(70deg); background-color: var(--sesame-main)} /* Darker color */
 .seed-4 { top: 25px; left: 140px; transform: rotate(-55deg);  }
 .seed-5 { top: 10px; left: 220px; transform: rotate(15deg); }
 .seed-6 { top: 35px; left: 65px; transform: rotate(-80deg); }
@@ -139,14 +167,15 @@
 .seed-9 { top: 15px; left: 110px; transform: rotate(85deg); }
 .seed-10 { top: 15px; left: 200px; transform: rotate(-65deg);  }
 
-/* Cheese */
+/* CHEESE */
 
+/* Main */
 .burger-cheese {
     width: 0;     
     height: 0;    
     border-left: 165px solid transparent;
     border-right: 165px solid transparent;
-    border-top: 30px solid #FFA500;
+    border-top: 30px solid var(--cheese-main);
     position: relative;
     margin-bottom: -27px;
     z-index: 2;
@@ -154,23 +183,23 @@
 }
 
 /* Highlight */
-
 .burger-cheese-highlight {
     position: absolute;
     width: 0;
     height: 0;
     border-left: 100px solid transparent;  /* Smaller triangle */
     border-right: 165px solid transparent;
-    border-top: 30px solid #FFB84D;       /* Shadow color */
+    border-top: 30px solid var(--cheese-highlight);       /* Shadow color */
     top: -30px;    /* Position relative to parent triangle */
     left: -99px;  /* Center it within parent */
     border-radius: 10px;
 }
 
-/* Patty */
+/* PATTY */
 
+/* Main */
 .burger-patty {
-    background-color: #6B3E26;
+    background-color: var(--patty-main);
     width: 310px;
     height: 35px;
     border-radius: 40px;
@@ -180,9 +209,8 @@
 }
 
 /* Highlight */
-
 .patty-highlight {
-    background-color: #8B5538;
+    background-color: var(--patty-highlight);
     width: 310px;
     height: 35px;
     border-radius: 40px;
@@ -192,10 +220,11 @@
     z-index: 2;
 }
 
-/* Tomato */
+/* TOMATO */
 
+/* Main */
 .burger-tomato {
-    background-color: #E53935;
+    background-color: var(--tomato-main);
     position: relative;
     width: 270px;
     height: 15px;
@@ -204,8 +233,9 @@
     margin-bottom: -1.5px;
 }
 
+/* Highlight */
 .tomato-highlight {
-    background-color: #F06292;
+    background-color: var(--tomato-highlight);
     position: absolute;
     width: 270px;
     height: 15px;
@@ -214,7 +244,7 @@
     left: 35px;
 }
 
-/* Lettuce */
+/* LETTUCE */
 
 .burger-lettuce {
     height: 30px;
@@ -226,12 +256,14 @@
     z-index: 2;
 }
 
+/* Highlight */
 .lettuce-leaf {
-    background-color: #81C784;
+    background-color: var(--lettuce-highlight);
     border-radius: 0% 0% 50% 50%;
     margin-left: -1px;
 }
 
+/* Main */
 .lettuce-leaf-1 {
     width: 80px;
     height: 30px;
@@ -239,11 +271,12 @@
     margin-left: 0;
     overflow: hidden;
     position: relative;
-    background-color: #4CAF50;
+    background-color: var(--lettuce-main);
 }
 
+/* Highlight */
 .lettuce-highlight {
-    background-color: #81C784;
+    background-color: var(--lettuce-highlight);
     border-radius: 50% 0% 50% 50%;
     width: 80px;
     height: 30px;
@@ -269,11 +302,10 @@
 }
 
 .burger-shadow {
-    width: 360px;
-    height: 50px;
+    width: 320px;
+    height: 30px;
+    background-color: var(--bg-shadow);
     border-radius: 50%;
-    z-index: -1;
-    background-color: #2E5266;
-    margin-top: -25px;
-    margin-left: -60px;
+    margin-right: 30px;
+    margin-top: -15px;
 }
