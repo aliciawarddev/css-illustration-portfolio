@@ -1,7 +1,16 @@
 .retro-computer-illustration-container {
     width: 100%;
     height: 100%;
-    background-color: 
+    background-color: var(--computer-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.scale-computer {
+    transform: scale(0.7);
+    position: relative;
 }
 
 /* Color palette */
@@ -13,7 +22,8 @@
     --computer-darkest: #908873;
     --computer-monitor-dark: #000618;
     --computer-monitor-light: #000d42;
-    --computer-bg-shadow: #a5aadc;
+    --computer-bg-shadow: #3E5E3E;
+    --computer-bg: #4F6F4F;
 }
 
 /* ANIMATION */
