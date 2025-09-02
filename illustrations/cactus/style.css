@@ -1,6 +1,24 @@
+/* Color Variables */
+:root {
+    /* Cactus */
+    --cactus-base: #68B578;
+    --cactus-highlight: #8FD49C;
+    --cactus-shadow: #4A7855;
+    --dot-shadow:#2F5238;
+    --dot-highlight: #5A9968;
+    /* Pot */
+    --pot-main: #E07B54;
+    --pot-highlight: #F4A582;
+    --pot-shadow: #B85A3A;
+    /* Background */
+    --bg: #3A4F63;
+    --bg-shadow: #2C3D4F;
+}
+
 .cactus-illustration-container {
     width: 100%;
     height: 100%;
+    background-color: var(--bg);
 }
 
 /* General */
@@ -27,37 +45,37 @@
 .cactus-dot {
     width: 4px;
     height: 4px;
-    background-color: #3F5A46;
+    background-color: var(--dot-highlight);
     border-radius: 50%;
     position: absolute;
     z-index: 10;
 }
 
 /* Left arm dots - 2 in top, 4 in arm */
-.cactus-left-top .cactus-dot:nth-child(1) { top: 10px; left: 30px; background-color: #1F3024;} 
-.cactus-left-top .cactus-dot:nth-child(2) { top: 40px; left: 5px; background-color: #1F3024;} 
+.cactus-left-top .cactus-dot:nth-child(1) { top: 10px; left: 30px; background-color:} 
+.cactus-left-top .cactus-dot:nth-child(2) { top: 40px; left: 5px; background-color: } 
 
-.cactus-left-arm .cactus-dot:nth-child(1) { top: 25px; left: 20px; background-color: #1F3024;} 
-.cactus-left-arm .cactus-dot:nth-child(2) { top: 55px; left: 40px; background-color: #1F3024;} 
-.cactus-left-arm .cactus-dot:nth-child(3) { top: 75px; left: 15px; background-color: #1F3024;}
-.cactus-left-arm .cactus-dot:nth-child(4) { top: 100px; left: 40px; background-color: #1F3024;}
+.cactus-left-arm .cactus-dot:nth-child(1) { top: 25px; left: 20px; background-color:} 
+.cactus-left-arm .cactus-dot:nth-child(2) { top: 55px; left: 40px; background-color:} 
+.cactus-left-arm .cactus-dot:nth-child(3) { top: 75px; left: 15px; background-color:}
+.cactus-left-arm .cactus-dot:nth-child(4) { top: 100px; left: 40px; background-color:}
 
 /* Right arm dots - 2 in top, 4 in arm */
 .cactus-right-top .cactus-dot:nth-child(2) { top: 20px; left: 15px; }
 .cactus-right-top .cactus-dot:nth-child(3) { top: 40px; left: 35px; }
 
-.cactus-right-arm .cactus-dot:nth-child(3) { top: 60px; left: 5px; background-color: #1F3024;} /* shadow */ 
-.cactus-right-arm .cactus-dot:nth-child(4) { top: 15px; left: 30px; background-color: #1F3024; } /* shadow */ 
+.cactus-right-arm .cactus-dot:nth-child(3) { top: 60px; left: 5px; background-color: } /* shadow */ 
+.cactus-right-arm .cactus-dot:nth-child(4) { top: 15px; left: 30px; background-color: } /* shadow */ 
 .cactus-right-arm .cactus-dot:nth-child(5) { top: 45px; left: 43px; }
 .cactus-right-arm .cactus-dot:nth-child(6) { top: 80px; left: 25px; }
 
 /* Middle body dots - 5 dots in base (left side) */
-.cactus-middle-body > .cactus-dot:nth-child(2) { top: 20px; left: 10px; background-color: #1F3024; } /* shadow */ 
-.cactus-middle-body > .cactus-dot:nth-child(3) { top: 80px; left: 10px; background-color: #1F3024; } /* shadow */ 
-.cactus-middle-body > .cactus-dot:nth-child(4) { top: 140px; left: 3px; background-color: #1F3024;} /* shadow */ 
-.cactus-middle-body > .cactus-dot:nth-child(5) { top: 210px; left: 7px; background-color: #1F3024;} /* shadow */ 
-.cactus-middle-body > .cactus-dot:nth-child(6) { top: 265px; left: 14px; background-color: #1F3024;} /* shadow */
-.cactus-middle-body > .cactus-dot:nth-child(7) { top: 310px; left: 5px; background-color: #1F3024;} /* shadow */
+.cactus-middle-body > .cactus-dot:nth-child(2) { top: 20px; left: 10px; background-color: } /* shadow */ 
+.cactus-middle-body > .cactus-dot:nth-child(3) { top: 80px; left: 10px; background-color:  } /* shadow */ 
+.cactus-middle-body > .cactus-dot:nth-child(4) { top: 140px; left: 3px; background-color: } /* shadow */ 
+.cactus-middle-body > .cactus-dot:nth-child(5) { top: 210px; left: 7px; background-color: } /* shadow */ 
+.cactus-middle-body > .cactus-dot:nth-child(6) { top: 265px; left: 14px; background-color: } /* shadow */
+.cactus-middle-body > .cactus-dot:nth-child(7) { top: 310px; left: 5px; background-color: } /* shadow */
 
 /* Middle body highlight dots - 10 dots in highlight part */
 .cactus-middle-body-highlight .cactus-dot:nth-child(1) { top: 30px; left: 30px; }
@@ -70,6 +88,21 @@
 .cactus-middle-body-highlight .cactus-dot:nth-child(8) { top: 240px; left: 15px; }
 .cactus-middle-body-highlight .cactus-dot:nth-child(9) { top: 290px; left: 30px; }
 .cactus-middle-body-highlight .cactus-dot:nth-child(10) { top: 340px; left: 10px; }
+
+
+/* All shadow dots in one rule */
+.cactus-left-top .cactus-dot,
+.cactus-left-arm .cactus-dot,
+.cactus-right-arm .cactus-dot:nth-child(3),
+.cactus-right-arm .cactus-dot:nth-child(4),
+.cactus-middle-body > .cactus-dot:nth-child(2),
+.cactus-middle-body > .cactus-dot:nth-child(3),
+.cactus-middle-body > .cactus-dot:nth-child(4),
+.cactus-middle-body > .cactus-dot:nth-child(5),
+.cactus-middle-body > .cactus-dot:nth-child(6),
+.cactus-middle-body > .cactus-dot:nth-child(7) {
+    background-color: var(--dot-shadow);
+}
 
 /* Left Arm */
 
@@ -85,7 +118,7 @@
     width: 45px;
     height: 45px;
     border-radius: 45px 45px 0 0;
-    background-color: #4A7C59;
+    background-color: var(--cactus-base);
     margin-left: -24px;
     margin-bottom: -1px;
     position: relative;
@@ -95,14 +128,14 @@
     width: 70px;
     height: 120px;
     border-radius: 0 0 0 100px;
-    background-color: #4A7C59;
+    background-color: var(--cactus-base);
     margin-bottom: -100px;
     margin-right: -1px;
     position: relative;
 }
 
 .cactus-left-space {
-    background-color: #74D4D0;
+    background-color: var(--bg);
     width: 24px;
     height: 75px;
     border-radius: 0 0 0 100px;
@@ -122,7 +155,7 @@
 .cactus-middle-body {
     width: 70px;
     height: 350px;
-    background-color: #4A7C59;
+    background-color: var(--cactus-base);
     border-radius: 100px 100px 0 0;
     margin-bottom: -4px;
     position: relative;
@@ -133,7 +166,7 @@
 .cactus-middle-bottom {
     width: 70px;
     height: 4px;
-    background-color: #4A7C59;;
+    background-color: var(--cactus-base);
     border-radius: 50%;
     position: relative;
     margin-top: 2px;
@@ -145,7 +178,7 @@
 .cactus-middle-body-highlight {
     width: 70px;
     height: 350px;
-    background-color: #7BA085;
+    background-color: var(--cactus-highlight);
     border-radius: 100px 100px 0 0;
     margin-bottom: -4px;
     position: absolute;
@@ -156,7 +189,7 @@
 .cactus-middle-bottom-highlight {
     width: 70px;
     height: 10px;
-    background-color: #7BA085;
+    background-color: var(--cactus-highlight);
     position: absolute;
     z-index: 4;
     top: -1px;
@@ -177,7 +210,7 @@
     width: 45px;
     height: 45px;
     border-radius: 45px 45px 0 0;
-    background-color: #4A7C59;
+    background-color: var(--cactus-base);
     margin-right: -24px;
     margin-bottom: -1px;
     z-index: 1;
@@ -185,11 +218,11 @@
     overflow: hidden;
 }
 
-.cactus-right-arm {
+.cactus-right-arm { /* Highlight */
     width: 70px;
     height: 100px;
     border-radius: 0 0 100px 0;
-    background-color: #7BA085;
+    background-color: var(--cactus-highlight);
     margin-bottom: -100px;
     margin-left: -1px;
     z-index: 1;
@@ -198,7 +231,7 @@
 }
 
 .cactus-right-space {
-    background-color: #74D4D0;
+    background-color: var(--bg);
     width: 24px;
     height: 70px;
     border-radius: 0 0 100px 0;
@@ -213,7 +246,7 @@
     width: 45px;
     height: 45px;
     border-radius: 45px 45px 0 0;
-    background-color: #7BA085;
+    background-color: var(--cactus-highlight);
     top: 0;
     left: 13px;
     z-index: 2;
@@ -221,7 +254,7 @@
 }
 
 .cactus-right-arm-shadow {
-    background-color: #4A7C59;
+    background-color: var(--cactus-base);
     width: 24px;
     height: 75px;
     border-radius: 0 0 100px 0;
@@ -232,7 +265,7 @@
 }
 
 .cactus-right-arm-shadow-side {
-    background-color: #4A7C59;
+    background-color: var(--cactus-base);
     position: absolute;
     height: 60px;
     width: 15px;
@@ -252,7 +285,7 @@
 }
 
 .cactus-pot-edge {
-    background-color: #d15207;
+    background-color: var(--pot-main);
     border-radius: 50%;
     width: 120px;
     height: 18px;
@@ -266,7 +299,7 @@
 }
 
 .cactus-pot-inside {
-    background-color:#722c08;
+    background-color: var(--pot-shadow);
     width: 105px;
     height: 12px;
     border-radius: 50%;
@@ -281,13 +314,13 @@
     position: absolute;
     right: -2px;
     top: -1px;
-    background-color: #e06908;
+    background-color: var(--pot-highlight);
     margin-bottom: -7px;
     margin-right: -2px;
 }
 
 .cactus-pot-edge-highlight-corner {
-    background-color: #d15207;
+    background-color: var(--pot-main);
     width: 10px;
     height: 10px;
     transform: rotate(45deg);
@@ -301,7 +334,7 @@
     --c: 85; /* control the curvature (a percentage value without unit bigger than 50%)*/
     width: 120px; /* increased from 250px for wider */
     aspect-ratio: 7/2; /* changed from 3/2 to 5/2 for shorter relative to width */
-    background: #bf4908;
+    background: var(--pot-main);
     mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(-100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000);
     clip-path: ellipse(calc(var(--c)*1%) 100% at top);
     margin-bottom: -8px;
@@ -314,7 +347,7 @@
     --c: 85; /* same curvature as parent */
     width: 90px; /* smaller width */
     height: 42px;
-    background: #e06908; /* highlight color */
+    background: var(--pot-highlight); /* highlight color */
     mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(-100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000);
     clip-path: ellipse(calc(var(--c)*1%) 100% at top);
     position: absolute;
@@ -327,7 +360,7 @@
     --c: 130; /* same curvature value */
     width: 110px; /* narrower shape */
     aspect-ratio: 4/3; /* original height */
-    background: #9b3608;
+    background: var(--pot-shadow);
     mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(-100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000);
     clip-path: ellipse(calc(var(--c)*1%) 100% at top);
     position: relative;
@@ -339,7 +372,7 @@
     width: 92px; /* same width */
     height: 15px; /* changed from 100px to 20px */
     /* Remove aspect-ratio since we're using explicit height */
-    background: #9b3608;
+    background: var(--pot-shadow);
     mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(-100%*cos(asin(50/var(--c)))),#0000 calc(100% - 0px),#000);
     clip-path: ellipse(calc(var(--c)*1%) 100% at top);
     position: absolute;
@@ -354,7 +387,7 @@
     width: 80px;
     height: 100px;
     aspect-ratio: 6/3;
-    background: #d25509;
+    background: var(--pot-highlight);
     /* Use a sharper mask instead */
     mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(-100%*cos(asin(50/var(--c)))),#0000 calc(100% - 0px),#000);
     clip-path: ellipse(calc(var(--c)*1%) 100% at top);
@@ -369,7 +402,7 @@
     width: 180px;
     height: 25px;
     border-radius: 50%;
-    background-color: #5AA8A6;
+    background-color: var(--bg-shadow);
     margin-top: -21px;
     margin-left: -70px;
 }
