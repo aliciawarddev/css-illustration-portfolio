@@ -1,6 +1,16 @@
 .rain-cloud-illustration-container {
     width: 100%;
     height: 100%;
+    background-color: #6D7C85;
+}
+
+.drawing-container {
+    transform: scale(0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
 }
 
 /* =========== RAIN CLOUD =========== */
