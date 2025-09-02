@@ -1,17 +1,26 @@
 .sun-cloud-illustration-container {
     width: 100%;
     height: 100%;
+    background-color: #d0ecff;
+}
+
+.drawing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .sun {
-    position: absolute;
-    top: -10px;
-    left: -5px;
+    position: relative;
     width: 120px;
     height: 120px;
     border-radius: 50%;
     background: radial-gradient(circle, #fff176 0%, #fbc02d 70%, #f57f17 100%);
     box-shadow: 0 0 30px rgba(255, 223, 0, 0.8);
+    margin-right: -100px;  /* Pull cloud closer */
+    margin-bottom: -40px;  /* Shift sun up */
     z-index: 0;
 }
 
@@ -37,8 +46,11 @@
 
 .partial-sun-cloud-container {
     display: flex;
-    align-items: flex-end; /* bottom alignment of cloud parts */
+    align-items: flex-end;
     animation: cloud-drift 7s infinite ease-in-out;
+    position: relative;
+    margin-top: 140px;  /* Shift cloud down */
+    z-index: 1;
 }
 
 @keyframes cloud-drift {
