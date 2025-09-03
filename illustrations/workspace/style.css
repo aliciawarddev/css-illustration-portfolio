@@ -303,15 +303,15 @@ soil-           #39465a
 }
 
 .pc-pen-1 {
-    width: 13px;
-    height: 70px;
+    width: 10px;
+    height: 55px;
     border-radius: 8px 8px 0 0;
     background-color: #f89c59;
     position: relative;
     transform: skewY(10deg) translateY(-2px);
     z-index: 6;
-    margin-right: 15px;
     overflow: hidden;
+    right: 12px;
 }
 
 .pc-pen-1-cap {
@@ -323,14 +323,15 @@ soil-           #39465a
 }
 
 .pc-pen-2 {
-    width: 13px;
-    height: 75px;
+    width: 10px;
+    height: 60px;
     border-radius: 8px 8px 0 0;
     background-color: #304f65;
     position: relative;
     transform: skewX(-10deg) rotate(10deg) translateY(1px);
     z-index: 6;
-    margin-left: 0px;
+    left: 5px;
+    top: 0px;
 }
 
 /* Pencil cup */ 
@@ -345,18 +346,18 @@ soil-           #39465a
 
 .pc-top {
     background-color: #a75441;
-    width: 42px;
-    height: 16px;
+    width: 63px;
+    height: 27px;
     border-top: 5px solid #f2924d;
     border-bottom: 5px solid #f2924d;
     border-right: 10px solid #f2924d;
     border-left: 10px solid #f2924d;
     transform: rotate(10deg) skewX(-55deg);
-    top: -6px;
-    left: -0px;
-    border-radius: 1px;
+    border-radius: 4px;
     position: relative;
     z-index: 5;
+    bottom: 6px;
+    right: 0px;
 }
 
 .pc-bottom {
