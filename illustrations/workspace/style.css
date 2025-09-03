@@ -172,13 +172,15 @@ soil-           #39465a
 
 .window-wrapper {
     position: relative;
-    transform: scale(0.9);
+    transform: scale(1.0);
     z-index: 1;
+    bottom: 170px;
+    left: 55px;
 }
 
 .frame-outer {
     width: 275px;
-    height: 625px;
+    height: 600px;
     border: 30px solid #ffd8a3;
     transform: skewY(10deg);
     display: flex;
@@ -247,26 +249,26 @@ soil-           #39465a
 /* Window Shine */
 .window-shine-top {
     background: linear-gradient(to top, #e0e5d0, #f0f0d4);
-    height: 270px;
+    height: 100px;
     width: 50px;
-    transform: rotate(40deg);
+    transform: skewX(-40deg);
     transform-origin: bottom left;
     opacity: 0.5;
     position: relative;
-    margin-top: -85px;
-    margin-left: 0;
+    top: 30px;
+    left: 30px;
 }
 
 .window-shine-bottom {
     background: linear-gradient(to top, #e0e5d0, #f0f0d4);
-    height: 350px;
+    height: 200px;
     width: 50px;
-    transform: rotate(40deg);
+    transform: skewX(-40deg);
     transform-origin: bottom left;
     opacity: 0.5;
     position: relative;
-    margin-top: -85px;
-    margin-left: -50px;
+    top: 0px;
+    left: 15px;
 } 
 
 /* PENCIL CUP */
@@ -625,10 +627,10 @@ soil-           #39465a
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: -30px;
-    right: 160px;
-    transform: scale(1.4);
+    transform: scale(1.0);
     z-index: 2;
+    top: 60px;
+    left: 260px;
 }
 
 /* Plant */
@@ -751,8 +753,9 @@ soil-           #39465a
     display: flex;
     flex-direction: column;
     align-items: center;
-    left: 170px;
-    top: -130px;  
+    bottom: 120px;
+    transform: scale(0.8);
+    right: 50px;
 }
 
 /* Pot */
