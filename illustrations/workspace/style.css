@@ -29,6 +29,8 @@
     margin-top: -40px;
 }
 
+
+
 /* Botanical Workspace Color Palette */
 /*
 left wall: #fef1cd
@@ -65,13 +67,48 @@ soil-           #39465a
     box-sizing: border-box;
     background: linear-gradient(90deg, #fef1cd 55%, #ffd8a3 55%);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: relative;
     padding: 0;
     margin: 0;
+}
+
+/* VISUAL POSITIONING - HIERARCHY */
+
+/* Background Elements */
+.background-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Midground Elements */
+.midground-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Foreground Elements */
+.foreground-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 /* TABLE */ 
@@ -81,8 +118,7 @@ soil-           #39465a
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: -140px;
+    position: relative;
     right: 0;
     z-index: 3;
 }
@@ -121,6 +157,7 @@ soil-           #39465a
     margin-right: -5px;
 }
 
+/* 
 .table-cover {
     width: 30px;
     height: 80px;
@@ -129,6 +166,7 @@ soil-           #39465a
     right: -10px;
     bottom: 70px;
 }
+*/ 
 
 /* WINDOW */ 
 
@@ -136,8 +174,6 @@ soil-           #39465a
     position: relative;
     transform: scale(0.9);
     z-index: 1;
-    bottom: 120px;
-    left: 215px;
 }
 
 .frame-outer {
@@ -241,7 +277,7 @@ soil-           #39465a
     justify-content: center;
     align-items: center;
     transform: scale(0.7);
-    position: absolute;
+    position: relative;
     right: 70px;
     bottom: -70px;
     z-index: 4;
@@ -346,7 +382,7 @@ soil-           #39465a
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    position: absolute;
+    position: relative;
     transform: scale(0.7);
     bottom: -120px;
     right: 280px;
@@ -419,11 +455,12 @@ soil-           #39465a
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .succulent-wrapper.small {
     transform: scale(1.0);
-    position: absolute;
+    position: relative;
     z-index: 6;
     bottom: -90px;
     right: 170px;
@@ -505,7 +542,7 @@ soil-           #39465a
 
 .succulent-wrapper.large {
     transform: scale(1.3);
-    position: absolute;
+    position: relative;
     bottom: -30px;
     right: 200px;
     z-index: 5;
@@ -519,7 +556,7 @@ soil-           #39465a
     justify-content: center;
     align-items: center;
     transform: rotate(10deg);
-    position: absolute;
+    position: relative;
     z-index: 4;
     bottom: -80px;
     left: 270px;
@@ -587,7 +624,7 @@ soil-           #39465a
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     bottom: -30px;
     right: 160px;
     transform: scale(1.4);
@@ -710,7 +747,7 @@ soil-           #39465a
 /* HANGING POTHOS */
 
 .pothos-container {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
