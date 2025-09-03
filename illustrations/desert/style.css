@@ -47,7 +47,7 @@
 /* Clouds */
 .desert-cloud {
     position: relative;
-    top: 90px;
+    top: 110px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -56,7 +56,7 @@
 
 .cloud-bulb-large {
     height: 24px;
-    width: 180px;
+    width: 150px;
     border-radius: 50% 50% 0 50%;
     background-color: var(--desert-cloud);
 }
@@ -69,18 +69,14 @@
     margin-left: -9px;
 }
 
-.desert-cloud .left {
-    margin-left: 90px;
-}
-
 /* Sun */
 .desert-sun {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background-color: var(--desert-sun);
     position: relative;
-    margin-top: 42px;
+    margin-top: 80px;
     margin-left: 90px;
 }
 
@@ -323,7 +319,7 @@
     justify-content: center;
     align-items: flex-end;
     margin-bottom: -60px;
-    gap: 9px;
+    gap: 10px;
 }
 
 .rocks-base {
@@ -336,22 +332,25 @@
 
 .rock-square {
     background-color: var(--desert-layer-4);
-    width: 108px;
+    width: 90px;
     height: 90px;
     border-radius: 18px 18px 0 0;
+    margin-left: 30px;
 }
 
 .rock-column {
     background-color: var(--desert-layer-4);
-    height: 60px;
-    width: 18px;
+    height: 80px;
+    width: 20px;
     border-radius: 27px 27px 0 0;
+    top: 20px;
+    position: relative;
 }
 
 /* Left Rock Group */
 .rock-group.left {
     bottom: 66px;
-    left: -162px;
+    left: -140px;
     transform: scale(1.1);
 }
 
@@ -359,6 +358,7 @@
 .rock-group.right {
     transform: scale(0.8);
     bottom: 60px;
+    left: 20px;
 }
 
 
