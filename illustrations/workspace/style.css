@@ -109,6 +109,9 @@ soil-           #39465a
     width: 100%;
     height: 100%;
     position: relative;
+    width: 900px;
+    height: 200px;
+    margin-top: -100px;
 }
 
 /* TABLE */ 
@@ -121,7 +124,7 @@ soil-           #39465a
     position: relative;
     right: 0;
     z-index: 3;
-    margin-top: -250px;
+    margin-top: -220px;
     left: 123px;
     transform: scale(0.8);
 }
@@ -281,11 +284,12 @@ soil-           #39465a
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: scale(0.7);
+    transform: scale(0.6);
     position: relative;
-    right: 70px;
-    bottom: -70px;
     z-index: 4;
+    bottom: 100px;
+    right: 50px;
+    margin-right: -140px;
 }
 
 /* Pens */
@@ -388,10 +392,11 @@ soil-           #39465a
     align-items: center;
     margin-top: 50px;
     position: relative;
-    transform: scale(0.7);
-    bottom: -120px;
-    right: 280px;
+    transform: scale(0.5);
     z-index: 5;
+    bottom: 150px;
+    right: 120px;
+    margin-right: -40px;
 }
 
 .steam-lines {
@@ -464,11 +469,12 @@ soil-           #39465a
 }
 
 .succulent-wrapper.small {
-    transform: scale(1.0);
+    transform: scale(0.7);
     position: relative;
     z-index: 6;
-    bottom: -90px;
-    right: 170px;
+    bottom: 120px;
+    right: 100px;
+    margin-right: -60px;
 }
 
 .succulent-plant-wrapper {
@@ -546,11 +552,12 @@ soil-           #39465a
 /* Succulent 2 - Large */
 
 .succulent-wrapper.large {
-    transform: scale(1.3);
+    transform: scale(0.9);
     position: relative;
-    bottom: -30px;
-    right: 200px;
     z-index: 5;
+    bottom: 150px;
+    right: 100px;
+    margin-right: -15px;
 }
 
 /* LAPTOP */
@@ -560,11 +567,12 @@ soil-           #39465a
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: rotate(10deg);
+    transform: rotate(10deg) scale(0.7);
     position: relative;
     z-index: 4;
-    bottom: -80px;
-    left: 270px;
+    bottom: 180px;
+    right: 50px;
+    margin-right: -20px;
 }
 
 .laptop-top {
@@ -1054,11 +1062,12 @@ soil-           #39465a
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     z-index: 4;
+    transform: scale(1.1) rotate(-10deg);
     left: 90px;
-    bottom: -200px;
-    transform: scale(1.4) rotate(-5deg);
+    bottom: 20px;
+    margin-right: 20px;
 }
 
 .chair-back {
