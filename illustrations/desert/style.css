@@ -2,6 +2,11 @@
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;
 }
 
 .desert-wrapper {
@@ -12,7 +17,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    container-type: size;
 }
 
 /* Desert Color Palette */
@@ -28,7 +32,6 @@
     --desert-layer-1: #583620;
 }
 
-
 /* SKY */
 .sky-wrapper {
     position: relative;
@@ -36,15 +39,15 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
-    width: 100cqw;
-    height: 55cqh;
+    width: 900px;
+    height: 330px;
     background: linear-gradient(to top, var(--desert-sky-light), var(--desert-sky-dark));
 }
 
 /* Clouds */
 .desert-cloud {
     position: relative;
-    top: 15cqh;
+    top: 90px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -52,37 +55,37 @@
 }
 
 .cloud-bulb-large {
-    height: 4cqh;
-    width: 20cqw;
+    height: 24px;
+    width: 180px;
     border-radius: 50% 50% 0 50%;
     background-color: var(--desert-cloud);
 }
 
 .cloud-bulb-small {
-    height: 2.5cqh;
-    width: 7cqw;
+    height: 15px;
+    width: 63px;
     border-radius: 0 50% 50% 0;
     background-color: var(--desert-cloud);
-    margin-left: -1cqw;
+    margin-left: -9px;
 }
 
-.desert-cloud-.eft {
-    margin-left: 10cqw;
+.desert-cloud .left {
+    margin-left: 90px;
 }
 
 /* Sun */
 .desert-sun {
-    width: 20cqw;
-    height: 20cqw;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background-color: var(--desert-sun);
     position: relative;
-    margin-top: 7cqh;
-    margin-left: 10cqw; 
+    margin-top: 42px;
+    margin-left: 90px;
 }
 
 /* Template */
-.desert-bush{
+.desert-bush {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -110,32 +113,32 @@
 
 /* Bush - Layer 1 */
 .desert-bush.layer1 {
-    margin-top: -10cqh;
-    height: 10cqh;
-    width: 14cqw;
-    left: -11cqw;
+    margin-top: -60px;
+    height: 60px;
+    width: 126px;
+    left: -99px;
 }
 
 .bush-spike.layer1 {
-    border-bottom: 7cqw solid var(--desert-layer-1);
-    border-left: 1cqh solid transparent;
-    border-right: 1cqh solid transparent;
+    border-bottom: 63px solid var(--desert-layer-1);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
 }
 
 /* Bush - Layer 2 */
 .desert-bush.layer2 {
-    margin-top: -7.5cqh;
-    height: 10cqh;
-    width: 14cqw;
+    margin-top: -45px;
+    height: 60px;
+    width: 126px;
     transform: scale(0.5);
-    left: 12cqw;
-    bottom: 2cqh;
+    left: 108px;
+    bottom: 12px;
 }
 
 .bush-spike.layer2 {
-    border-bottom: 7cqw solid var(--desert-layer-2);
-    border-left: 1cqh solid transparent;
-    border-right: 1cqh solid transparent;
+    border-bottom: 63px solid var(--desert-layer-2);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
 }
 
 /* CACTUS */
@@ -145,47 +148,47 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    height: 30cqh;
-    width: 30cqw;
+    height: 180px;
+    width: 270px;
     position: relative;
 }
 
 /* Middle */
 .desert-cactus-middle {
-    width: 3cqw;
-    height: 30cqh;
+    width: 27px;
+    height: 180px;
     background-color: var(--desert-layer-1);
-    border-radius: 3cqw 3cqw 0 0;
+    border-radius: 27px 27px 0 0;
 }
 
 /* Left side */
 .desert-cactus-left {
-    margin-top: 3cqw;
+    margin-top: 27px;
     display: flex;
     flex-direction: column;
     margin-right: -1px;
 }
 
 .cactus-top-left {
-    width: 2.5cqw;
-    height: 4cqh;
-    border-radius: 3cqw 3cqw 0 0;
+    width: 23px;
+    height: 24px;
+    border-radius: 27px 27px 0 0;
     margin-bottom: -1px;
 }
 
 .cactus-bottom-left {
-    width: 2cqw;
-    height: 5cqw;
-    border-radius: 0 0 0 10cqw;
-    border-left-width: 2.5cqw;
+    width: 18px;
+    height: 45px;
+    border-radius: 0 0 90px 0;
+    border-left-width: 23px;
     border-left-style: solid;
-    border-bottom-width: 2.5cqw;
+    border-bottom-width: 23px;
     border-bottom-style: solid;
 }
 
 /* Right side */
 .desert-cactus-right {
-    margin-top: 5cqw;
+    margin-top: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,27 +197,27 @@
 }
 
 .cactus-top-right {
-    width: 2.5cqw;
-    height: 7cqh;
-    border-radius: 3cqw 3cqw 0 0;
+    width: 23px;
+    height: 42px;
+    border-radius: 27px 27px 0 0;
     margin-bottom: -1px;
 }
 
 .cactus-bottom-right {
-    width: 2cqw;
-    height: 5cqw;
-    border-radius: 0 0 10cqw 0;
-    border-right-width: 2.5cqw;
+    width: 18px;
+    height: 45px;
+    border-radius: 0 0 90px 0;
+    border-right-width: 23px;
     border-right-style: solid;
-    border-bottom-width: 2.5cqw;
+    border-bottom-width: 23px;
     border-bottom-style: solid;
 }
 
 /* Layer-specific styles */
 /* Layer 1 */
 .desert-cactus.layer1 {
-    margin-top: -32cqh;
-    margin-left: -25cqw;
+    margin-top: -192px;
+    margin-left: -225px;
 }
 
 .desert-cactus.layer1 .desert-cactus-middle,
@@ -231,8 +234,8 @@
 /* Layer 2 */
 .desert-cactus.layer2 {
     transform: scale(0.5);
-    margin-top: -25cqh;
-    margin-left: 12cqw;
+    margin-top: -150px;
+    margin-left: 108px;
 }
 
 .desert-cactus.layer2 .desert-cactus-middle,
@@ -261,51 +264,51 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    margin-bottom: -10cqh;
-    gap: 1cqw;
+    margin-bottom: -60px;
+    gap: 9px;
 }
 
 .rocks-base {
     height: 0;
     width: 0;
-    border-bottom: 15cqw solid var(--desert-layer-4);
-    border-left: 15cqw solid transparent;
-    border-right: 15cqw solid transparent;
+    border-bottom: 135px solid var(--desert-layer-4);
+    border-left: 135px solid transparent;
+    border-right: 135px solid transparent;
 }
 
 .rock-square {
     background-color: var(--desert-layer-4);
-    width: 12cqw;
-    height: 15cqh;
-    border-radius: 2cqw 2cqw 0 0;
+    width: 108px;
+    height: 90px;
+    border-radius: 18px 18px 0 0;
 }
 
 .rock-column {
     background-color: var(--desert-layer-4);
-    height: 10cqh;
-    width: 2cqw;
-    border-radius: 3cqw 3cqw 0 0;
+    height: 60px;
+    width: 18px;
+    border-radius: 27px 27px 0 0;
 }
 
 /* Left Rock Group */
 .rock-group.left {
-    bottom: 11cqh;
-    left: -18cqw;
+    bottom: 66px;
+    left: -162px;
     transform: scale(1.1);
 }
 
 /* Right Rock Group */
 .rock-group.right {
     transform: scale(0.8);
-    bottom: 10cqh;
+    bottom: 60px;
 }
 
 
 /* LAYER 1 - Furthest Forward */ 
 .layer-1-wrapper {
     position: relative;
-    width: 100cqw;
-    height: 15cqh;
+    width: 900px;
+    height: 90px;
     background-color: var(--desert-layer-1);
     z-index: 5;
     overflow: visible;
@@ -318,8 +321,8 @@
 /* LAYER 2 */
 .layer-2-wrapper {
     position: relative;
-    width: 100cqw;
-    height: 5cqh;
+    width: 900px;
+    height: 30px;
     background-color: var(--desert-layer-2);
     z-index: 4;
     overflow: visible;
@@ -332,8 +335,8 @@
 /* LAYER 3 */
 .layer-3-wrapper {
     position: relative;
-    width: 100cqw;
-    height: 5cqh;
+    width: 900px;
+    height: 30px;
     background-color: var(--desert-layer-3);
     z-index: 3;
     overflow: visible;
@@ -342,8 +345,8 @@
 /* LAYER 4 */
 .layer-4-wrapper {
     position: relative;
-    width: 100cqw;
-    height: 12cqh;
+    width: 900px;
+    height: 72px;
     background-color: var(--desert-layer-4);
     z-index: 2;
     overflow: visible;
@@ -356,8 +359,8 @@
 /* LAYER 5 - Furthest Back */
 .layer-5-wrapper {
     position: relative;
-    width: 100cqw;
-    height: 8cqh;
+    width: 900px;
+    height: 48px;
     background-color: var(--desert-layer-5);
     z-index: 1;
     overflow: visible;
