@@ -1,3 +1,47 @@
+/* COLOR PALETTE */
+
+:root {
+    /* Background */
+    --bg-light:#e8f4f8;
+    --bg-dark: #c5d9e0;
+    /* Window */
+     --window-frame-outer: #8ca5b3;     
+    --window-frame-inner: #b8cdd8;      
+    --window-glass: #d4e7e9;          
+    --window-shine-light: #f0f6f7;    
+    --window-shine-dark: #dae8ea; 
+    /* Desk */
+    --desk-surface: #f5f9fa;         
+    --desk-side-light: #d8e3e6;       
+    --desk-side-dark: #c0d0d5;  
+    /* Laptop */
+    --laptop-dark: #2c3e50;             
+    --laptop-medium: #34495e;         
+    --laptop-light: #5d6d7e; 
+    /* Mug */
+    --mug-main: #7b9aab;               
+    --mug-rim: #94b0c2;               
+    --coffee: #4a5568;
+    /* Pencil Cup */
+    --pencil-cup-front: #6b7c8a;        
+    --pencil-cup-side: #7e8fa0;         
+    --pencil-cup-rim: #91a3b5;          
+    --pencil-cup-inside: #4a5968;       
+    --pen-orange: #ff7979;     
+    --pen-dark: #2c3e50;          
+    /* Plants */
+    --pot-main: #5c6f7b;
+    --pot-rim: #748a96;
+    --plant-light: #7eb88f;
+    --plant-dark: #5a8c6e;
+    --plant-soil: #3a454f;
+    /* Chair */
+    --chair-main: #546e7a;
+    --chair-highlight: #607d8b; 
+}
+
+
+
 .workspace-illustration-container {
     width: 100%;
     height: 100%;
@@ -65,7 +109,7 @@ soil-           #39465a
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background: linear-gradient(90deg, #fef1cd 46%, #ffd8a3 46%);
+    background: linear-gradient(90deg, var(--bg-light) 46%, var(--bg-dark) 46%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,7 +176,7 @@ soil-           #39465a
 .table-top {
     width: 600px;
     height: 200px;
-    background-color:#ffecc3;
+    background-color:var(--desk-surface);
     transform: rotate(10deg) skew(-40deg);
     position: relative;
 }
@@ -148,7 +192,7 @@ soil-           #39465a
 .table-side-left {
     width: 595px;
     height: 20px;
-    background-color: #fdd199;
+    background-color: var(--desk-side-light);
     transform: skewX(10deg) rotate(10deg);
     position: relative;
     margin-top: -17px;
@@ -157,7 +201,7 @@ soil-           #39465a
 .table-side-right {
     width: 195px;
     height: 23px;
-    background-color: #fdd39d;
+    background-color: var(--desk-side-dark);
     transform: skewY(-40deg);
     margin-top: -85px;
     margin-right: -5px;
@@ -187,15 +231,15 @@ soil-           #39465a
 .frame-outer {
     width: 275px;
     height: 600px;
-    border: 30px solid #ffd8a3;
+    border: 30px solid var(--window-frame-outer);
     transform: skewY(10deg);
     display: flex;
     justify-content: flex-end;
     align-items: center;
         box-shadow:
-        inset 20px 0 0 0 #fff6d6,
-        inset 0 20px 0 0 #fff6d6,
-        inset 0 -20px 0 0 #fff6d6;
+        inset 20px 0 0 0 var(--window-frame-inner),
+        inset 0 20px 0 0 var(--window-frame-inner),
+        inset 0 -20px 0 0 var(--window-frame-inner);
 }
 
 /* Top Window */
@@ -207,15 +251,15 @@ soil-           #39465a
 }
 
 .window-top {
-    background-color: #d8e3d1;
+    background-color: var(--window-glass);
     width: 200px;
     height: 200px;
     position: relative;
     overflow: hidden;
-    border: 30px solid #ffe1b5;
+    border: 30px solid var(--window-frame-inner);
     box-shadow:
-        inset 15px 0 0 0 #fff6d6, 
-        inset 0 -10px 0 0 #fff6d6;
+        inset 15px 0 0 0 var(--window-frame-inner), 
+        inset 0 -10px 0 0 var(--window-frame-inner);
         display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -223,17 +267,17 @@ soil-           #39465a
 
 /* Bottom Window */
 .window-bottom {
-    background-color: #d8e3d1;
+    background-color: var(--window-glass);
     width: 200px;
     height: 300px;
     border-top: none;
     position: relative;
     overflow: hidden;
-    border: 30px solid #ffe1b5;
+    border: 30px solid var(--window-frame-inner);
     border-top: none;
     box-shadow:
-        inset 15px 0 0 0 #fff6d6,
-        inset 0 -15px 0 0 #fff6d6;
+        inset 15px 0 0 0 var(--window-frame-inner),
+        inset 0 -15px 0 0 var(--window-frame-inner);
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
@@ -254,7 +298,7 @@ soil-           #39465a
 
 /* Window Shine */
 .window-shine-top {
-    background: linear-gradient(to top, #e0e5d0, #f0f0d4);
+    background: linear-gradient(to top, var(--window-shine-dark), var(--window-shine-light));
     height: 100px;
     width: 50px;
     transform: skewX(-40deg);
@@ -266,7 +310,7 @@ soil-           #39465a
 }
 
 .window-shine-bottom {
-    background: linear-gradient(to top, #e0e5d0, #f0f0d4);
+    background: linear-gradient(to top, var(--window-shine-dark), var(--window-shine-light));
     height: 200px;
     width: 50px;
     transform: skewX(-40deg);
@@ -306,7 +350,7 @@ soil-           #39465a
     width: 10px;
     height: 55px;
     border-radius: 8px 8px 0 0;
-    background-color: #f89c59;
+    background-color: var(--pen-orange);
     position: relative;
     transform: skewY(10deg) translateY(-2px);
     z-index: 6;
@@ -316,7 +360,7 @@ soil-           #39465a
 }
 
 .pc-pen-1-cap {
-    background-color: #304f65;
+    background-color: var(--pen-dark);
     height: 20px;
     width: 30px;
     border-radius: 0 0 50% 50%;
@@ -327,7 +371,7 @@ soil-           #39465a
     width: 10px;
     height: 60px;
     border-radius: 8px 8px 0 0;
-    background-color: #304f65;
+    background-color: var(--pen-dark);
     position: relative;
     transform: skewX(-10deg) rotate(10deg) translateY(1px);
     z-index: 6;
@@ -346,13 +390,13 @@ soil-           #39465a
 }
 
 .pc-top {
-    background-color: #a75441;
+    background-color: var(--pencil-cup-inside);
     width: 63px;
     height: 37px;
-    border-top: 5px solid #f2924d;
-    border-bottom: 5px solid #f2924d;
-    border-right: 10px solid #f2924d;
-    border-left: 10px solid #f2924d;
+    border-top: 5px solid var(--pencil-cup-rim);
+    border-bottom: 5px solid var(--pencil-cup-rim);
+    border-right: 10px solid var(--pencil-cup-rim);
+    border-left: 10px solid var(--pencil-cup-rim);
     transform: rotate(10deg) skewX(-40deg);
     border-radius: 4px;
     position: relative;
@@ -372,14 +416,14 @@ soil-           #39465a
 .pc-front {
     width: 60px;
     height: 90px;
-    background-color: #d26943;
+    background-color: var(--pencil-cup-front);
     transform: skewY(10deg);
     top: 5px;
     position: relative;
 }
 
 .pc-side {
-    background-color: #e37645;
+    background-color: var(--pencil-cup-side);
     width: 35px;
     height: 90px;
     transform: skewY(-40deg);
@@ -418,7 +462,7 @@ soil-           #39465a
     width: 100px;
     border-radius: 50%;
     height: 40px;
-    border: 7px solid #fdcc95;
+    border: 7px solid var(--mug-rim);
     position: relative;
     display: flex;
     justify-content: center;
@@ -427,7 +471,7 @@ soil-           #39465a
 }
 
 .mug-coffee {
-    background-color: #ab5446;
+    background-color: var(--coffee);
     width: 100px;
     height: 40px;
     border-radius: 50%;
@@ -445,11 +489,11 @@ soil-           #39465a
   width: 100px;
   height: 130px;
   border-radius: 100% / 50px;
-  background: #fab16e;
+  background: var(--mug-main);
 }
 
 .mug-handle {
-    border: 15px solid #fab16e;
+    border: 15px solid var(--mug-main);
     border-radius: 0 30px 30px 0;
     height: 70px;
     width: 30px;
@@ -489,7 +533,7 @@ soil-           #39465a
 .succulent-leaf-left {
     height: 30px;
     width: 30px;
-    background-color: #4d7f61;
+    background-color: var(--plant-dark);
     border-radius: 20px 70px 10px 70px;
     position: relative;
     margin-right: -20px;
@@ -500,7 +544,7 @@ soil-           #39465a
 .succulent-leaf-middle {
     height: 30px;
     width: 30px;
-    background-color: #80a362;
+    background-color: var(--plant-light);
     border-radius: 20px 70px 10px 70px;
     transform: rotate(45deg);
     position: relative;
@@ -511,7 +555,7 @@ soil-           #39465a
 .succulent-leaf-right {
     height: 30px;
     width: 30px;
-    background-color: #4d7f61;
+    background-color: var(--plant-dark);
     border-radius: 70px 20px 70px 10px;
     position: relative;
     margin-left: -20px;
@@ -520,7 +564,7 @@ soil-           #39465a
 }
 
 .pot-top {
-    background-color: #e17444;
+    background-color: var(--pot-rim);
     width: 60px;
     height: 20px;
     border-radius: 50%;
@@ -535,13 +579,13 @@ soil-           #39465a
 .pot-soil {
     width: 45px;
     height: 10px;
-    background-color: #39465a;
+    background-color: var(--plant-soil);
     border-radius: 50%;
     z-index: 3;
 }
 
 .pot-bottom {
-    background-color: #e17444;
+    background-color: var(--pot-main);
     width: 60px;
     height: 40px;
     border-radius: 0 0 30px 30px;
@@ -576,8 +620,8 @@ soil-           #39465a
 }
 
 .laptop-top {
-    background-color: #2c415a;
-    border: 10px solid #3c5c75;
+    background-color: var(--laptop-dark);
+    border: 10px solid var(--laptop-medium);
     width: 200px;
     height: 140px;
     box-sizing: border-box;
@@ -587,7 +631,7 @@ soil-           #39465a
 }
 
 .laptop-bottom {
-    background-color: #466b82;
+    background-color: var(--laptop-light);
     width: 200px;
     height: 80px;
     transform: skewX(-40deg);
@@ -601,7 +645,7 @@ soil-           #39465a
 }
 
 .keyboard {
-    background-color: #2c415a;
+    background-color: var(--laptop-dark);
     width: 150px;
     height: 50px;
     margin-top: 10px;
@@ -611,7 +655,7 @@ soil-           #39465a
 .laptop-bottom-side-left {
     width: 200px;
     height: 10px;
-    background-color: #375772;
+    background-color: var(--laptop-medium);
     position: relative;
     margin-left: -30px;
     transform: skewX(10deg);
@@ -620,7 +664,7 @@ soil-           #39465a
 }
 
 .laptop-bottom-side-right {
-    background-color: #375772;
+    background-color: var(--laptop-medium);
     height: 100px;
     width: 9px;
     position: relative;
@@ -659,7 +703,7 @@ soil-           #39465a
 .snake-plant-leaf-dark {
     height: 200px;
     width: 35px;
-    background-color: #4d7f61;
+    background-color: var(--plant-dark);
     border-radius: 100% / 200px;
     display: flex;
     justify-content: center;
@@ -670,7 +714,7 @@ soil-           #39465a
     height: 250px;
     width: 35px;
     border-radius: 100% / 200px;
-    background-color: #80a362;
+    background-color: var(--plant-light);
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -701,14 +745,14 @@ soil-           #39465a
 }
 
 .snake-line-light {
-    background-color: #80a362;
+    background-color: var(--plant-light);
     width: 3px;
     height: 180px;
     border-radius: 50%;
 }
 
 .snake-line-dark {
-    background-color: #4d7f61;
+    background-color: var(--plant-dark);
     width: 3px;
     height: 180px;
     border-radius: 50%;
@@ -727,10 +771,10 @@ soil-           #39465a
     width: 150px;
     height: 45px;
     border-radius: 50%;
-    background-color: #af5847;
+    background-color: var(--plant-soil);
     position: relative;
     margin-bottom: -60px;
-    border: 10px solid #f5995c;
+    border: 10px solid var(--pot-main);
     box-sizing: border-box;
     z-index: 2;
     display: flex;
@@ -739,7 +783,7 @@ soil-           #39465a
 }
 
 .snake-pot-top-edge {
-    border-bottom: 20px solid #f5995c;
+    border-bottom: 20px solid var(--pot-main);
     width: 135px;
     height: 70px;
     border-radius: 50%;
@@ -751,7 +795,7 @@ soil-           #39465a
 .snake-pot-middle {
     width: 150px;
     height: 150px;
-    background-color: #f5995c;
+    background-color: var(--pot-main);
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
     position: relative;
     z-index: 1;
@@ -791,7 +835,7 @@ soil-           #39465a
 .pothos-hanger-left {
     height: 200px;
     width: 5px;
-    background-color: #f7b079;
+    background-color: var(--pot-main);
     transform: rotate(15deg);
     margin-left: 30px;
     margin-bottom: -15px;
@@ -800,7 +844,7 @@ soil-           #39465a
 .pothos-hanger-right {
     height: 200px;
     width: 5px;
-    background-color: #f7b079;
+    background-color: var(--pot-main);
     transform: rotate(-15deg);
     margin-right: 30px;
     margin-bottom: -15px;
@@ -808,7 +852,7 @@ soil-           #39465a
 
 .pothos-pot-top {
     width: 130px;
-    background-color: #4d7f61;
+    background-color: var(--pot-soil);
     height: 30px;
     border-radius: 50%;
     position: relative;
@@ -819,7 +863,7 @@ soil-           #39465a
 .pothos-pot-bottom {
     width: 130px;
     height: 110px;
-    background-color: #f7b079;
+    background-color: var(--pot-main);
     border-radius: 0 0 100px 100px;
     position: relative;
     z-index: 1;
@@ -847,7 +891,7 @@ soil-           #39465a
 /* Dark Leaf */
 
 .pothos-leaf-dark {
-  background-color: #4d7f61;
+  background-color: var(--plant-dark);
   display: inline-block;
   height: 40px;
   margin: 0 10px;
@@ -861,7 +905,7 @@ soil-           #39465a
 .pothos-leaf-dark:before,
 .pothos-leaf-dark:after {
   content: "";
-  background-color: #4d7f61;
+  background-color: var(--plant-dark);
   border-radius: 50%;
   height: 40px;
   position: absolute;
@@ -884,7 +928,7 @@ soil-           #39465a
     left: 50%;
     width: 5px;
     height: 57px; 
-    background-color: #80a362; 
+    background-color:var(--plant-light); 
     transform: translateY(-50%) translateX(-50%) rotate(45deg);
     z-index: 1;
     border-radius: 0 0 50% 50%;
@@ -893,7 +937,7 @@ soil-           #39465a
 /* Light Leaf */ 
 
 .pothos-leaf-light {
-    background-color: #80a362;
+    background-color: var(--plant-light);
     display: inline-block;
     height: 40px;
     margin: 0 10px;
@@ -908,7 +952,7 @@ soil-           #39465a
 .pothos-leaf-light:before,
 .pothos-leaf-light:after {
   content: "";
-  background-color: #80a362;
+  background-color: var(--plant-light);
   border-radius: 50%;
   height: 40px;
   position: absolute;
@@ -931,7 +975,7 @@ soil-           #39465a
   left: 50%;
   width: 5px;
   height: 57px; 
-  background-color: #4d7f61; 
+  background-color: var(--plant-dark); 
   transform: translateY(-50%) translateX(-50%) rotate(45deg);
   z-index: 1;
   border-radius: 0 0 50% 50%;
@@ -1071,12 +1115,12 @@ soil-           #39465a
 }
 
 .chair-back {
-    background-color: #9f4f46;
+    background-color: var(--chair-main);
     width: 150px;
     height: 150px;
     transform: skewY(20deg);
     border-radius: 30px;
     position: relative;
-    border-right: 15px solid #be5c49;
-    border-top: 15px solid #be5c49;
+    border-right: 15px solid var(--chair-highlight);
+    border-top: 15px solid var(--chair-highlight);
 }
