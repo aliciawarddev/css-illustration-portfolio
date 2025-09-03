@@ -789,6 +789,7 @@
 }
 
 /* BEAM - CHASE LIGHT ANIMATION */
+/* 
 @keyframes light-chase {
     0%, 85%, 100% {
         background-color: var(--ferris-cream);
@@ -806,6 +807,7 @@
         transform: scale(1.2);
     }
 }
+*/ 
 
 /* Left beam - lights chase upward */
 .beam.left .ferris-light:nth-child(1) { animation: light-chase 5s infinite 0s; }
