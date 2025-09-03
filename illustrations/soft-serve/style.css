@@ -1,6 +1,46 @@
+/* Colors */
+:root {
+    --bg: #7ec8d8;
+    --bg-shadow: #5a9fb0;
+    --ice-cream-base: #f4e8d0;
+    --ice-cream-highlight:#fdf8ec;
+    --cone-base: #f5c97b;
+    --cone-shadow: #d9a857;
+    --cone-shadow-dark: #bd9049;
+}
+
 .soft-serve-illustration-container {
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.styled-section {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7ec8d8; 
+}
+
+.drawing-scaling-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.drawing-container {
+    width: 900px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ICE CREAM */ 
@@ -15,7 +55,7 @@
 .soft-serve-top {
     width: 165px;
     height: 65px;
-    background: #e8dcc6;
+    background: var(--ice-cream-base);
     clip-path: path("M82.5 65 C123.75 65, 123.75 32.5, 82.5 0 C41.25 32.5, 41.25 65, 82.5 65 Z");
     display: flex;
     justify-content: center;
@@ -32,13 +72,13 @@
     right: 10px;
     width: 165px;
     height: 65px;
-    background: #fdf6e3;
+    background: var(--ice-cream-highlight);
     clip-path: path("M82.5 65 C123.75 65, 123.75 32.5, 82.5 0 C41.25 32.5, 41.25 65, 82.5 65 Z");
     z-index: -1;
 }
 
 .soft-serve-middle {
-    background-color: #e8dcc6;
+    background-color: var(--ice-cream-base);
     width: 160px;
     height: 65px;
     border-radius: 65px;
@@ -47,7 +87,7 @@
 }
 
 .middle-shadow {
-    background-color: #e8dcc6;
+    background-color: var(--ice-cream-base);
     width: 75px;
     height: 10px;
     border-radius: 10px;
@@ -57,7 +97,7 @@
 }
 
 .middle-highlight {
-    background-color: #fdf6e3;
+    background-color: var(--ice-cream-highlight);
     width: 140px;
     height: 55px;
     border-radius: 65px;
@@ -67,7 +107,7 @@
 }
 
 .middle-highlight-left {
-    background-color: #fdf6e3;
+    background-color: var(--ice-cream-highlight);
     width: 65px;
     height: 70px;
     border-top-left-radius: 65px 65px;
@@ -81,7 +121,7 @@
 }
 
 .soft-serve-bottom {
-    background-color: #e8dcc6;
+    background-color: var(--ice-cream-base);
     width: 200px;
     height: 65px;
     border-radius: 65px;
@@ -89,7 +129,7 @@
 }
 
 .bottom-shadow {
-    background-color: #e8dcc6;
+    background-color: var(--ice-cream-base);
     width: 120px;
     height: 10px;
     border-radius: 10px;
@@ -99,7 +139,7 @@
 }
 
 .bottom-highlight {
-    background-color: #fdf6e3;
+    background-color: var(--ice-cream-highlight);
     width: 180px;
     height: 55px;
     border-radius: 65px;
@@ -111,7 +151,7 @@
 .bottom-highlight-left {
     position: absolute;
     z-index: 2;
-    background-color: #fdf6e3;
+    background-color: var(--ice-cream-highlight);
     width: 65px;
     height: 45px;
     border-top-left-radius: 65px 65px;
@@ -123,21 +163,15 @@
     left: -12px;
 }
 
-/* Cone colors:
-base:         #f5c97b   
-shadow:       #d9a857   
-dark shadow:  #bd9049 
-*/ 
-
 .cone-top {
-    background-color: #f5c97b;
+    background-color: var(--cone-base);
     width: 140px;
     height: 5px;
     position: relative;
 }
 
 .cone-top-side-shadow {
-    background-color: #d9a857;
+    background-color: var(--cone-shadow);
     width: 30px;
     height: 5px;
     right: 0px;
@@ -145,7 +179,7 @@ dark shadow:  #bd9049
 }
 
 .cone-middle {
-    background-color: #f5c97b;
+    background-color: var(--cone-base);
     position: relative;
     width: 130px;
     height: 30px;
@@ -154,20 +188,20 @@ dark shadow:  #bd9049
 .cone-middle-shadow {
     width: 130px;
     height: 5px;
-    background-color: #d9a857;
+    background-color: var(--cone-shadow);
 }
 
 .cone-middle-shadow-overlap {
     width: 30px;
     height: 5px;
-    background-color: #bd9049;
+    background-color: var(--cone-shadow-dark);
     top: 0px;
     position: absolute;
     right: 0;
 }
 
 .cone-middle-side-shadow {
-    background-color: #d9a857;
+    background-color: var(--cone-shadow);
     width: 30px;
     height: 30px;
     position: absolute;
@@ -180,47 +214,52 @@ dark shadow:  #bd9049
     width: 115px;
     height: 100px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cone-bottom {
-    width: 80px;
+    width: 110px;
     height: 0;
-    border-bottom: 100px solid #f5c97b;
+    border-bottom: 100px solid var(--cone-base);
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     transform: rotate(180deg);
     position: relative;
     z-index: 1;
+
 }
 
 .cone-bottom-shadow {
-    width: 106px;
+    width: 110px;
     height: 0;
-    border-bottom: 10px solid #d9a857;
+    border-bottom: 10px solid var(--cone-shadow); 
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
     top: 90px;
     position: absolute;
     left: -15px;
     z-index: 2;
+    
 }
 
 .cone-bottom-shadow-overlap {
-    width: 30px;
+    width: 32px;
     height: 0;
-    border-bottom: 10px solid #bd9049 ;
+    border-bottom: 10px solid var(--cone-shadow-dark) ;
     border-left: 0px solid transparent;
     border-right: 1.5px solid transparent;
     position: absolute;
     top: 90px;
     left: -15.5px;
-    transform: skewX(-15deg); /* Adjust to match left-side slant */
+    transform: skewX(-12deg); /* Adjust to match left-side slant */
     z-index: 4;
 }
 
 .cone-bottom-side-shadow {
     height: 110px;
-    background-color: #d9a857;
+    background-color: var(--cone-shadow);
     width: 30px;
     transform: rotate(8deg);
     overflow: hidden;
@@ -234,7 +273,7 @@ dark shadow:  #bd9049
     width: 200px;
     height: 25px;
     border-radius: 50%;
-    background-color: #2e8592;
+    background-color: var(--bg-shadow);
     position: absolute;
     z-index: 0;
     bottom: -12.5px;
