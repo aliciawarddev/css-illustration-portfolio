@@ -405,16 +405,16 @@ soil-           #39465a
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: -20px;
-    margin-left: -25px;
     z-index: 10;
+    right: 12px;
+    top: 20px;
 }
 
 .mug-top-border {
-    width: 84px;
+    width: 100px;
     border-radius: 50%;
-    height: 20px;
-    border: 8px solid #fdcc95;
+    height: 40px;
+    border: 7px solid #fdcc95;
     position: relative;
     display: flex;
     justify-content: center;
@@ -424,14 +424,10 @@ soil-           #39465a
 
 .mug-coffee {
     background-color: #ab5446;
-    width: 85px;
-    height: 20px;
-    bottom: 0;
-    left: 0;
+    width: 100px;
+    height: 40px;
     border-radius: 50%;
     position: relative;
-    margin-top: 15px;
-    margin-left: 0;
 }
 
 .mug-bottom {
@@ -451,8 +447,8 @@ soil-           #39465a
 .mug-handle {
     border: 15px solid #fab16e;
     border-radius: 0 30px 30px 0;
-    height: 30px;
-    width: 15px;
+    height: 70px;
+    width: 30px;
     border-left: none;
     margin-left: -1px;
 }
