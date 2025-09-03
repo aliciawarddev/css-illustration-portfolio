@@ -155,13 +155,40 @@
 
 /* Middle */
 .desert-cactus-middle {
-    width: 27px;
+    width: 20px;
     height: 180px;
     background-color: var(--desert-layer-1);
     border-radius: 27px 27px 0 0;
 }
 
 /* Left side */
+.desert-cactus-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cactus-top-left {
+    position: relative;
+    width: 15px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    margin-right: 5px;
+}
+
+.cactus-bottom-left {
+    position: relative;
+    width: 20px;
+    height: 40px;
+    border-radius: 0 0 0 20px;
+    border: 15px solid;
+    border-right: none;
+    border-top: none;
+}
+
+/* 
 .desert-cactus-left {
     margin-top: 27px;
     display: flex;
@@ -170,23 +197,53 @@
 }
 
 .cactus-top-left {
-    width: 23px;
+    width: 20px;
     height: 24px;
     border-radius: 27px 27px 0 0;
     margin-bottom: -1px;
 }
 
 .cactus-bottom-left {
-    width: 18px;
+    width: 20px;
     height: 45px;
-    border-radius: 0 0 90px 0;
-    border-left-width: 23px;
+    border-radius: 0 0 0 90px;
+    border-left-width: 25px;
     border-left-style: solid;
-    border-bottom-width: 23px;
+    border-bottom-width: 25px;
     border-bottom-style: solid;
 }
+*/ 
 
 /* Right side */
+
+.desert-cactus-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 45px;
+    margin-left: 0;
+}
+
+.cactus-top-right {
+    position: relative;
+    width: 15px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: -1px;
+}
+
+.cactus-bottom-right {
+    position: relative;
+    width: 20px;
+    height: 40px;
+    border-radius: 0 0 20px 0;
+    border: 15px solid;
+    border-left: none;
+    border-top: none;
+}
+
+/* 
 .desert-cactus-right {
     margin-top: 45px;
     display: flex;
@@ -197,21 +254,22 @@
 }
 
 .cactus-top-right {
-    width: 23px;
+    width: 20px;
     height: 42px;
     border-radius: 27px 27px 0 0;
     margin-bottom: -1px;
 }
 
 .cactus-bottom-right {
-    width: 18px;
+    width: 20px;
     height: 45px;
     border-radius: 0 0 90px 0;
-    border-right-width: 23px;
+    border-right-width: 25px;
     border-right-style: solid;
-    border-bottom-width: 23px;
+    border-bottom-width: 25px;
     border-bottom-style: solid;
 }
+*/ 
 
 /* Layer-specific styles */
 /* Layer 1 */
@@ -228,7 +286,7 @@
 
 .desert-cactus.layer1 .cactus-bottom-left,
 .desert-cactus.layer1 .cactus-bottom-right {
-    border-color: var(--desert-layer-1);
+    border-color: var(--desert-layer-1); /* Issue */
 }
 
 /* Layer 2 */
