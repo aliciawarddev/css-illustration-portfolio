@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .styled-section {
@@ -12,7 +13,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #a9d0b5;
+    background: linear-gradient(180deg, 
+        #4a5668 0%,      /* Muted blue-gray */
+        #6b6b83 35%,     /* Lavender-gray */
+        #8a7183 70%,     /* Dusty mauve */
+        #a08088 100%     /* Warm gray-pink */
+    );
 }
 
 .drawing-container {
@@ -31,13 +37,26 @@
 
 /* FERRIS WHEEL COLOR PALETTE */
 :root {
+    /* New Color Palette */
+    --ferris-pink-dark: #a04458;    /* Muted dusty rose */
+    --ferris-pink-medium: #c77185;  /* Softer pink */
+    --ferris-pink-light: #e6b8c2;   /* Dusty pink light */
+    --ferris-teal-dark: #5a7a7f;    /* Grayed teal */
+    --ferris-teal-light: #8fa5a8;   /* Soft sage-teal */
+    --ferris-cream: #fef6ec;        /* Warm cream */
+    --ferris-yellow: #f4d4a2;       /* Warm amber glow */
+    --ferris-glow: #ffd6a8;         /* Golden glow */
+    
+    /* Old Color Palette 
     --ferris-pink-dark: #bc3d46;
     --ferris-pink-medium: #d66f70;
     --ferris-pink-light: #facccf;
     --ferris-teal-dark: #639387;
     --ferris-teal-light: #85b4ae;
     --ferris-cream: #fff7f0;
-    --ferris-yellow: #FFF5DC;
+    --ferris-yellow: #fffacd;
+    --ferris-glow: #fff5dc;
+    */ 
 }
 
 .ferris-container {
@@ -48,7 +67,7 @@
     align-items: center;
     box-sizing: border-box;
     height: 500px;
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 /* WHEEL */ 
@@ -181,6 +200,21 @@
     bottom: 0px;
     border: 3px solid var(--ferris-teal-dark);
     border-radius: 50%;
+}
+
+
+/* LIGHTS */
+.wheel-light,
+.ferris-light {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--ferris-yellow);
+    box-shadow: 
+        0 0 8px var(--ferris-yellow),
+        0 0 16px var(--ferris-glow),
+        0 0 24px rgba(244, 212, 162, 0.5),
+        0 0 32px rgba(244, 212, 162, 0.3);
 }
 
 /* WHEEL LIGHTS */
@@ -864,6 +898,18 @@
     justify-content: center;
     align-items: center;
     z-index: 4;
+}
+
+.platform-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -45px; /* Adjust to position below platform */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px; /* Match your widest platform */
+    height: 55px; /* Height of shadow/base */
+    background-color: #4a5668;
+    z-index: 3;
 }
 
 .platform {
