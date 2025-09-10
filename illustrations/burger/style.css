@@ -45,6 +45,14 @@
     align-items: center;
 } 
 
+.drawing-container, 
+.drawing-scaling-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 /* Top Bun */
 .burger-bun-top {
     background-color: var(--bun-main);
