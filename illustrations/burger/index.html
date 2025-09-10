@@ -165,6 +165,19 @@
         aspect-ratio: unset;
       }
     }
+
+    /* Scale down on smaller screens */
+    @media (max-width: 768px) {
+      .burger-wrapper {
+        transform: scale(0.6);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .burger-wrapper {
+        transform: scale(0.45);
+      }
+    }
   </style>
 </head>
 
