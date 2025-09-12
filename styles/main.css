@@ -73,6 +73,8 @@ h1 {
     font-size: 4rem;
     color: var(--teal);
     margin: 0;
+    text-shadow: -3px 3px 0 red; /* Fixed: removed extra 0, added -- */
+    color: red;
 }
 
 h2 {
