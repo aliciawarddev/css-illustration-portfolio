@@ -1,0 +1,101 @@
+.betelgeuse-illustration-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sky {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center bottom, #f88a4d 0%, #ee7a9a 30%, #a94cc0 40%,#3c016f 60%, #01001f 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grave-wrapper {
+    width: 20%;
+    height: 70%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.ground {
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, #146c16 0%, #043d05 50%, #001915 100%);
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    margin-bottom: -55px;
+} 
+
+/* GRAVE */
+.grave-stone {
+    background-color: #5f6cd5;
+    height: 260px;
+    width: 160px;
+    border-radius: 100px 100px 0 0;
+    margin-bottom: -20px;
+    box-shadow: 5px -5px 0 #1c1b63;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+
+.line {
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #911260;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line.first {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: -10px;
+}
+
+.line.second {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: -20px;
+}
+
+.line.third {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: -40px;
+}
+
+/* Arrow 
+.arrow-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    background-color: #911260;
+}
+
+.arrow.line {
+    width: 10px;
+    height: 50px;
+}
+
+.arrow-triangle {
+
+}
+*/ 
