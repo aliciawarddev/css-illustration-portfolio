@@ -109,7 +109,7 @@
     text-transform: uppercase;
     font-size: 1.8rem;
     margin-bottom: 0;
-    width: 170px;
+    width: 200px;
 }
 
 .description {
@@ -126,16 +126,54 @@
     font-size: 1.5rem;
 }
 
-/* Button */
+/* BUTTON */
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .button {
-    width: 190px;
-    height: 30px;
-    font-family: indie flower;
+    width: 60px;
+    height: 60px;
+    font-family: 'Bebas Neue', sans-serif; /* Bold, condensed, restaurant-style font */
+    font-weight: 400;
+    letter-spacing: 1px;
     color: var(--text);
     font-size: 1rem;
-    background-color: var(--frame);
+    background-color: #d4a574;
+    border: 3px solid #a0845c;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--frame-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.button-shadow {
+    background-color: #b8956a;
+    border: 3px solid #a0845c;
+    z-index: 1;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: -55px;
+    margin-right: 5px;
+}
+
+.button:hover {
+    background-color: #e6b885; /* Lighter mustard on hover */
+    transform: translate(-1px, -1px);
+    box-shadow: -2px -3px 0 0 #a0845c;
+}
+
+.button:active {
+    transform: translate(1px, 1px);
+    background-color: #c29660; /* Darker mustard when pressed */
+    box-shadow: -2px -2px 0 0 #a0845c;
 }
