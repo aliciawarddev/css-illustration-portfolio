@@ -1,34 +1,111 @@
 /* Container */
 .rainbow-stripes-container {
-    background-color: black;
+    background-color: #2C2A26;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.stripes-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.stripes-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 20px;
-}
-
 /* Rainbow Text */
 .rainbow-text {
     font-family: monoton;
     font-size: 5rem;
+    z-index: 2;
+    width: 450px;
+    height: 100px;
+    margin-right: -500px;
+    left: 80px;
+    position: relative;
+    bottom: 180px;
 }
 
-.rainbow-text span:nth-child(1) { color: #E63946; } /* Red */
-.rainbow-text span:nth-child(2) { color: #F77F00; } /* Orange */
-.rainbow-text span:nth-child(3) { color: #FCBF49; } /* Yellow */
-.rainbow-text span:nth-child(4) { color: #2A9D8F; } /* Green */
-.rainbow-text span:nth-child(5) { color: #457B9D; } /* Blue */
-.rainbow-text span:nth-child(6) { color: #A8508A; } /* Purple */
+.rainbow-text span:nth-child(1) { color: #D1574A; } /* Mid Red */
+.rainbow-text span:nth-child(2) { color: #E67916; } /* Mid Orange */
+.rainbow-text span:nth-child(3) { color: #E8B34E; } /* Mid Yellow */
+.rainbow-text span:nth-child(4) { color: #428B7C; } /* Mid Green */
+.rainbow-text span:nth-child(5) { color: #5A7A94; } /* Mid Blue */
+.rainbow-text span:nth-child(6) { color: #965D81; } /* Mid Purple */
 
-/* Horizontal Stripe */
+/* 
+.rainbow-text span:nth-child(1) { color: #E63946; } 
+.rainbow-text span:nth-child(2) { color: #F77F00; } 
+.rainbow-text span:nth-child(3) { color: #FCBF49; } 
+.rainbow-text span:nth-child(4) { color: #2A9D8F; } 
+.rainbow-text span:nth-child(5) { color: #457B9D; } 
+.rainbow-text span:nth-child(6) { color: #A8508A; } 
+*/ 
+
+/* Curved Stripes */
+.stripe-curved-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}   
+
+.stripe-curved {
+    position: relative;
+    box-sizing: border-box;
+    border-right: 3.5px solid;
+    border-bottom: 3.5px solid;
+    height: 500px;
+    width: 850px;
+    bottom: 80px;
+    right: 100px;
+}
+
+.stripe-curved.red { 
+    border-color: #D1574A;; 
+    border-radius: 0 0 25px 0;
+} 
+
+.stripe-curved.orange { 
+    border-color: #E67916;  
+    border-radius: 0 0 30px 0;
+    margin-left: -844px;
+    margin-bottom: -11px;
+} 
+
+.stripe-curved.yellow { 
+    border-color: #E8B34E; 
+    border-radius: 0 0 35px 0;
+    margin-left: -844px;
+    margin-bottom: -22px;
+}
+
+.stripe-curved.green { 
+    border-color: #428B7C; 
+    border-radius: 0 0 40px 0;
+    margin-left: -844px;
+    margin-bottom: -33px;
+} 
+
+.stripe-curved.blue { 
+    border-color: #5A7A94;; 
+    border-radius: 0 0 45px 0;
+    margin-left: -844px;
+    margin-bottom: -44px;
+} 
+
+.stripe-curved.purple { 
+    border-color: #965D81; 
+    border-radius: 0 0 50px 0;
+    margin-left: -844px;
+    margin-bottom: -55px;
+} 
+
+/* Horizontal Stripe 
 .stripe-horizontal-wrapper {
     position: relative;
     display: flex;
@@ -44,74 +121,15 @@
     position: relative;
 }
 
-.stripe-horizontal.red { background-color: #E63946; } /* Red */
-.stripe-horizontal.orange { background-color: #F77F00; } /* Orange */
-.stripe-horizontal.yellow { background-color: #FCBF49; } /* Yellow */
-.stripe-horizontal.green { background-color: #2A9D8F; } /* Green */
-.stripe-horizontal.blue { background-color: #457B9D; } /* Blue */
-.stripe-horizontal.purple { background-color: #A8508A; } /* Purple */
+.stripe-horizontal.red { background-color: #E63946; } 
+.stripe-horizontal.orange { background-color: #F77F00; } 
+.stripe-horizontal.yellow { background-color: #FCBF49; } 
+.stripe-horizontal.green { background-color: #2A9D8F; } 
+.stripe-horizontal.blue { background-color: #457B9D; } 
+.stripe-horizontal.purple { background-color: #A8508A; } 
+*/
 
-/* Curved Stripes */
-.stripe-curved-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-}   
-
-.stripe-curved {
-    position: relative;
-    box-sizing: border-box;
-    border-right: 4px solid;
-    border-bottom: 4px solid;
-    height: 100px;
-    width: 100px;
-}
-
-.stripe-curved.red { 
-    border-color: #E63946; 
-    border-radius: 0 0 25px 0;
-} 
-
-.stripe-curved.orange { 
-    border-color: #F77F00; 
-    margin-left: -95px;
-    margin-bottom: -15px;
-    border-radius: 0 0 30px 0;
-} 
-
-.stripe-curved.yellow { 
-    border-color: #FCBF49; 
-    margin-left: -95px;
-    margin-bottom: -30px;
-    border-radius: 0 0 35px 0;
-}
-
-.stripe-curved.green { 
-    border-color: #2A9D8F; 
-    margin-left: -95px;
-    margin-bottom: -45px;
-    border-radius: 0 0 40px 0;
-} 
-
-.stripe-curved.blue { 
-    border-color: #457B9D; 
-    margin-left: -95px;
-    margin-bottom: -60px;
-    border-radius: 0 0 45px 0;
-} 
-
-.stripe-curved.purple { 
-    border-color: #A8508A; 
-    margin-left: -95px;
-    margin-bottom: -75px;
-    border-radius: 0 0 50px 0;
-} 
-
-
-/* Vertical Stripe */
+/* Vertical Stripe 
 .stripe-vertical-wrapper {
     position: relative;
     display: flex;
@@ -127,9 +145,10 @@
     position: relative;
 }
 
-.stripe-vertical.red { background-color: #E63946; } /* Red */
-.stripe-vertical.orange { background-color: #F77F00; } /* Orange */
-.stripe-vertical.yellow { background-color: #FCBF49; } /* Yellow */
-.stripe-vertical.green { background-color: #2A9D8F; } /* Green */
-.stripe-vertical.blue { background-color: #457B9D; } /* Blue */
-.stripe-vertical.purple { background-color: #A8508A; } /* Purple */
+.stripe-vertical.red { background-color: #E63946; }
+.stripe-vertical.orange { background-color: #F77F00; } 
+.stripe-vertical.yellow { background-color: #FCBF49; } 
+.stripe-vertical.green { background-color: #2A9D8F; } 
+.stripe-vertical.blue { background-color: #457B9D; } 
+.stripe-vertical.purple { background-color: #A8508A; }
+*/
