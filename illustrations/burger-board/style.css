@@ -37,16 +37,16 @@
 .frame::before {
     content: '';
     position: absolute;
-    bottom: 9px;
+    bottom: 5px;
     right: 100%;
-    width: 8px;
-    height: 100%;
+    width: 5px;
+    height: 100.5%;
     background-color: var(--frame-shadow);
     transform: skewY(45deg);
     transform-origin: top left;
     z-index: 1;
     border: 2px solid var(--frame-border);
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 /* Top depth */
@@ -54,16 +54,16 @@
     content: '';
     position: absolute;
     bottom: 100%;
-    right: 9px;
-    width: 101%;
-    height: 12px;
+    right: 5px;
+    width: 102%;
+    height: 9px;
     background-color: var(--frame-shadow);
     transform: skewX(45deg);
     transform-origin: top left;
     z-index: 1;
     border: 2px solid var(--frame-border);
     box-sizing: border-box;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 /* Board */
