@@ -6,6 +6,12 @@
     --wall: #efecc7;
     --board: #878b93;
     --text: #f6f8fc;
+    --counter: #ffdf79;
+    --counter-border: #9a8832;
+    --bell: #a2a7b1;
+    --bell-shadow: #878d94;
+    --bell-highlight: #b5b9c1;
+    --bell-border: #68738c;
 }
 
 /* Container */
@@ -126,7 +132,7 @@
     font-size: 1.5rem;
 }
 
-/* BUTTON */
+/* BUTTON 
 .button-wrapper {
     display: flex;
     flex-direction: column;
@@ -137,7 +143,7 @@
 .button {
     width: 60px;
     height: 60px;
-    font-family: 'Bebas Neue', sans-serif; /* Bold, condensed, restaurant-style font */
+    font-family: 'Bebas Neue', sans-serif; 
     font-weight: 400;
     letter-spacing: 1px;
     color: var(--text);
@@ -167,16 +173,121 @@
 }
 
 .button:hover {
-    background-color: #e6b885; /* Lighter mustard on hover */
+    background-color: #e6b885; 
     transform: translate(-1px, -1px);
     box-shadow: -2px -3px 0 0 #a0845c;
 }
 
 .button:active {
     transform: translate(1px, 1px);
-    background-color: #c29660; /* Darker mustard when pressed */
+    background-color: #c29660; 
     box-shadow: -2px -2px 0 0 #a0845c;
+}
+*/
+
+/* Counter */
+.counter {
+    background-color: var(--counter);
+    border-top: 2px solid var(--counter-border);
+    width: 100%;
+    height: 15%;
+    margin-bottom: -45px;
 }
 
 /* Bell */
+.bell-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.top {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid var(--bell-border);
+    background-color: var(--bell);
+    margin-bottom: -2px;
+    box-shadow: inset 3px 0 0 var(--bell-shadow);
+}
+
+.bell {
+    width: 60px;
+    height: 30px;
+    border-radius: 60px 60px 0 0;
+    border: 2px solid var(--bell-border);
+    background-color: var(--bell);
+    box-shadow: inset 8px 0 0 var(--bell-shadow);
+}
+
+.bottom {
+    width: 60px;
+    height: 15px;
+    border: 2px solid var(--bell-border);
+    background-color: var(--bell);
+    transform: perspective(100px) rotateX(50deg);
+    margin-top: -4px;
+    box-shadow: inset 8px 0 0 var(--bell-shadow);
+}
+
+/* Hover state */
+.bell-wrapper:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05); /* Subtle lighting effect */
+}
+
+.bell-wrapper:hover .bell {
+    background-color: var(--bell-highlight);
+}
+
+.bell-wrapper:hover .top {
+    background-color: var(--bell-highlight);
+}
+
+.bell-wrapper:hover .bottom {
+    background-color: var(--bell-highlight);
+}
+
+/* Active state - entire bell assembly presses down */
+.bell-wrapper:active {
+    transform: translateY(2px);
+    animation: bellRing 0.5s ease-out, bellDing 0.2s ease-out;
+    filter: brightness(0.95);
+}
+
+.bell-wrapper:active .bell {
+    filter: brightness(0.95); 
+}
+
+.bell-wrapper:active .top {
+    filter: brightness(0.95); 
+}
+
+.bell-wrapper:active .bottom {
+    filter: brightness(0.95); 
+}
+
+/* Improved ring animation - more realistic bell movement */
+@keyframes bellRing {
+    0% { transform: translateY(2px) rotate(0deg); }
+    15% { transform: translateY(2px) rotate(-2deg); }
+    30% { transform: translateY(2px) rotate(1.5deg); }
+    45% { transform: translateY(2px) rotate(-1deg); }
+    60% { transform: translateY(2px) rotate(0.5deg); }
+    75% { transform: translateY(2px) rotate(-0.2deg); }
+    90% { transform: translateY(2px) rotate(0.1deg); }
+    100% { transform: translateY(2px) rotate(0deg); }
+}
+
+/* Optional: Add a subtle "ding" effect */
+@keyframes bellDing {
+    0% { transform: translateY(2px) scale(1); }
+    20% { transform: translateY(2px) scale(1.02); }
+    100% { transform: translateY(2px) scale(1); }
+}
+
 
