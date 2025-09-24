@@ -93,43 +93,65 @@
 .header-top {
     text-transform: uppercase;
     font-family: indie flower;
-    color: var(--text);
-    margin-top: 10px;
-    font-size: 2.5rem;
+    color: transparent;
+    -webkit-text-stroke: 0.1px var(--text); /* Only the outline shows */
+    margin-top: 0px;
+    font-size: 3rem;
     margin-bottom: 0;
+    font-weight: 900;
+    transform: rotate(-3deg);
 }
 
 .header-bottom {
     text-transform: uppercase;
     font-family: indie flower;
     color: var(--text);
-    font-size: 1.5rem;
-    text-decoration: underline;
-    margin-top: -20px;
+    font-size: 1.7rem;
+    margin-top: -25px;
     margin-bottom: 20px;
+    transform: rotate(-3deg);
+    font-weight: 500;
+}
+
+.underline {
+    width: 150px;
+    background-color: var(--text);
+    height: 2px;
+    border-radius: 2px;
+    transform: rotate(-3deg);
+    margin-top: -30px;
 }
 
 .name {
     font-family: indie flower;
     color: var(--text);
     text-transform: uppercase;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 0;
     width: 200px;
+    margin-top: 30px;
+    font-weight: 500;
+    transform: rotate(-3deg);
+    line-height: 1.1;
 }
 
 .description {
     font-family: indie flower;
     color: var(--text);
-    font-size: 1rem;
-    margin-bottom: 0;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
     width: 200px;
+    font-weight: 500;
+    transform: rotate(-3deg);
+    margin-top: 5px;
 }
 
 .price {
     font-family: indie flower;
     color: var(--text);
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    transform: rotate(-3deg);
 }
 
 /* BUTTON 

@@ -10,7 +10,7 @@ const burgerData = [
     },
     {
         name: "The final kraut-down",
-        description: "(comes with sauerkraut"
+        description: "(comes with sauerkraut)"
     },
     {
         name: "Poblano picasso burger",
@@ -22,7 +22,7 @@ const burgerData = [
     },
     {
         name: "Olive and let fry burger",
-        description: "(comes with olive tapenade"
+        description: "(comes with olive tapenade)"
     }
 ];
 
@@ -44,5 +44,5 @@ function changeBurger() {
 // Wait for the page to fully load before setting up event listeners
 document.addEventListener('DOMContentLoaded', function() {
   // Find the button element and add a click event listener to it
-  document.querySelector('.button').addEventListener('click', changeBurger);
+  document.querySelector('.bell').addEventListener('click', changeBurger);
 });
