@@ -22,10 +22,10 @@
     z-index: 2;
     width: 450px;
     height: 100px;
-    margin-right: -500px;
     left: 80px;
     position: relative;
     bottom: 180px;
+    margin-right: -500px;
 }
 
 .rainbow-text span:nth-child(1) { color: #D1574A; } /* Mid Red */
@@ -52,6 +52,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    margin-left: -100px;
 }   
 
 .stripe-curved {
@@ -64,6 +65,184 @@
     bottom: 80px;
     right: 100px;
 }
+
+/* Red stripes - base radius 25px */
+.stripe-curved.red:nth-of-type(1) { 
+    border-color: #D1574A;
+    border-radius: 0 0 25px 0;
+} 
+.stripe-curved.red:nth-of-type(2) { 
+    border-color: #D1574A;
+    border-radius: 0 0 28px 0;
+    margin-left: -844px;
+    margin-bottom: -3px;
+} 
+.stripe-curved.red:nth-of-type(3) { 
+    border-color: #D1574A;
+    border-radius: 0 0 31px 0;
+    margin-left: -844px;
+    margin-bottom: -6px;
+} 
+.stripe-curved.red:nth-of-type(4) { 
+    border-color: #D1574A;
+    border-radius: 0 0 34px 0;
+    margin-left: -844px;
+    margin-bottom: -9px;
+} 
+
+/* Orange stripes - base radius 37px */
+.stripe-curved.orange:nth-of-type(5) { 
+    border-color: #E67916;  
+    border-radius: 0 0 37px 0;
+    margin-left: -844px;
+    margin-bottom: -12px;
+} 
+.stripe-curved.orange:nth-of-type(6) { 
+    border-color: #E67916;  
+    border-radius: 0 0 40px 0;
+    margin-left: -844px;
+    margin-bottom: -15px;
+} 
+.stripe-curved.orange:nth-of-type(7) { 
+    border-color: #E67916;  
+    border-radius: 0 0 43px 0;
+    margin-left: -844px;
+    margin-bottom: -18px;
+} 
+.stripe-curved.orange:nth-of-type(8) { 
+    border-color: #E67916;  
+    border-radius: 0 0 46px 0;
+    margin-left: -844px;
+    margin-bottom: -21px;
+} 
+
+/* Yellow stripes - base radius 49px */
+.stripe-curved.yellow:nth-of-type(9) { 
+    border-color: #E8B34E; 
+    border-radius: 0 0 49px 0;
+    margin-left: -844px;
+    margin-bottom: -24px;
+}
+.stripe-curved.yellow:nth-of-type(10) { 
+    border-color: #E8B34E; 
+    border-radius: 0 0 52px 0;
+    margin-left: -844px;
+    margin-bottom: -27px;
+}
+.stripe-curved.yellow:nth-of-type(11) { 
+    border-color: #E8B34E; 
+    border-radius: 0 0 55px 0;
+    margin-left: -844px;
+    margin-bottom: -30px;
+}
+.stripe-curved.yellow:nth-of-type(12) { 
+    border-color: #E8B34E; 
+    border-radius: 0 0 58px 0;
+    margin-left: -844px;
+    margin-bottom: -33px;
+}
+
+/* Green stripes - base radius 61px */
+.stripe-curved.green:nth-of-type(13) { 
+    border-color: #428B7C; 
+    border-radius: 0 0 61px 0;
+    margin-left: -844px;
+    margin-bottom: -36px;
+} 
+.stripe-curved.green:nth-of-type(14) { 
+    border-color: #428B7C; 
+    border-radius: 0 0 64px 0;
+    margin-left: -844px;
+    margin-bottom: -39px;
+} 
+.stripe-curved.green:nth-of-type(15) { 
+    border-color: #428B7C; 
+    border-radius: 0 0 67px 0;
+    margin-left: -844px;
+    margin-bottom: -42px;
+} 
+.stripe-curved.green:nth-of-type(16) { 
+    border-color: #428B7C; 
+    border-radius: 0 0 70px 0;
+    margin-left: -844px;
+    margin-bottom: -45px;
+} 
+
+/* Blue stripes - base radius 73px */
+.stripe-curved.blue:nth-of-type(17) { 
+    border-color: #5A7A94;
+    border-radius: 0 0 73px 0;
+    margin-left: -844px;
+    margin-bottom: -48px;
+} 
+.stripe-curved.blue:nth-of-type(18) { 
+    border-color: #5A7A94;
+    border-radius: 0 0 76px 0;
+    margin-left: -844px;
+    margin-bottom: -51px;
+} 
+.stripe-curved.blue:nth-of-type(19) { 
+    border-color: #5A7A94;
+    border-radius: 0 0 79px 0;
+    margin-left: -844px;
+    margin-bottom: -54px;
+} 
+.stripe-curved.blue:nth-of-type(20) { 
+    border-color: #5A7A94;
+    border-radius: 0 0 82px 0;
+    margin-left: -844px;
+    margin-bottom: -57px;
+} 
+
+/* Purple stripes - base radius 85px */
+.stripe-curved.purple:nth-of-type(21) { 
+    border-color: #965D81; 
+    border-radius: 0 0 85px 0;
+    margin-left: -844px;
+    margin-bottom: -60px;
+} 
+.stripe-curved.purple:nth-of-type(22) { 
+    border-color: #965D81; 
+    border-radius: 0 0 88px 0;
+    margin-left: -844px;
+    margin-bottom: -63px;
+} 
+.stripe-curved.purple:nth-of-type(23) { 
+    border-color: #965D81; 
+    border-radius: 0 0 91px 0;
+    margin-left: -844px;
+    margin-bottom: -66px;
+} 
+.stripe-curved.purple:nth-of-type(24) { 
+    border-color: #965D81; 
+    border-radius: 0 0 94px 0;
+    margin-left: -844px;
+    margin-bottom: -69px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
 .stripe-curved.red { 
     border-color: #D1574A;; 
@@ -104,6 +283,12 @@
     margin-left: -844px;
     margin-bottom: -55px;
 } 
+*/ 
+
+
+
+
+/* ARCHIVED */
 
 /* Horizontal Stripe 
 .stripe-horizontal-wrapper {

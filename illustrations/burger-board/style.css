@@ -1,3 +1,5 @@
+
+
 /* Colours */
 :root {
     --frame: #b04e61;
@@ -210,7 +212,7 @@
 /* Counter */
 .counter {
     background-color: var(--counter);
-    border-top: 2px solid var(--counter-border);
+    border: 2px solid var(--counter-border);
     width: 100%;
     height: 15%;
     margin-bottom: -45px;
