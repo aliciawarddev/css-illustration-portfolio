@@ -148,29 +148,6 @@
     gap: var(--space-md);
 }
 
-.filter-btn {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding: var(--space-sm) var(--space-lg);
-    border: 2px solid var(--dark);
-    border-radius: 25px;
-    background-color: var(--orange);
-    color: var(--lightest);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: -3px 3px 0 0 var(--dark);
-}
-
-.filter-btn:hover {
-    transform: translateY(-2px);
-    background-color: var(--orange-dark);
-    box-shadow: -5px 5px 0 0 var(--dark);
-}
-
-
-
 /* GALLERY GRID */
 #gallery {
     padding-top: 40px;
@@ -201,7 +178,8 @@
     overflow: hidden;
     transition: all 0.3s ease;
     position: relative;
-    box-shadow: -6px 6px 0 0 var(--mustard);
+    box-shadow: -4px 4px 0 0 var(--mustard); 
+    padding: var(--space-lg);
     
     /* Make cards equal height in grid */
     justify-self: center;
@@ -209,6 +187,10 @@
 
 .gallery-item.hidden {
     display: none;
+}
+
+.gallery-item:hover {
+    box-shadow: -6px 6px 0 0 var(--mustard); 
 }
 
 .gallery-item:hover .illustration-info {

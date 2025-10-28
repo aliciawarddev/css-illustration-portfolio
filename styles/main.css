@@ -244,13 +244,14 @@ nav {
 
 /* CARDS */
 .card {
-    background: var(--lightest);
+    background: var(--light);
     border: 2px solid var(--dark);
     border-radius: 25px;
     padding: var(--space-lg);
     transition: all 0.3s ease;
     position: relative;
-    box-shadow: -6px 6px 0 0 var(--mustard);
+    box-shadow: -4px 4px 0 0 var(--mustard); 
+    background-color: var(--lightest);
 }
 
 .card:hover {
