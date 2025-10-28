@@ -68,31 +68,22 @@ body {
     justify-content: center;
     flex-direction: column;
     position: relative;
+
 }
 
 /* TYPOGRAPHY */
-h1, h2, h3, h4 {
+h2 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: var(--space-xl); 
+    color: var(--dark);
+    text-align: center;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.05em;
-    font-weight: 400;
-}
-
-h1 {
-    font-size: 4rem;
-    color: var(--teal);
-    margin: 0;
-    text-shadow: -3px 3px 0 red; /* Fixed: removed extra 0, added -- */
-    color: red;
-}
-
-h2 {
-    font-size: 2.25rem;
-    margin-top: 0;
-    margin-bottom: var(--space-xl);
-    color: var(--dark);
-    padding-bottom: var(--space-xs);
-    text-align: center;
     text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: var(--space-xs);
 }
 
 h3 {
@@ -140,20 +131,15 @@ main section:last-child {
 
 /* NAVIGATION */
 header {
-    margin-bottom: var(--space-xl);
-}
-
-nav {
-    padding: var(--space-md) 0;
+    width: 100%;
+    padding: 2rem;
 }
 
 .nav-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--space-md);
+    max-width: 80rem;
 }
 
 .nav-links {
@@ -250,7 +236,7 @@ nav {
 
 */
 
-/* CARDS */
+/* Cards */
 .card {
     background: var(--light);
     border: 2px solid var(--dark);
@@ -262,14 +248,10 @@ nav {
     background-color: var(--lightest);
 }
 
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: -8px 8px 0 0 var(--mustard);
-}
-
-.card h3 {
+/* Card headers */
+.card h4 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--dark);
     margin: 0 0 var(--space-sm) 0;
     letter-spacing: 0.05em;
@@ -281,6 +263,11 @@ nav {
     margin: 0;
     color: var(--dark);
     line-height: 1.6;
+    text-align: left;
+}
+
+.card .skill-list, 
+.card ul {
     text-align: left;
 }
 

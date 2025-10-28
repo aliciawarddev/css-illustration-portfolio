@@ -41,41 +41,11 @@
     margin: 0 auto;
 }
 
-.hero-title {
-    color: var(--teal);
-    text-shadow: -5px 5px 0 var(--dark);
-    border: none;
-    margin-top: var(--space-lg);
-    margin-bottom: var(--space-lg);
-    text-shadow: -3px 3px 0 var(--dark);
-    letter-spacing: 0.05em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-}
-
 #hero h3 {
     font-size: 1.75rem;
     border-bottom: none;
     color: var(--dark);
     margin-bottom: var(--space-lg);
-}
-
-#hero h3::before,
-#hero h3::after {
-    content: '✦';
-    margin: 0 1rem;
-    color: var(--mustard);
-    font-size: 1.5rem;
-    vertical-align: middle;
-}
-
-.hero-divider {
-    width: 80px;
-    height: 4px;
-    background: var(--mustard);
-    margin: var(--space-lg) auto;
 }
 
 .hero-subtitle {
@@ -105,6 +75,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style: none;
+    padding-left: 0;
 }
 
 .about-point {
@@ -186,11 +158,13 @@
     width: 100%;
     height: 100%;
     background: var(--light);
-    display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 .illustration-preview img {
@@ -220,9 +194,9 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, var(--lightest) 0%, var(--lightest) 30%, transparent 100%);
+    background: linear-gradient(to top, var(--lightest) 0%, var(--lightest) 20%, transparent 100%);
     color: var(--dark);
-    padding: 20px 16px 16px;
+    padding: 30px 32px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -230,7 +204,7 @@
 .illustration-info h3 {
     margin-bottom: var(--space-xs);
     color: var(--dark);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .techniques {
@@ -241,6 +215,7 @@
     font-style: italic;
 }
 
+/* ARCHIVE 
 .view-btn {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.9rem;
@@ -260,6 +235,7 @@
 .view-btn:hover {
     background-color: var(--orange-dark);
 }
+*/
 
 /* =======================================
    MOBILE RESPONSIVENESS
