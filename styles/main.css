@@ -155,6 +155,30 @@ nav {
 }
 
 /* BUTTONS */
+
+.btn-primary {
+    background-color: var(--orange);
+    color: var(--dark);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: 2px solid var(--dark);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    box-shadow: -2px 2px 0 0 var(--dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hover State */
+.btn-primary:hover { 
+    background-color: var(--teal);
+    color: var(--lightest);
+    transform: translate(-2px, -2px);
+    box-shadow: -4px 4px 0 0 var(--dark);
+}
+/* ARCHIVE 
 .btn {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
@@ -179,6 +203,8 @@ nav {
     transform: translateY(-3px);
     box-shadow: -8px 8px 0 0 var(--dark);
 }
+
+*/
 
 /* CARDS */
 .card {
