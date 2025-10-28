@@ -156,6 +156,7 @@ nav {
 
 /* BUTTONS */
 
+/* Primary Buttons */
 .btn-primary {
     background-color: var(--orange);
     color: var(--dark);
@@ -178,6 +179,41 @@ nav {
     transform: translate(-2px, -2px);
     box-shadow: -4px 4px 0 0 var(--dark);
 }
+
+/* Filter buttons */
+.filter-btn {
+    background-color: var(--orange);
+    color: var(--dark) !important;
+    padding: 0.4rem 1rem !important;
+    border-radius: 20px;
+    border: 2px solid var(--dark);
+    font-weight: 600;
+    font-size: 0.875rem !important;
+    transition: all 0.3s ease;
+    box-shadow: -2px 2px 0 0 var(--dark);
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: none !important;
+}
+
+/* Hover State */
+.filter-btn:hover { 
+    background-color: var(--teal) !important;
+    color: var(--lightest) !important;
+    transform: translate(-2px, -2px)  !important;
+    box-shadow: -4px 4px 0 0 var(--dark) !important;
+}
+
+.filter-btn.active {
+    background-color: var(--teal);
+    color: var(--dark);
+}
+
+.filter-btn:focus {
+    outline: none;
+}
+
 /* ARCHIVE 
 .btn {
     font-family: 'Bebas Neue', sans-serif;
