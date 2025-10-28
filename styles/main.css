@@ -58,8 +58,16 @@ body {
     line-height: 1.6;
     background-color: var(--light);
     color: var(--dark);
-    padding: 1.25rem;
-    min-height: 100vh;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
 }
 
 /* TYPOGRAPHY */
