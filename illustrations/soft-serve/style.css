@@ -10,8 +10,8 @@
 }
 
 .soft-serve-illustration-container {
-    width: 900px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -36,8 +36,8 @@
 }
 
 .drawing-container {
-    width: 900px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
