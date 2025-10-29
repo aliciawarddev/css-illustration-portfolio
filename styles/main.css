@@ -68,7 +68,21 @@ body {
     justify-content: center;
     flex-direction: column;
     position: relative;
+}
 
+body::before {
+    content: '';
+    position: fixed; /* Use fixed so it stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03; /* Keep it very subtle */
+    z-index: -1;
+    background-image: 
+        repeating-linear-gradient(45deg, var(--teal) 0px, var(--teal) 2px, transparent 2px, transparent 20px),
+        repeating-linear-gradient(-45deg, var(--orange) 0px, var(--orange) 2px, transparent 2px, transparent 20px);
+    pointer-events: none; /* Ensure it doesn't interfere with clicks */
 }
 
 /* TYPOGRAPHY */
