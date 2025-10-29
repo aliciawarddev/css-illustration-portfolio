@@ -184,6 +184,13 @@ header {
     display: inline-block;
 }
 
+.btn-primary.back::before {
+    content: '➜';
+    display: inline-block;
+    transform: scaleX(-1); /* Flips horizontally */
+    margin-right: 0.2rem;
+}
+
 /* Hover State */
 .btn-primary:hover { 
     background-color: var(--teal);
