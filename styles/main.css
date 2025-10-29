@@ -230,6 +230,7 @@ header {
     color: var(--lightest) !important;
     transform: translate(-2px, -2px)  !important;
     box-shadow: -4px 4px 0 0 var(--dark) !important;
+    cursor: pointer;
 }
 
 .filter-btn.active {
