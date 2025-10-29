@@ -171,7 +171,7 @@ header {
     background-color: var(--teal);
     color: var(--lightest);
     transform: translate(-2px, -2px);
-    box-shadow: -4px 4px 0 0 var(--dark);
+    box-shadow: -3px 3px 0 0 var(--dark);
 }
 
 /* Filter buttons */
@@ -269,28 +269,6 @@ header {
 .card .skill-list, 
 .card ul {
     text-align: left;
-}
-
-/* FOOTER */
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-lg);
-    padding: var(--space-xl) var(--space-xl) var(--space-lg);
-    margin-top: var(--space-2xl);
-}
-
-footer p {
-    font-size: 0.9rem;
-    color: var(--dark);
-    letter-spacing: 0.05em;
-    margin: 0;
-}
-
-.footer-star {
-    color: var(--mustard);
-    font-size: 1.2rem;
 }
 
 /* =======================================

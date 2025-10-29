@@ -36,6 +36,11 @@
     position: relative;
 }
 
+.hero-title {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
 .hero-content {
     max-width: 700px;
     margin: 0 auto;
@@ -89,6 +94,15 @@
 .about-point strong {
     color: var(--teal-dark);
     font-weight: 600;
+}
+
+#about .card {
+    transition: none;
+}
+
+#about .card:hover {
+    transform: none;
+    box-shadow: -4px 4px 0 0 var(--mustard);
 }
 
 /* FILTER SECTION */
@@ -214,6 +228,27 @@
     opacity: 0.9;
     margin-bottom: var(--space-sm);
     font-style: italic;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-note {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    text-align: center;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: var(--dark);
+    opacity: 0.8;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* ARCHIVE 
