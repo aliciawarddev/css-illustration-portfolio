@@ -191,6 +191,14 @@ header {
     margin-right: 0.2rem;
 }
 
+/* BACK TO GALLERY BTN */
+.btn-primary.back-gallery::before {
+    content: '➜';
+    display: inline-block;
+    transform: scaleX(-1); /* Flips horizontally */
+    margin-right: 0.2rem;
+}
+
 /* Hover State */
 .btn-primary:hover { 
     background-color: var(--teal);

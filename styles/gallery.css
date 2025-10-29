@@ -165,7 +165,6 @@
     position: relative;
     box-shadow: -4px 4px 0 0 var(--mustard); 
     padding: 0.8rem;
-
 }
 
 .gallery-item.hidden {
