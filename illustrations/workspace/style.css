@@ -51,8 +51,6 @@
     --chair-highlight: #607d8b;         /* Lighter steel-blue */
 }
 
-
-
 .workspace-illustration-container {
     width: 100%;
     height: 100%;
@@ -84,7 +82,12 @@
     margin-top: -40px;
 }
 
-
+.btn-primary.back-gallery::before {
+    content: '➜';
+    display: inline-block;
+    transform: scaleX(-1); /* Flips horizontally */
+    margin-right: 0.2rem;
+}
 
 /* Botanical Workspace Color Palette */
 /*

@@ -184,7 +184,7 @@ header {
     display: inline-block;
 }
 
-.btn-primary.back::before {
+.btn-primary.back-main::before {
     content: '➜';
     display: inline-block;
     transform: scaleX(-1); /* Flips horizontally */
