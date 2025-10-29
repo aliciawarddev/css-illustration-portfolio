@@ -77,33 +77,48 @@
 }
 
 .about-points {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    padding-left: 0;
+    list-style-position: outside;
+    padding-left: 2rem;
 }
 
 .about-point {
-    text-align: left;
-    margin-bottom: 0.5rem;
-    position: relative;
-    width: 100%;
+    list-style-type: disc;
+    color: var(--dark);
 }
 
 .about-point strong {
     color: var(--teal-dark);
-    font-weight: 600;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+/* Style custom bullet points */
+.about-point::marker {
+    color: var(--orange);
+    font-size: 1.2em;
 }
 
 #about .card {
-    transition: none;
+    padding: var(--space-xl);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 #about .card:hover {
     transform: none;
     box-shadow: -4px 4px 0 0 var(--mustard);
 }
+
+/* Card title */
+#about .card h4 {
+    font-size: 2rem;
+    margin-bottom: var(--space-lg);
+    text-align: center;
+    color: var(--teal-dark);
+}
+
 
 /* FILTER SECTION */
 
