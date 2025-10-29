@@ -129,17 +129,21 @@ main section:last-child {
     padding-bottom: 40px;
 }
 
-/* NAVIGATION */
+/* HEADER & NAVIGATION */
 header {
     width: 100%;
-    padding: 2rem;
+    padding: var(--space-lg) var(--space-xl);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     max-width: 80rem;
+    margin: 0 auto;
 }
 
 .nav-links {
@@ -233,10 +237,9 @@ header {
     transform: translateY(-3px);
     box-shadow: -8px 8px 0 0 var(--dark);
 }
-
 */
 
-/* Cards */
+/* PREVIEW CARDS */
 .card {
     background: var(--light);
     border: 2px solid var(--dark);

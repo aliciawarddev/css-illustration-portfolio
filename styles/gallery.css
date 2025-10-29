@@ -30,41 +30,39 @@
 }
 
 /* HERO SECTION */
+/* HERO SECTION */
 #hero {
     text-align: center;
-    padding: 20px;
+    padding: var(--space-2xl) var(--space-lg);
     position: relative;
-}
-
-.hero-title {
-    margin-bottom: 0;
-    padding-bottom: 1rem;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-#hero h3 {
-    font-size: 1.75rem;
-    border-bottom: none;
+/* Hero Title */
+.hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.1em;
     color: var(--dark);
-    margin-bottom: var(--space-lg);
-}
-
-.hero-subtitle {
-    font-size: 1.1rem;
-    color: var(--dark);
-    opacity: 0.8;
-    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    position: relative;
+    display: inline-block;
+    /* Single text shadow */
+    text-shadow: 2.5px 2.5px 0 var(--teal);
 }
 
 /* ABOUT SECTION */
 
 #about {
     padding: 40px;
-    padding-top: 20px;
+    padding-top: 0;
     padding-bottom: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -78,7 +76,7 @@
 
 .about-points {
     list-style-position: outside;
-    padding-left: 2rem;
+    padding-left: 1rem;
 }
 
 .about-point {
@@ -91,13 +89,11 @@
     font-weight: 700;
     display: block;
     margin-bottom: 0.25rem;
-    font-size: 1.1rem;
 }
 
 /* Style custom bullet points */
 .about-point::marker {
-    color: var(--orange);
-    font-size: 1.2em;
+    color: var(--dark);
 }
 
 #about .card {
@@ -113,12 +109,13 @@
 
 /* Card title */
 #about .card h4 {
-    font-size: 2rem;
-    margin-bottom: var(--space-lg);
+    font-size: 1.8rem;
+    margin-bottom: var(--space-md);
     text-align: center;
-    color: var(--teal-dark);
+    color: var(--dark);
+    font-weight: 600;
+    letter-spacing: 0.06em;
 }
-
 
 /* FILTER SECTION */
 
