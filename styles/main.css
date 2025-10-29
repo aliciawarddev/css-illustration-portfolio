@@ -147,7 +147,7 @@ main section:last-child {
 header {
     width: 100%;
     padding: var(--space-lg) var(--space-xl);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 100;
 }
