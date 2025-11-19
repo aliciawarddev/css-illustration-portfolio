@@ -165,11 +165,18 @@
             font-size: 2rem;
             margin-bottom: var(--space-md);
         }
+
+        .illustration-page {
+        padding: var(--space-sm);
+        }
         
         .illustration-container {
             padding: var(--space-md);
             height: auto;
             min-height: 400px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
         }
     }
 
@@ -183,9 +190,17 @@
             margin-bottom: var(--space-md);
         }
         
+        .illustration-page {
+            padding: var(--space-xs);
+        }
+        
         .illustration-container {
             padding: var(--space-sm);
             min-height: 350px;
+            width: calc(100vw - 2rem);
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
   </style>
