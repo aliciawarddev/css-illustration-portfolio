@@ -734,39 +734,43 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
         padding: 0;
-        justify-items: center; /* Add this to center items */
+        max-width: calc(180px * 2 + var(--space-md)); /* Set max width */
+        margin: 0 auto; /* Center the grid */
     }
 
     /* Make gallery items smaller to fit 2 per row */
     .gallery-item {
         width: 100%;
         max-width: 180px;
-        height: auto;
-        aspect-ratio: 1 / 1; /* Makes the entire card square */
-        padding: 0.5rem; /* Reduced padding */
+        aspect-ratio: 1 / 1; /* Square cards */
+        padding: 0.5rem;
     }
 
     /* Reduce font size for mobile */
     .illustration-info h3 {
-        font-size: 0.75rem;
+        font-size: 1.125rem; /* 50% larger than 0.75rem */
         margin-bottom: 0.1rem;
     }
 
-    /* Adjust info positioning to not overlap image */
     .illustration-info {
         padding: 0.5rem;
-        background: var(--lightest); /* Solid background instead of gradient */
+        background: var(--lightest);
     }
 
     /* Match about card width to gallery width */
     #about .card {
-        max-width: calc(180px * 2 + var(--space-md)); /* 2 cards + gap */
+        max-width: calc(180px * 2 + var(--space-md));
         margin: 0 auto;
     }
 
     .hero-title {
-        font-size: clamp(2.5rem, 10vw, 3rem); /* Increased font size */
+        font-size: clamp(3rem, 12vw, 4.5rem); /* Increased by 50% from 2rem base */
         text-shadow: -2px 2px 0 var(--teal);
+    }
+
+    .filter-container {
+        max-width: calc(180px * 2 + var(--space-md));
+        margin: 0 auto;
     }
 }
 
@@ -775,10 +779,13 @@ footer {
     .gallery-grid {
         gap: var(--space-sm);
         padding: 0;
+        max-width: calc(160px * 2 + var(--space-sm));
+        margin: 0 auto;
     }
     
     .gallery-item {
         max-width: 160px;
+        aspect-ratio: 1 / 1;
         padding: 0.4rem;
     }
     
@@ -787,16 +794,21 @@ footer {
     }
 
     .illustration-info h3 {
-        font-size: 0.7rem;
+        font-size: 1.05rem; /* 50% larger than 0.7rem */
     }
     
     .techniques {
-        font-size: 0.6rem;
+        font-size: 0.9rem; /* 50% larger than 0.6rem */
     }
 
     /* Match about card width to gallery width on small phones */
     #about .card {
-        max-width: calc(160px * 2 + var(--space-sm)); /* 2 cards + gap */
+        max-width: calc(160px * 2 + var(--space-sm));
+        margin: 0 auto;
+    }
+
+    .filter-container {
+        max-width: calc(160px * 2 + var(--space-sm));
         margin: 0 auto;
     }
 }
