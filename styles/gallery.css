@@ -764,7 +764,7 @@ footer {
     }
 
     .hero-title {
-        font-size: clamp(3rem, 12vw, 4.5rem); /* Increased by 50% from 2rem base */
+        font-size: clamp(4.5rem, 18vw, 6.75rem); /* Increased by 50% from 2rem base */
         text-shadow: -2px 2px 0 var(--teal);
     }
 
