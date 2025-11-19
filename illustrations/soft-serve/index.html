@@ -158,6 +158,36 @@
     .image-container {
       position: relative;
     }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+        .illustration-title {
+            font-size: 2rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .illustration-container {
+            padding: var(--space-md);
+            height: auto;
+            min-height: 400px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .illustration-title {
+            font-size: 1.75rem;
+        }
+        
+        .back-link {
+            font-size: 1rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .illustration-container {
+            padding: var(--space-sm);
+            min-height: 350px;
+        }
+    }
   </style>
 </head>
 

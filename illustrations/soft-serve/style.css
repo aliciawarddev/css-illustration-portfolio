@@ -363,3 +363,22 @@
     transform: rotate(45deg);
     z-index: 4;
 }
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .soft-serve-wrapper {
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 480px) {
+    .soft-serve-wrapper {
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width: 360px) {
+    .soft-serve-wrapper {
+        transform: scale(0.45);
+    }
+}
