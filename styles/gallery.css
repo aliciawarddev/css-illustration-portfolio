@@ -733,15 +733,35 @@ footer {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
-        padding: 0 var(--space-sm);
+        padding: 0;
         justify-items: center; /* Add this to center items */
     }
 
+    /* Make gallery items smaller to fit 2 per row */
     .gallery-item {
         width: 100%;
         max-width: 180px;
         height: auto;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1 / 1; /* Makes the entire card square */
+        padding: 0.5rem; /* Reduced padding */
+    }
+
+    /* Reduce font size for mobile */
+    .illustration-info h3 {
+        font-size: 0.75rem;
+        margin-bottom: 0.1rem;
+    }
+
+    /* Adjust info positioning to not overlap image */
+    .illustration-info {
+        padding: 0.5rem;
+        background: var(--lightest); /* Solid background instead of gradient */
+    }
+
+    /* Match about card width to gallery width */
+    #about .card {
+        max-width: calc(180px * 2 + var(--space-md)); /* 2 cards + gap */
+        margin: 0 auto;
     }
 }
 
@@ -749,14 +769,30 @@ footer {
 @media (max-width: 480px) {
     .gallery-grid {
         gap: var(--space-sm);
+        padding: 0;
     }
     
     .gallery-item {
         max-width: 160px;
+        padding: 0.4rem;
     }
     
     .illustration-preview {
         height: auto;
+    }
+
+    .illustration-info h3 {
+        font-size: 0.7rem;
+    }
+    
+    .techniques {
+        font-size: 0.6rem;
+    }
+
+    /* Match about card width to gallery width on small phones */
+    #about .card {
+        max-width: calc(160px * 2 + var(--space-sm)); /* 2 cards + gap */
+        margin: 0 auto;
     }
 }
 
